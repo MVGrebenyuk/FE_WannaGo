@@ -29,7 +29,6 @@ angular.module('WannaGo').controller('mainController', function ($scope, $rootSc
         $http.post('http://localhost:8189/wannago/auth', $scope.user)
             .then(function successCallback(response) {
                 if (response.data.token) {
-                    alert($scope.user)
                     $http.defaults.headers.common.Authorization = 'Bearer ' + response.data.token;
                     $localStorage.springWebUser = {username: $scope.user.login, token: response.data.token};
 
