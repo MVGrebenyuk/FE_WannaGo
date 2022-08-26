@@ -113,16 +113,16 @@ var headerText = `
                                 </div> --> 
                                 <div class="form-group"> 
                                     <label for="email" class="col-sm-12 control-label control-label-registration"> 
-                                        Почта:</label> 
+                                        Логин:</label> 
                                     <div class="col-sm-12"> 
-                                        <input type="email" class="form-control" id="email" placeholder="i.ivanov@example.ru" /> 
+                                        <input type="text" class="form-control" id="email"ng-model="user.login" placeholder="i.ivanov@example.ru" /> 
                                     </div> 
                                 </div> 
                                 <div class="form-group"> 
                                     <label for="password" class="col-sm-12 control-label control-label-registration">
                                     Пароль:</label> 
                                     <div class="col-sm-12"> 
-                                        <input type="password" class="form-control" id="password" placeholder="*********" /> 
+                                        <input type="password" class="form-control" id="password" ng-model="user.password" placeholder="*********" /> 
                                     </div> 
                                 </div> 
                                 <div class="form-group"> 
@@ -132,15 +132,14 @@ var headerText = `
                                         <input type="password" class="form-control form-contral-lastchield" id="password" placeholder="*********" /> 
                                     </div> 
                                 </div> 
+                                </form>
                                 <div class="row"> 
                                     <div class="col-sm-12"> 
                                         <div class="container"> 
-                                            <button type="button" class="btn btn-submit btn-lg btn-block">Зарегистрироваться</button> 
+                                        <button type="submit" class="btn blt-login btn-submit btn-lg btn-block" ng-click="tryToRegistration()">Зарегистрироваться</button> 
                                         </div>
-                                         
                                     </div> 
-                                </div> 
-                                </form> 
+                                </div>  
                             </div> 
                         </div> 
                     </div> 

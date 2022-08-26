@@ -38,6 +38,21 @@ angular.module('WannaGo').controller('mainController', function ($scope, $rootSc
             }, function errorCallback(response) {
 
             });
+    }
+
+    $scope.tryToRegistration = function () {
+        $http.post('http://localhost:8189/wannago/registration', $scope.user)
+            .then(function successCallback(response) {
+                if (response.data.token) {
+                    $http.defaults.headers.common.Authorization = 'Bearer ' + response.data.token;
+                    $localStorage.springWebUser = {username: $scope.user.login, token: response.data.token};
+
+                    $scope.user.login = null;
+                    $scope.user.password = null;
+                }
+            }, function errorCallback(response) {
+
+            });
     };
 
     $scope.tryToLogout = function () {
