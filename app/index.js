@@ -65,6 +65,15 @@ angular.module('WannaGo').controller('mainController', function ($scope, $rootSc
         }
     };
 
+    $scope.saveImage = function (){
+        var image = $scope.myFile.file;
+        alert($scope.myFile.file)
+        $http.post("http://localhost:8189/wannago/addAvatar", image)
+            .then(function successCallback(response) {
+                alert(response);
+        })
+    };
+
     $scope.clearUser = function () {
         delete $localStorage.springWebUser;
         delete $localStorage.cartName;
