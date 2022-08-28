@@ -39,8 +39,19 @@ var headerText = `
                             <div class="col-1">
                                 <div class="signup-search-area">
                                     <div class="login_register_area justify-content-end">
-                                        <div class="login/Registration">
-                                            <button class="btn btn-submit login_register" data-toggle="modal"  ng-show="!isUserLoggedIn()" data-target="#myModal">Войти</button>
+                                        <div class="user-auth">
+                                        <img src='./img/icons/apple.png'>
+                                        <nav class="menu">
+                                            <ul>
+                                                <li><a href="#">▼</a>
+                                            <ul>
+                                                <li><a href="#">Профиль</a></li>
+                                                <li><a href="#">Мои туры</a></li>
+                                                <li><a href="#">Выход</a></li>
+                                            </ul>
+                                                </li>
+                                            </ul>
+                                            </nav>
                                         </div>
                                     </div>
                                 </div>
@@ -63,7 +74,8 @@ var headerText = `
         <div class="modal-content"> 
             <div class="modal-header"> 
             <div class="col-md-12"><img class="head-icon" src="img/icons/WannaGo.png"></div> 
-                <span class="close" data-dismiss="modal" aria-hidden="true"></span>
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> --> 
+                <span class="close"></span>
             </div> 
             <ul class="nav nav-tabs"> 
                 <li class="login"><a href="#Login" class="nav-login-link" data-toggle="tab">Вход</a></li> 
