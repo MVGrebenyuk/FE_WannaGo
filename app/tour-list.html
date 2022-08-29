@@ -1,62 +1,167 @@
 <!DOCTYPE html>
-<html lang="en"/>
+<html lang="en" ng-app="WannaGo">
     <head>
         <meta charset="UTF-8">
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
+
         <!-- Title -->
         <title>WannaGo</title>
-        
+
         <!-- Favicon -->
         <link rel="icon" href="img/core-img/favicon.ico">
-        
+
         <!-- Core Stylesheet -->
         <link href="style.css" rel="stylesheet">
-        
+
         <!-- Responsive CSS -->
         <link href="css/responsive/responsive.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./components/jquery-ui/jquery-ui.min.css">
+
+        <!-- Angular scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-route.min.js"></script>
     </head>
 
     <!-- ****** Body ****** -->
-    <ul class="breadcrumbs">
-        <li><a href="index.html">Главная</a></li>
-        <li>Туры</li>
-    </ul>
-    <section class="blog_area_second">
+    <div class="container">
+        <ul class="breadcrumbs">
+            <li><a href="./index.html">Главная</a></li>
+            <li>Туры</li>
+        </ul>
+    </div>
+    <section class="tour-list">
         <div class="container">
-            <h2 class="post-headline">Список туров</h2>
+            <h2 class="tour-catalog">Каталог туров</h2>
             <div class="row">
-                <div class="post-content col-md-5">
-                    <div>
-                        <h4>Преимущество 1</h4>
-                        <p>В целом, конечно, повышение уровня гражданского сознания обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствующей насущным потребностям.</p>
+                <div class="tour-list-filter col ml-3">
+                    <div class="tour-list-filter-caption text-center">Поиск туров</div>
+                    <div class="tour-list-filter-region">
+                        <div class="tour-list-filter-name">По странам</div>
+                        <div class="tour-list-filter-content">
+                            <div class="tour-list-select">
+                                <select class="select" name="country">
+                                    <option disabled>Выбрать страну</option>
+                                    <option value="option">Россия</option>
+                                    <option value="option1">Грузия</option>
+                                    <option value="option2">Китай</option>
+                                    <option value="option3">Англия</option>
+                                    <option value="option4">Франция</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <h4>Преимущество 2</h4>
-                        <p>Сложно сказать, почему сторонники тоталитаризма в науке, вне зависимости от их уровня, должны быть рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок.</p>
+                    <div class="tour-list-filter-price">
+                        <div class="tour-list-filter-name">Цена</div>
+                            <div id="slider-range-price">
+                                <input type="text" id="min" value="800">
+                                <span class="filter-description">от (руб)</span>
+                                <input type="text" id="max" value="5400">
+                                <span class="filter-description-r">до (руб)</span>
+                            </div>
+                            <div id="slider-price"></div>
                     </div>
-                    <div>
-                        <h4>Преимущество 3</h4>
-                        <p>Идейные соображения высшего порядка, а также высококачественный прототип будущего проекта однозначно определяет каждого участника как способного принимать собственные решения касаемо модели развития.</p>
+                    <div class="tour-list-filter-duration">
+                        <div class="tour-list-filter-name">Длительность</div>
+                        <div id="slider-range-duration">
+                            <input type="text" id="min-duration" value="2">
+                            <span class="filter-description">от (дней)</span>
+                            <input type="text" id="max-duration" value="15">
+                            <span class="filter-description-r">до (дней)</span>
+                        </div>
+                        <div id="slider-duration"></div>
+                        </div>
+                    <div class="tour-list-filter-complexity">
+                        <div class="tour-list-filter-name">По сложности</div>
+                        <div class="difficulty-values">
+                            <input type="checkbox" name="checkbox" id="checkbox_1" class="css-checkbox" value="1">
+                            <label for="checkbox_1" class="cb-values"><span></span>1</label>
+                            <input type="checkbox" name="checkbox" id="checkbox_2" class="css-checkbox" value="2">
+                            <label for="checkbox_2" class="cb-values"><span></span>2</label>
+                            <input type="checkbox" name="checkbox" id="checkbox_3" class="css-checkbox" value="3">
+                            <label for="checkbox_3" class="cb-values"><span></span>3</label>
+                            <input type="checkbox" name="checkbox" id="checkbox_4" class="css-checkbox" value="4">
+                            <label for="checkbox_4" class="cb-values chexbox-val-4"><span></span>4</label>
+                            <input type="checkbox" name="checkbox" id="checkbox_5" class="css-checkbox" value="5">
+                            <label for="checkbox_5" class="cb-values"><span></span>5</label>
+                        </div>
                     </div>
-                    <div>
-                        <h4>Преимущество 4</h4>
-                        <p>С учётом сложившейся международной обстановки, выбранный нами инновационный путь требует определения и уточнения существующих финансовых и административных условий.</p>
+                    <div class="tour-list-filter-distance">
+                        <div class="tour-list-filter-name">Расстоянию</div>
+                        <div id="slider-range-distance">
+                            <input type="text" id="min-distance" value="40">
+                            <span class="filter-description">от (км)</span>
+                            <input type="text" id="max-distance" value="300">
+                            <span class="filter-description-r">до (км)</span>
+                        </div>
+                        <div id="slider-distance"></div>
+                    </div>
+                    <div class="tour-list-filter-name">
+                        <button class="btn btn-submit tour-list-btn-find-tours" data-toggle="modal" data-target="#myModal">Поиск</button>
                     </div>
                 </div>
-                <div class="post-content col-md-7">
-                    <img class="icons" src="img/icons/Rec.png">
-                </div>
-                <!-- ****** Blog Sidebar ****** -->
+                <table class="col-md-9 tour-list-table">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="tour-list-block">
+                                    <div class="tour-list-first-block">
+                                            <div class="place-name">Горная Аджария</div>
+                                            <div class="tour-description-text">Как принято считать, диаграммы связей могут быть призваны к ответу. А также ключевые особенности структуры проекта формируют глобальную экономическую сеть.
+                                                Лишь сделанные на базе интернет-аналитики выводы представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть смешаны.
+                                            </div>
+                                        <div class="tour-list-bottom-block">
+                                            <div><span>Время в пути</span>
+                                                <div class="bottom-block-info">
+                                                    <img src="./img/icons/tour-list-1.png">
+                                                    <p>8 дней</p>
+                                                </div>
+                                            </div>
+                                            <div><span>Расстояние</span>
+                                                <div class="bottom-block-info">
+                                                    <img src="./img/icons/tour-list-2.png">
+                                                    <p>120 км.</p>
+                                                </div>
+                                            </div>
+                                            <div><span>Сложность</span>
+                                                <div class="bottom-block-info">
+                                                    <img src="./img/icons/tour-list-3.png">
+                                                    <p>2/5</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tour-list-second-block">
+                                        <div class="user-name">
+                                            <img src="./img/icons/google.png">
+                                            <div class="tour-list-user-name">Александр Новиков</div>
+                                        </div>
+                                        <div class="tour-list-image">
+                                            <img src="img/slider-img/1.jpg">
+                                        </div>
+                                        <div class="tour-list-grad-image">
+                                            <img src="img//tour-list/tour-list-image2.png">
+                                        </div>
+                                        <div class="tour-list-second-block-button">
+                                            <div class="tour-list-cost">1000 ₽</div>
+                                            <button class="tour-list-btn-favorites"></button>
+                                            <button class="btn btn-submit tour-list-btn-buy-tour" data-toggle="modal" data-target="#myModal">Купить</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-    
     </section>
     <!-- ****** Blog Area End ****** -->
 
+    <script src="tour-list.js"></script>
     <!-- Jquery-2.2.4 js -->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
@@ -66,10 +171,11 @@
     <!-- All Plugins JS -->
     <script src="js/others/plugins.js"></script>
     <!-- Active JS -->
-    <script src="js/active.js"></script>
+    <script src="js/tour-list.js"></script>
     <!-- Header and Modal JS -->
     <script src="js/header.js"></script>
     <!-- Footer JS -->
     <script src="js/footer.js"></script>
-
+    <!-- Jquery price-slider -->
+    <script src="./components/jquery-ui/jquery-ui.min.js"></script>
 </body>

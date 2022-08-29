@@ -10,6 +10,10 @@
                 templateUrl: 'index.html',
                 controller: 'mainController'
             })
+            .when('/wannago', {
+                templateUrl: 'tour-list.html',
+                controller: 'mainController'
+            })
             .otherwise({
                 redirectTo: '/wannago'
             });

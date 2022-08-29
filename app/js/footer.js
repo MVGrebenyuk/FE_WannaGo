@@ -10,7 +10,7 @@ var headerText = `
                         <div class="col-12">
                             <div class="footer-social-area d-flex">
                                 <div class="footer-logo-area text-center">
-                                    <p class="yummy-logo">WannaGo</p>
+                                    <p class="wannago-logo">WannaGo</p>
                                 </div>
                                 <div class="footer-privacy"><a>© 2022</a>
                                         <a>WannaGo</a>
