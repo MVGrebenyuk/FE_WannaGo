@@ -10,12 +10,12 @@
                 templateUrl: 'index.html',
                 controller: 'mainController'
             })
-            .when('/wannago', {
+            .when('/tours', {
                 templateUrl: 'tour-list.html',
-                controller: 'mainController'
+                controller: 'tourController'
             })
             .otherwise({
-                redirectTo: '/wannago'
+                redirectTo: '/'
             });
     }
 
@@ -28,6 +28,10 @@
 
 angular.module('WannaGo').controller('mainController', function ($scope, $rootScope, $http, $localStorage) {
     const contextPath = 'http://localhost:8189/wannago/api/v1';
+
+    $scope.trips = [{name:'John', age:25},
+        {name:'Mary', age:40},
+        {name:'Peter', age:85}]
 
     $scope.tryToAuth = function () {
         $http.post('http://localhost:8189/wannago/auth', $scope.user)
