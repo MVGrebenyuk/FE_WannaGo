@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./components/jquery-ui/jquery-ui.min.css">
 
+        <!-- Angular scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-route.min.js"></script>
@@ -34,75 +35,72 @@
     </div>
     <section class="tour-list">
         <div class="container">
-            <h2 class="post-headline">Каталог туров</h2>
+            <h2 class="tour-catalog">Каталог туров</h2>
             <div class="row">
                 <div class="tour-list-filter col ml-3">
-                    <div>
-                        <div class="tour-list-filter-caption text-center">Поиск туров</div>
-                        <div class="tour-list-filter-region">
-                            <div class="tour-list-filter-name">По странам</div>
-                            <div class="tour-list-filter-content">
-                                
-                                <div class="tour-list-select">
-                                    <select class="select" name="country">
-                                        <option disabled>Выбрать страну</option>
-                                        <option value="option">Россия</option>
-                                        <option value="option1">Грузия</option>
-                                        <option value="option2">Китай</option>
-                                        <option value="option3">Англия</option>
-                                        <option value="option4">Франция</option>
-                                    </select>
-                                </div>
+                    <div class="tour-list-filter-caption text-center">Поиск туров</div>
+                    <div class="tour-list-filter-region">
+                        <div class="tour-list-filter-name">По странам</div>
+                        <div class="tour-list-filter-content">
+                            <div class="tour-list-select">
+                                <select class="select" name="country">
+                                    <option disabled>Выбрать страну</option>
+                                    <option value="option">Россия</option>
+                                    <option value="option1">Грузия</option>
+                                    <option value="option2">Китай</option>
+                                    <option value="option3">Англия</option>
+                                    <option value="option4">Франция</option>
+                                </select>
                             </div>
                         </div>
-                        <div class="tour-list-filter-price">
-                            <div class="tour-list-filter-name">Цена</div>
-                                <div id="slider-range-price">
-                                    <input type="text" id="min" value="800">
-                                    <span class="filter-description">от (руб)</span>
-                                    <input type="text" id="max" value="5400">
-                                    <span class="filter-description-r">до (руб)</span>
-                                </div>
-                                <div id="slider-price"></div>
-                        </div>
-                        <div class="tour-list-filter-duration">
-                            <div class="tour-list-filter-name">Длительность</div>
-                            <div id="slider-range-duration">
-                                <input type="text" id="min-duration" value="2">
-                                <span class="filter-description">от (дней)</span>
-                                <input type="text" id="max-duration" value="15">
-                                <span class="filter-description-r">до (дней)</span>
+                    </div>
+                    <div class="tour-list-filter-price">
+                        <div class="tour-list-filter-name">Цена</div>
+                            <div id="slider-range-price">
+                                <input type="text" id="min" value="800">
+                                <span class="filter-description">от (руб)</span>
+                                <input type="text" id="max" value="5400">
+                                <span class="filter-description-r">до (руб)</span>
                             </div>
-                            <div id="slider-duration"></div>
-                            </div>
-                        <div class="tour-list-filter-complexity">
-                            <div class="tour-list-filter-name">По сложности</div>
-                            <div class="difficulty-values">
-                                <input type="checkbox" name="checkbox" id="checkbox_1" class="css-checkbox" value="1">
-                                <label for="checkbox_1" class="cb-values"><span></span>1</label>
-                                <input type="checkbox" name="checkbox" id="checkbox_2" class="css-checkbox" value="2">
-                                <label for="checkbox_2" class="cb-values"><span></span>2</label>
-                                <input type="checkbox" name="checkbox" id="checkbox_3" class="css-checkbox" value="3">
-                                <label for="checkbox_3" class="cb-values"><span></span>3</label>
-                                <input type="checkbox" name="checkbox" id="checkbox_4" class="css-checkbox" value="4">
-                                <label for="checkbox_4" class="cb-values chexbox-val-4"><span></span>4</label>
-                                <input type="checkbox" name="checkbox" id="checkbox_5" class="css-checkbox" value="5">
-                                <label for="checkbox_5" class="cb-values"><span></span>5</label>
-                            </div>
+                            <div id="slider-price"></div>
+                    </div>
+                    <div class="tour-list-filter-duration">
+                        <div class="tour-list-filter-name">Длительность</div>
+                        <div id="slider-range-duration">
+                            <input type="text" id="min-duration" value="2">
+                            <span class="filter-description">от (дней)</span>
+                            <input type="text" id="max-duration" value="15">
+                            <span class="filter-description-r">до (дней)</span>
                         </div>
-                        <div class="tour-list-filter-distance">
-                            <div class="tour-list-filter-name">Расстоянию</div>
-                            <div id="slider-range-distance">
-                                <input type="text" id="min-distance" value="40">
-                                <span class="filter-description">от (км)</span>
-                                <input type="text" id="max-distance" value="300">
-                                <span class="filter-description-r">до (км)</span>
-                            </div>
-                            <div id="slider-distance"></div>
+                        <div id="slider-duration"></div>
                         </div>
-                        <div class="tour-list-filter-name">
-                            <button class="btn btn-submit tour-list-btn-find-tours" data-toggle="modal" data-target="#myModal">Поиск</button>
+                    <div class="tour-list-filter-complexity">
+                        <div class="tour-list-filter-name">По сложности</div>
+                        <div class="difficulty-values">
+                            <input type="checkbox" name="checkbox" id="checkbox_1" class="css-checkbox" value="1">
+                            <label for="checkbox_1" class="cb-values"><span></span>1</label>
+                            <input type="checkbox" name="checkbox" id="checkbox_2" class="css-checkbox" value="2">
+                            <label for="checkbox_2" class="cb-values"><span></span>2</label>
+                            <input type="checkbox" name="checkbox" id="checkbox_3" class="css-checkbox" value="3">
+                            <label for="checkbox_3" class="cb-values"><span></span>3</label>
+                            <input type="checkbox" name="checkbox" id="checkbox_4" class="css-checkbox" value="4">
+                            <label for="checkbox_4" class="cb-values chexbox-val-4"><span></span>4</label>
+                            <input type="checkbox" name="checkbox" id="checkbox_5" class="css-checkbox" value="5">
+                            <label for="checkbox_5" class="cb-values"><span></span>5</label>
                         </div>
+                    </div>
+                    <div class="tour-list-filter-distance">
+                        <div class="tour-list-filter-name">Расстоянию</div>
+                        <div id="slider-range-distance">
+                            <input type="text" id="min-distance" value="40">
+                            <span class="filter-description">от (км)</span>
+                            <input type="text" id="max-distance" value="300">
+                            <span class="filter-description-r">до (км)</span>
+                        </div>
+                        <div id="slider-distance"></div>
+                    </div>
+                    <div class="tour-list-filter-name">
+                        <button class="btn btn-submit tour-list-btn-find-tours" data-toggle="modal" data-target="#myModal">Поиск</button>
                     </div>
                 </div>
                 <table class="col-md-9 tour-list-table">
@@ -145,7 +143,7 @@
                                             <img src="img/slider-img/1.jpg">
                                         </div>
                                         <div class="tour-list-grad-image">
-                                            <img src="img/tour-list-image2.png">
+                                            <img src="img//tour-list/tour-list-image2.png">
                                         </div>
                                         <div class="tour-list-second-block-button">
                                             <div class="tour-list-cost">1000 ₽</div>
@@ -158,7 +156,6 @@
                         </tr>
                     </tbody>
                 </table>
-                <!-- ****** Blog Sidebar ****** -->
             </div>
         </div>
     </section>

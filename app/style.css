@@ -31,7 +31,7 @@
 }
 
 .blog_area {
-    background-image: url(./img/back/bgg.png);
+    background-image: url(./img/back/background.png);
     background-size: 100%;
     height: 650px;
 }
@@ -288,6 +288,12 @@ CSS
 .post-headline {
     font-size: 40px;
     margin-bottom: 0;
+    margin-bottom: 50px;
+}
+
+.tour-catalog {
+    font-size: 40px;
+    margin-bottom: 0;
 }
 
 .blog_area_second {
@@ -322,70 +328,6 @@ h6 {
 p {
     color: #51545f;
     font-size: 16px;
-}
-
-.yummy-table {
-    display: table;
-    height: 100%;
-    left: 0;
-    position: relative;
-    top: 0;
-    width: 100%;
-    z-index: 2;
-}
-
-.yummy-table-cell {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-#preloader {
-    overflow: hidden;
-    background-color: #fff;
-    height: 100%;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999999;
-}
-
-.yummy-load {
-    -webkit-animation: 2000ms linear 0s normal none infinite running yummy-load;
-    animation: 2000ms linear 0s normal none infinite running yummy-load;
-    background: transparent none repeat scroll 0 0;
-    border-color: #dddddd #dddddd #fc6c3f;
-    border-radius: 50%;
-    border-style: solid;
-    border-width: 3px;
-    height: 40px;
-    left: calc(50% - 20px);
-    position: relative;
-    top: calc(50% - 20px);
-    width: 40px;
-    z-index: 9;
-}
-
-@-webkit-keyframes yummy-load {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes yummy-load {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
 }
 
 /* --------------------
@@ -451,7 +393,7 @@ p {
 :: Menu Area CSS
 -------------------- */
 
-.logo_area .yummy-logo {
+.logo_area .wannago-logo {
     font-family: 'Nunito';
     font-weight: 700;
     font-size: 40px;
@@ -647,7 +589,7 @@ p {
     padding-right: 12px;
 }
 
-.footer-logo-area .yummy-logo {
+.footer-logo-area .wannago-logo {
     font-family: 'Montserrat';
     font-size: 60px;
     margin-bottom: 0;
@@ -656,7 +598,7 @@ p {
     color: #232d37;
 }
 
-.popular-routes .yummy-logo {
+.popular-routes .popular-routes-text {
     font-family: 'Montserrat';
     font-size: 40px;
     margin-bottom: 0;
@@ -687,7 +629,7 @@ p {
 }
 
 .breadcrumbs li::before {
-    content: '>';
+    content: url(./img/icons/breadcrumbs-arrow.png);
     margin-left: 5px;
     margin-right: 5px;
     color: #B6B6B6;
@@ -816,7 +758,7 @@ p {
     margin-bottom: 20px;
     width: 880px;
     margin-left: 20px;
-    /* margin-top: -320px; */
+    cursor: pointer;
 }
 
 .tour-list-bottom-block * {
@@ -859,8 +801,6 @@ p {
 /* СТРАНИЦА ТУРА */
 
 .inner-container {
-    width: 1180px; 
-    margin: 0 auto;
     border-radius: 10px;
     background: #EDEDED;
 }
@@ -877,9 +817,12 @@ p {
 }
 
 .tour-hero-description {
+    font-family: 'Montserrat' !important;
     max-width: 650px;
     max-height: 750px;
-    margin-right: 20px;
+    padding: 0;
+    margin-right: 26px;
+    margin-left: 24px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -889,9 +832,9 @@ p {
 }
 
 .tour-hero-maps {
+    max-width: 456px;
     padding: 0;
     align-items: flex-start;
-    
 }
 
 .tour-hero-maps-image {
@@ -900,8 +843,13 @@ p {
     padding: 0 15px 0 0;
 }
 
+.tour-hero-payment {
+    padding-right: 42px;
+    padding-left: 9px;
+}
+
 .tour-hero-maps-image-bottom {
-    padding: 0 15px 0 0;
+    padding: 0 26px 0 0;
     margin-top: 10px;
 }
 
@@ -914,6 +862,7 @@ p {
 .tour-characteristics {
     min-width: 600px;
     border-radius: 10px;
+    margin-left: 9px;
 }
 
 .tour-hero-maps-image-bot {
@@ -931,6 +880,7 @@ p {
 
 .tour-characteristics-discription {
     text-align: start;
+    font-weight: 600;
 }
 
 .tour-characteristics-footer  {
@@ -1316,7 +1266,7 @@ input[type="checkbox"]:checked + label span {
 
 .btn-buy {
     font-weight: 600;
-    padding: 11px 58px;
+    padding: 11px 60px;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
@@ -1395,7 +1345,6 @@ input[type="checkbox"]:checked + label span {
 /* Фото тура */
 
 .maps-hero-image {
-    padding: 0 15px 0 0;
     width: 456px;
     height: 326px;
 }
@@ -1443,6 +1392,14 @@ input[type="checkbox"]:checked + label span {
 /* Рейтинг и Автор */
 .container-rating-and-author {
     padding: 0 15px;
+}
+
+.tour-rating-block {
+    margin-left: 9px;
+}
+
+.tour-autor-block {
+    padding: 0 26px 0 0;
 }
 
 .section-tour-heading {
@@ -1499,37 +1456,6 @@ input[type="checkbox"]:checked + label span {
     margin-bottom: 5px;
 }
 
-/* --------------------
-:: Breadcrumbs Area
--------------------- */
-
-.breadcrumbs {
-    margin-left: 0px; 
-    padding: 0;
-    font-size: 14px;
-    color: #B6B6B6;
-}
-
-.breadcrumbs li {
-    display: inline-block;
-}
-
-.breadcrumbs li a {
-    text-decoration: none;
-    color: #a1a1a1;
-}
-
-.breadcrumbs li::before {
-    content: '>';
-    margin-left: 5px;
-    margin-right: 5px;
-    color: #B6B6B6;
-}
-
-.breadcrumbs li:first-child::before {
-    content: ''; /* Убираем разделитель для первого пункта */
-}
-
 /*  Звезды рейтинга  */
 
 .star-rating{
@@ -1581,4 +1507,167 @@ input[type="checkbox"]:checked + label span {
 }
 .rating-mini > span.active {
 	color: gold;
+}
+
+/* Tour slider */
+
+.tour-slider {
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+.tour-slider .full-height {
+    min-height: 100vh;
+}
+
+.tour-slider .over-hide {
+    overflow: hidden;
+}
+
+.tour-slider .padding-tb {
+    padding: 100px 0;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked){
+    position: absolute;
+    left: -9999px;
+}
+
+.tour-slider .checkbox:checked + label,
+.tour-slider .checkbox:not(:checked) + label{
+    position: relative;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-right: 2px;
+    margin-left: 3px;
+    display: inline-block;
+    width: 67px;
+    height: 50px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    background-image: url('./img/tour-img/m1.jpg');
+  }
+
+  .tour-slider .checkbox.scnd + label{
+    background-image: url('./img/tour-img/m2.jpg');
+  }
+
+  .tour-slider .checkbox.thrd + label{
+    background-image: url('./img/tour-img/m3.jpg');
+  }
+
+  .tour-slider .checkbox.foth + label{
+    background-image: url('./img/tour-img/m4.jpg');
+  }
+
+  .tour-slider .checkbox.fifth + label{
+    background-image: url('./img/tour-img/m5.jpg');
+  }
+
+  .tour-slider .checkbox.sixth + label{
+    background-image: url('./img/tour-img/m6.jpg');
+  }
+  
+  .tour-slider .checkbox:checked + label{
+    transform: scale(1.2);
+      -webkit-animation-play-state: running;
+      -moz-animation-play-state: running;
+      animation-play-state: running;
+  }
+  
+  .slider-height-padding {
+    padding-top: 336px;
+  }
+  
+  .tour-slider > ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    z-index: 100;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .tour-slider>ul li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    z-index: 100;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 326px;
+    background-size: cover;
+    background-position: center;
+    background-image: url('./img/tour-img/m1.jpg');
+    border-radius: 50%;
+    box-sizing: border-box;
+    color: #343434;
+    writing-mode: vertical-rl;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 8px 25px 0 rgba(16,39,112,.1);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.tour-slider>ul li span {
+    mix-blend-mode: difference;
+}
+.tour-slider>ul li:nth-of-type(2) {
+    background-image: url('./img/tour-img/m2.jpg');
+}
+.tour-slider>ul li:nth-of-type(3) {
+    background-image: url('./img/tour-img/m3.jpg');
+}
+.tour-slider>ul li:nth-of-type(4) {
+    background-image: url('./img/tour-img/m4.jpg');
+}
+.tour-slider>ul li:nth-of-type(5) {
+    background-image: url('./img/tour-img/m5.jpg');
+}
+.tour-slider>ul li:nth-of-type(6) {
+    background-image: url('./img/tour-img/m6.jpg');
+}
+
+.tour-slider .checkbox.frst:checked ~ ul li:nth-of-type(1) {
+    opacity: 1;
+    pointer-events: auto;
+    border-radius: 16px;
+}
+.tour-slider .checkbox.scnd:checked ~ ul li:nth-of-type(2) {
+    opacity: 1;
+    pointer-events: auto;
+    border-radius: 16px;
+}
+.tour-slider .checkbox.thrd:checked ~ ul li:nth-of-type(3) {
+    opacity: 1;
+    pointer-events: auto;
+    border-radius: 16px;
+}
+.tour-slider .checkbox.foth:checked ~ ul li:nth-of-type(4) {
+    opacity: 1;
+    pointer-events: auto;
+    border-radius: 16px;
+}
+.tour-slider .checkbox.fifth:checked ~ ul li:nth-child(5) {
+    opacity: 1;
+    pointer-events: auto;
+    border-radius: 16px;
+}
+.tour-slider .checkbox.sixth:checked ~ ul li:nth-child(6) {
+    opacity: 1;
+    pointer-events: auto;
+    border-radius: 16px;
 }

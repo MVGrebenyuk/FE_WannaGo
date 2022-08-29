@@ -85,3 +85,7 @@ $('.select').each(function() {
         }
     });
 });
+
+$('div.tour-list-block').on('click', function(event) {
+    window.location.href = './touring.html';
+});

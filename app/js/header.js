@@ -13,19 +13,19 @@ var headerText = `
                                 <!--  Top Social bar start -->
                                 <div class="top_social_bar">
                                     <div class="logo_area text-center">
-                                        <a href="index.html" class="yummy-logo">WannaGo</a>
+                                        <a href="index.html" class="wannago-logo">WannaGo</a>
                                     </div>
                                 </div>
                             </div>
                             <nav class="navbar navbar-expand-lg">
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#yummyfood-nav" aria-controls="yummyfood-nav" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars" aria-hidden="true"></i> Menu</button>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#wannago-nav" aria-controls="wannago-nav" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars" aria-hidden="true"></i>Меню</button>
                                 <!-- Menu Area Start -->
                                 <div class="search">
                                     <input type="text" maxlength= "12" placeholder="Найди то, что ты давно ищешь" class="searchbar">
                                     <img src="https://images-na.ssl-images-amazon.com/images/I/41gYkruZM2L.png" alt="search icon" class="button">
                                     </div>
-                                <div class="collapse navbar-collapse justify-content-center" id="yummyfood-nav">
-                                    <ul class="navbar-nav" id="yummy-nav">
+                                <div class="collapse navbar-collapse justify-content-center" id="wannago-nav">
+                                    <ul class="navbar-nav" id="wannago-nav">
                                         <li class="nav-item">
                                             <a class="nav-link" href="index.html">Главная</a>
                                         </li>
