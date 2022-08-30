@@ -88,13 +88,13 @@ var headerText = `
                                         <input type="password" class="form-control" id="exampleInputPassword1" ng-model="user.password" placeholder="Пароль" /> 
                                     </div> 
                                 </div> 
-                                <div class="container"> 
+                                <div class="container-btm-form-registration"> 
                                 <div class="row"> 
                                     <div class="col-sm-12"> 
                                         <button type="submit" class="btn blt-login btn-submit btn-lg btn-block" ng-click="tryToAuth()">Войти</button> 
                                         <div><a href="#" class="forgot">Забыли пароль?</a></div> 
                                     </div> 
-                                </div> 
+                                </div>
                             </div> 
                                 </form> 
                             </div> 
@@ -133,8 +133,8 @@ var headerText = `
                                 </div> 
                                 </form>
                                 <div class="row"> 
-                                    <div class="col-sm-12"> 
-                                        <div class="container"> 
+                                    <div class="col-sm-12">
+                                        <div class="container-btm-form-registration"> 
                                         <button type="submit" class="btn blt-login btn-submit btn-lg btn-block" ng-click="tryToRegistration()">Зарегистрироваться</button> 
                                         </div>
                                     </div> 

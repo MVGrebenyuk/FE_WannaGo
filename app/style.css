@@ -100,6 +100,11 @@ CSS
     color: white;
 }
 
+.container-btm-form-registration { 
+    padding-left: 15px; 
+    padding-right: 15px; 
+}
+
 .modal-header {
     border-bottom: 0;
 }
@@ -753,7 +758,7 @@ p {
 
 .tour-list-block {
     height: 317px;
-    background-color: #EDEDED;
+    background-color: #F7F7F7;
     border-radius: 10px;
     margin-bottom: 20px;
     width: 880px;
@@ -791,7 +796,8 @@ p {
 }
 
 .tour-list-btn-buy-tour {
-    width: 146px;
+    position: absolute;
+    width: 140px;
     height: 46px;
     border-radius: 10px;
     cursor: pointer;
@@ -802,7 +808,7 @@ p {
 
 .inner-container {
     border-radius: 10px;
-    background: #EDEDED;
+    background: #F7F7F7;
 }
 
 .tour-present {
@@ -926,10 +932,9 @@ p {
     height: 46px;
     border: 1px solid #1A1919;
     border-radius: 10px;
-    margin: 5px 15px 0 15px;
     float: left;
     background-image: url(./img//icons/favorites-tour-list1.png);
-    margin: 0 15px 0 15px;
+    margin: 5px 10px 0 10px;
     float: left;
     background-image: url(./img/icons/like-avourites.svg);
     background-repeat: no-repeat;
@@ -953,8 +958,39 @@ p {
     background-size: auto;
 }
 
+.tour-page-btn-favorites {
+    width: 46px;
+    height: 46px;
+    border: 1px solid #1A1919;
+    border-radius: 10px;
+    float: left;
+    background-image: url(./img//icons/favorites-tour-list1.png);
+    margin: 0 15px 0 15px;
+    float: left;
+    background-image: url(./img/icons/like-avourites.svg);
+    background-repeat: no-repeat;
+    background-position: 9px 12px;
+    background-size: auto;
+}
+
+.tour-page-btn-favorites:hover {
+    background-image: url(./img//icons/favorites-tour-list.png);
+    background-image: url(./img/icons/like-favourites-active.svg);
+    background-repeat: no-repeat;
+    background-position: 9px 12px;
+    background-size: auto;
+}
+
+.tour-page-btn-favorites:focus {
+    background-image: url(./img//icons/favorites-tour-list.png);
+    background-image: url(./img/icons/like-favourites-active.svg);
+    background-repeat: no-repeat;
+    background-position: 9px 12px;
+    background-size: auto;
+}
+
 .tour-list-filter {
-    background-color: #EDEDED;
+    background-color: #F7F7F7;
     border-radius: 10px;
     width: 280px !important;
     height: 740px !important;
@@ -1171,10 +1207,12 @@ input[type="checkbox"]:checked + label span {
 }
 
 .tour-list-cost {
+    position: relative;
     float: left;
-    font-size: 40px;
+    font-size: 38px;
     font-weight: 400;
     height: 49px;
+    width: 152px;
     /* margin-bottom: 10px; */
 }
 
@@ -1189,7 +1227,7 @@ input[type="checkbox"]:checked + label span {
     border-radius: 10px;
     width: 200px;
     height: 40px;
-    background-color: #EDEDED;
+    background-color: #F7F7F7;
     appearance: none;
     position: relative;
 }
@@ -1214,7 +1252,7 @@ input[type="checkbox"]:checked + label span {
     cursor: pointer;
     width: 100%;
     z-index: 99;
-    background: #EDEDED;
+    background: #F7F7F7;
     user-select: none;
 }
 
@@ -1616,10 +1654,12 @@ input[type="checkbox"]:checked + label span {
     color: #343434;
     writing-mode: vertical-rl;
     opacity: 0;
-    pointer-events: none;
+
+    /* анимация */
+    /* pointer-events: none;
     box-shadow: 0 8px 25px 0 rgba(16,39,112,.1);
     -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease; */
 }
 
 .tour-slider>ul li span {

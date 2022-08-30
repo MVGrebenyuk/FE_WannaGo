@@ -34,3 +34,8 @@ var i = 1;
    i = 1;
   }
 },5000)
+
+var myDiv = $('.tour-heading');
+myDiv.text(myDiv.text().substring(0,1050));
+
+$(".tour-hero-price").append(" ₽");
