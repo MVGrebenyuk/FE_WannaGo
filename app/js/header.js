@@ -41,6 +41,19 @@ var headerText = `
                                     <div class="login_register_area justify-content-end">
                                         <div class="login/Registration">
                                             <button class="btn btn-submit login_register" data-toggle="modal"  ng-show="!isUserLoggedIn()" data-target="#myModal">Войти</button>
+                                            <div class="user-auth" ng-show="isUserLoggedIn()">
+                                            <nav>
+                                                <ul class="topmenu">
+                                                <li><a href="" class="down"><img src='./img/icons/apple.png'>▼</a>
+                                                    <ul class="submenu">
+                                                        <li><a href="./personal-area.html">Профиль</a></li>
+                                                        <li><a href="">Мои туры</a></li>
+                                                        <li><a href="#" ng-click="tryToLogout()">Выход</a></li>
+                                                    </ul>
+                                                </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
@@ -91,7 +104,7 @@ var headerText = `
                                 <div class="container-btm-form-registration"> 
                                 <div class="row"> 
                                     <div class="col-sm-12"> 
-                                        <button type="submit" class="btn blt-login btn-submit btn-lg btn-block" ng-click="tryToAuth()">Войти</button> 
+                                        <button type="submit" class="btn blt-login btn-submit btn-lg btn-block" ng-click="tryToAuth(); closeModalWindow()">Войти</button> 
                                         <div><a href="#" class="forgot">Забыли пароль?</a></div> 
                                     </div> 
                                 </div>

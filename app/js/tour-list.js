@@ -98,3 +98,11 @@ var myDiv = $('.tour-description-text');
 myDiv.text(myDiv.text().substring(0,320));
 
 $(".tour-list-cost").append(" ₽");
+
+$(".user-route-cost").append("₽");
+
+$(".favorites-cost").append("₽");
+
+$('button.btn-more-photo').on('click', function(event) {
+    window.location.href = './user-photoalbum.html';
+});

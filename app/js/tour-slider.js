@@ -26,16 +26,23 @@ function showSlides(n) {
 
     slides[slideIndex - 1].checked = true;
 }
-var i = 1;
-  setInterval(function(){
-  currentSlide(i)
-  i++;
-  if(i == 7) {
-   i = 1;
-  }
-},5000)
+
+/* Autoslide */
+
+// var i = 1;
+//   setInterval(function(){
+//   currentSlide(i)
+//   i++;
+//   if(i == 7) {
+//    i = 1;
+//   }
+// },5000)
 
 var myDiv = $('.tour-heading');
 myDiv.text(myDiv.text().substring(0,1050));
 
 $(".tour-hero-price").append(" ₽");
+
+$('div.tour-autor-info-block').on('click', function(event) {
+  window.location.href = './personal-area.html';
+});

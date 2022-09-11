@@ -267,6 +267,7 @@ CSS
     margin-top: 8px;
     padding: 9px 23px;
     cursor: pointer;
+    font-weight: 600;
 }
 
 .blog-logo {
@@ -297,6 +298,7 @@ CSS
 }
 
 .tour-catalog {
+    display: contents;
     font-size: 40px;
     margin-bottom: 0;
 }
@@ -333,6 +335,19 @@ h6 {
 p {
     color: #51545f;
     font-size: 16px;
+}
+
+.purchased-routes-not-login {
+    height: 555px;
+}
+ 
+.purchased-routes-not-login  p {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
 }
 
 /* --------------------
@@ -575,6 +590,10 @@ p {
     font-size: 14px;
 }
 
+.footer-contacts a {
+    font-weight: 600;
+}
+
 .footer-contacts div {
     color: black;
 }
@@ -582,7 +601,7 @@ p {
 .footer-link > a {
     color: #1ABAA6;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .footer-link > a:hover {
@@ -647,6 +666,39 @@ p {
 .user-auth {
     margin-top: 14px;
 }
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+.topmenu li a:hover {
+    color: #E6855F;
+}
+  .submenu {
+    background: white;
+    border: 2px solid #003559;
+    position: absolute;
+    left: 35px;
+    top: 8px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 5;
+    width: 130px;
+    transform: perspective(600px) rotateX(-90deg);
+    transform-origin: 0% 0%;
+    transition: .6s ease-in-out;
+  }
+  .topmenu > li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+    transform: perspective(600px) rotateX(0deg);
+  }
+  .submenu li a {
+    line-height: 36px;
+    padding: 0 25px;
+  }
 
 .menu {
     display: contents;
@@ -802,6 +854,9 @@ p {
     border-radius: 10px;
     cursor: pointer;
     margin-top: 5px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 1px;
 }
 
 /* СТРАНИЦА ТУРА */
@@ -1194,6 +1249,7 @@ input[type="checkbox"]:checked + label span {
     font-size: 20px;
     margin-bottom: 16px;
     cursor: pointer;
+    font-weight: 600;
 }
 
 .tour-list-table {
@@ -1291,7 +1347,6 @@ input[type="checkbox"]:checked + label span {
 }
 
 .new-select.on {
-    border-bottom: 1px solid red;
     border-radius: 10px 10px 0 0;
 }
 
@@ -1450,6 +1505,7 @@ input[type="checkbox"]:checked + label span {
     margin-top: 34px;
 }
 .tour-autor-info-block {
+    cursor: pointer;
     margin-top: 20px;
 }
 
@@ -1701,13 +1757,1058 @@ input[type="checkbox"]:checked + label span {
     pointer-events: auto;
     border-radius: 16px;
 }
-.tour-slider .checkbox.fifth:checked ~ ul li:nth-child(5) {
+.tour-slider .checkbox.fifth:checked ~ ul li:nth-of-type(5) {
     opacity: 1;
     pointer-events: auto;
     border-radius: 16px;
 }
-.tour-slider .checkbox.sixth:checked ~ ul li:nth-child(6) {
+.tour-slider .checkbox.sixth:checked ~ ul li:nth-of-type(6) {
     opacity: 1;
     pointer-events: auto;
     border-radius: 16px;
+}
+
+/* Personal area */
+
+.personal-area-top-block {
+    height: 293px;
+    width: 580px !important;
+    background-color: #F7F7F7;
+    border-radius: 10px;
+    margin-top: 40px;
+    float: left;
+}
+
+.personal-area-top-block img {
+    width: 293px;
+    height: 293px;
+    float: left;
+    border-radius: 10px 0 0 10px;
+}
+
+.top-block-user-info {
+    margin: 24px 24px 24px 0;
+    display: inline-block;
+    line-height: 21px;
+}
+
+.personal-area-user-name {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 36.57px;
+    color: #000;
+    margin-bottom: -10px;
+    margin-top: -10px;
+}
+
+.personal-area-user-login {
+    font-size: 14px;
+    color: #000;
+    line-height: 24.38px;
+    margin-bottom: 5px;
+}
+
+.personal-area-user-date {
+    margin-left: 20px;
+    float: left;
+}
+
+.btn-subscribe-user-info {
+    width: 180px;
+    height: 46px;
+    color: white;
+    background-color: #FF820E;
+    border-radius: 10px;
+    border: 1px solid white;
+    font-weight: 600;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.personal-area-user-info > div {
+    float: left;
+    margin-right: 14px;
+}
+
+.personal-area-user-info > div > span {
+    font-size: 14px;
+    color: #000;
+    line-height: 24.38px;
+}
+
+.personal-area-user-info > div > p {
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.about-me {
+    width: 580px;
+    height: 293px;
+    background-color: #F7F7F7;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.about-me-caption {
+    margin-left: 24px;
+    margin-top: 17px;
+    margin-bottom: 0 !important;
+}
+
+.about-me-text {
+    margin: 0 24px;
+    font-size: 14px;
+    line-height: 17.07px;
+}
+
+.user-photo {
+    background-color: #F7F7F7;
+    border-radius: 10px;
+    height: 291px;
+}
+
+.user-routes-info {
+    margin-left: 24px;
+}
+
+.user-route-card {
+    border-bottom: 1px solid #B6B6B6;
+    width: 435px;
+    margin-bottom: 10px;
+}
+
+.user-routes-table {
+    margin-top: 30px;
+}
+
+.user-route-card img {
+    width: 140px;
+    height: 115px;
+    border-radius: 10px;
+    float: left;
+}
+
+.user-route-card-caption {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    color: #000000;
+    margin-left: 15px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.user-route-card-description {
+    font-size: 14px;
+    line-height: 17px;
+    margin-left: 15px;
+    display: inline-block;
+    width: 276px;
+    margin-bottom: 10px;
+}
+
+.user-routes-caption {
+    margin-top: 40px;
+    font-size: 30px;
+    line-height: 10px;
+}
+
+.personal-area-edit-button {
+    display: inline-block;
+    margin-left: 454px;
+}
+
+.btn-edit-personal-area {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    display: inline-block;
+    width: 232px;
+    height: 46px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 11px 50px 11px 20px;
+    background-image: url(./img/personal-area/edit.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 188px 13px;
+    background-color: white;
+}
+
+.user-photo-area {
+    margin-left: 24px;
+}
+
+.user-photo-area > a img{
+    margin-right: 17px;
+    width: 210px;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.user-more-photo {
+    padding-top: 20px;
+    margin-left: 24px;
+}
+
+.user-photo-caption {
+    float: left;
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.38px;
+    color: #000;
+    margin-right: 765px;
+}
+
+.btn-more-photo {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    width: 169px;
+    height: 39px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    margin-bottom: 24px;
+}
+
+.user-photoalbum {
+    width: 1180px;
+    margin-bottom: 100px;
+}
+
+.user-photoalbum-caption {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+    margin-bottom: 30px;
+}
+
+.user-photoalbum-area > a img{
+    margin-right: 11px;
+    margin-bottom: 15px;
+    width: 280px;
+    height: 280px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.btn-personal-area-see-more {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 230px;
+    height: 46px;
+    background-color: white;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+
+.user-route-block {
+    width: 380px;
+    height: 626px;
+    background-color: #F7F7F7;
+    border-radius: 10px;
+    margin: 18px 18px 0 0;
+}
+
+.user-route-second-block {
+    width: 356px;
+    margin-left: 20px;
+}
+
+.user-route-user-name-block {
+    display: flex;
+    align-items: flex-end;
+    font-size: 14px;
+    margin-top: 176px;
+    margin-left: 14px;
+    position: absolute;
+    z-index: 100;
+}
+
+.user-route-user-name-block img {
+    width: 40px;
+    height: 40px;
+}
+
+.user-route-user-name {
+    word-wrap: break-word;
+    max-width: 90px;
+    color: white;
+    font-weight: 700;
+    margin-left: 6px;
+}
+
+.user-route-image img {
+    object-fit: cover;
+    width: 332px;
+    height: 205px;
+    border: none;
+    border-radius: 10px;
+    position: relative;
+    margin: 24px 24px 0 4px;
+}
+
+.user-route-grad-image {
+    position: absolute;
+    z-index: 99;
+    margin-top: -57px;
+    margin-left: 4px;
+}
+
+.user-route-grad-image img {
+    width: 332px;
+}
+
+.user-route-second-block-button {
+    width: 356px;
+    margin-top: 10px;
+    margin-bottom: 75px;
+}
+
+.user-route-cost {
+    position: relative;
+    float: left;
+    font-size: 38px;
+    font-weight: 400;
+    height: 49px;
+    width: 137px;
+    margin-left: 4px;
+}
+
+.user-route-route-evaluation {
+    font-size: 14px;
+    color: white;
+    margin-bottom: -3px;
+    margin-left: 5px;
+}
+
+.user-route-btn-favorites {
+    width: 46px;
+    height: 46px;
+    border: 1px solid #1A1919;
+    border-radius: 10px;
+    float: left;
+    background-image: url(./img//icons/favorites-tour-list1.png);
+    margin: 5px 10px 0 10px;
+    float: left;
+    background-image: url(./img/icons/like-avourites.svg);
+    background-repeat: no-repeat;
+    background-position: 9px 12px;
+    background-size: auto;
+}
+
+.user-route-btn-favorites:hover {
+    background-image: url(./img//icons/favorites-tour-list.png);
+    background-image: url(./img/icons/like-favourites-active.svg);
+    background-repeat: no-repeat;
+    background-position: 9px 12px;
+    background-size: auto;
+}
+
+.user-route-btn-favorites:focus {
+    background-image: url(./img//icons/favorites-tour-list.png);
+    background-image: url(./img/icons/like-favourites-active.svg);
+    background-repeat: no-repeat;
+    background-position: 9px 12px;
+    background-size: auto;
+}
+
+.user-route-btn-buy-tour {
+    position: absolute;
+    width: 130px;
+    height: 46px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+
+.user-route-first-block {
+    margin: 0 24px;
+}
+
+.user-route-place-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 14px;
+    color: #000;
+    margin-bottom: 14px;
+}
+
+.user-route-description-text {
+    height: 143px;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.user-route-bottom-block * {
+    font-size: 14px;
+    color: #000;
+}
+
+.user-route-bottom-block>div {
+    float: left;
+    margin-right: 23px;
+}
+
+.user-route-bottom-block>div>span {
+    font-weight: 600;
+}
+
+.user-route-rating-mini {
+    display: inline-block;
+    margin-left: 0px;
+	font-size: 0;
+}
+
+.user-route-rating-mini span {
+	padding: 0;
+	font-size: 21px;
+	line-height: 1;
+	color: lightgrey;
+}
+
+.user-route-rating-mini > span:before {
+	content: '★';
+}
+
+.user-route-rating-mini > span.active {
+	color: gold;
+}
+
+/* Favourites */
+
+.favorites-block {
+    width: 380px;
+    height: 626px;
+    background-color: #F7F7F7;
+    border-radius: 10px;
+    margin: 18px 18px 0 0;
+}
+
+.favorites-second-block {
+    width: 356px;
+    margin-left: 20px;
+}
+
+.favorites-user-name-block {
+    display: flex;
+    align-items: flex-end;
+    font-size: 14px;
+    margin-top: 176px;
+    margin-left: 14px;
+    position: absolute;
+    z-index: 100;
+}
+
+.favorites-user-name-block img {
+    width: 40px;
+    height: 40px;
+}
+
+.favorites-user-name {
+    word-wrap: break-word;
+    max-width: 90px;
+    color: white;
+    font-weight: 700;
+    margin-left: 6px;
+}
+
+.favorites-image img {
+    object-fit: cover;
+    width: 332px;
+    height: 205px;
+    border: none;
+    border-radius: 10px;
+    position: relative;
+    margin: 24px 24px 0 4px;
+}
+
+.favorites-grad-image {
+    position: absolute;
+    z-index: 99;
+    margin-top: -57px;
+    margin-left: 4px;
+}
+
+.favorites-grad-image img {
+    width: 332px;
+}
+
+.favorites-second-block-button {
+    width: 356px;
+    margin-top: 10px;
+    margin-bottom: 75px;
+}
+
+.favorites-cost {
+    position: relative;
+    float: left;
+    font-size: 38px;
+    font-weight: 400;
+    height: 49px;
+    width: 137px;
+    margin-left: 4px;
+}
+
+.favorites-route-evaluation {
+    font-size: 14px;
+    color: white;
+    margin-bottom: -3px;
+    margin-left: 5px;
+}
+
+.favorites-btn-favorites {
+    width: 46px;
+    height: 46px;
+    border: 1px solid #1A1919;
+    border-radius: 10px;
+    float: left;
+    background-image: url(./img//icons/favorites-tour-list1.png);
+    margin: 5px 10px 0 10px;
+    float: left;
+    background-image: url(./img/icons/like-avourites.svg);
+    background-repeat: no-repeat;
+    background-position: 9px 12px;
+    background-size: auto;
+}
+
+.favorites-btn-favorites:hover {
+    background-image: url(./img//icons/favorites-tour-list.png);
+    background-image: url(./img/icons/like-favourites-active.svg);
+    background-repeat: no-repeat;
+    background-position: 9px 12px;
+    background-size: auto;
+}
+
+.favorites-btn-favorites:focus {
+    background-image: url(./img//icons/favorites-tour-list.png);
+    background-image: url(./img/icons/like-favourites-active.svg);
+    background-repeat: no-repeat;
+    background-position: 9px 12px;
+    background-size: auto;
+}
+
+.favorites-btn-buy-tour {
+    position: absolute;
+    width: 130px;
+    height: 46px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+
+.favorites-first-block {
+    margin: 0 24px;
+}
+
+.favorites-place-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 14px;
+    color: #000;
+    margin-bottom: 14px;
+}
+
+.favorites-description-text {
+    height: 143px;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.favorites-bottom-block * {
+    font-size: 14px;
+    color: #000;
+}
+
+.favorites-bottom-block>div {
+    float: left;
+    margin-right: 23px;
+}
+
+.favorites-bottom-block>div>span {
+    font-weight: 600;
+}
+
+.favorites-rating-mini {
+    display: inline-block;
+    margin-left: 0px;
+	font-size: 0;
+}
+
+.favorites-rating-mini span {
+	padding: 0;
+	font-size: 21px;
+	line-height: 1;
+	color: lightgrey;
+}
+
+.favorites-rating-mini > span:before {
+	content: '★';
+}
+
+.favorites-rating-mini > span.active {
+	color: gold;
+}
+
+.btn-favorites-see-more {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 230px;
+    height: 46px;
+    background-color: white;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+
+/* Purchased routes */
+
+.purchased-routes-block {
+    width: 380px;
+    height: 626px;
+    background-color: #F7F7F7;
+    border-radius: 10px;
+    margin: 18px 18px 0 0;
+}
+
+.purchased-routes-second-block {
+    width: 356px;
+    margin-left: 20px;
+}
+
+.purchased-routes-user-name-block {
+    display: flex;
+    align-items: flex-end;
+    font-size: 14px;
+    margin-top: 176px;
+    margin-left: 14px;
+    position: absolute;
+    z-index: 100;
+}
+
+.purchased-routes-user-name-block img {
+    width: 40px;
+    height: 40px;
+}
+
+.purchased-routes-user-name {
+    word-wrap: break-word;
+    max-width: 95px;
+    color: white;
+    font-weight: 700;
+    margin-left: 6px;
+}
+
+.purchased-routes-image img {
+    object-fit: cover;
+    width: 332px;
+    height: 205px;
+    border: none;
+    border-radius: 10px;
+    position: relative;
+    margin: 24px 24px 0 0;
+}
+
+.purchased-routes-grad-image {
+    position: absolute;
+    z-index: 99;
+    margin-top: -57px;
+}
+
+.purchased-routes-grad-image img {
+    width: 332px;
+}
+
+.purchased-routes-second-block-button {
+    width: 356px;
+    margin-top: 10px;
+    margin-bottom: 75px;
+}
+
+.purchased-routes-route-evaluation {
+    font-size: 14px;
+    color: white;
+    margin-bottom: -3px;
+    margin-left: 5px;
+}
+
+.purchased-routes-btn-view-route {
+    position: absolute;
+    width: 332px;
+    height: 46px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.purchased-routes-first-block {
+    margin: 0 24px;
+}
+
+.purchased-routes-place-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 14px;
+    color: #000;
+    margin-bottom: 14px;
+}
+
+.purchased-routes-description-text {
+    height: 143px;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.purchased-routes-bottom-block * {
+    font-size: 14px;
+    color: #000;
+}
+
+.purchased-routes-bottom-block>div {
+    float: left;
+    margin-right: 23px;
+}
+
+.purchased-routes-bottom-block>div>span {
+    font-weight: 600;
+}
+
+.purchased-routes-rating-mini {
+    display: inline-block;
+    margin-left: 0px;
+	font-size: 0;
+}
+
+.purchased-routes-rating-mini span {
+	padding: 0;
+	font-size: 19px;
+	line-height: 1;
+	color: lightgrey;
+}
+
+.purchased-routes-rating-mini > span:before {
+	content: '★';
+}
+
+.purchased-routes-rating-mini > span.active {
+	color: gold;
+}
+
+.btn-purchased-routes-see-more {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 230px;
+    height: 46px;
+    background-color: white;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+
+/* creating tour */
+
+.creating-tour-preview {
+    margin-top: 40px;
+}
+
+.creating-tour-preview-area {
+    margin-top: 30px;
+    /* width: 680px; */
+}
+
+.preview-area-caption {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    line-height: 24px;
+    margin-bottom: 10px;
+    float: left;
+    /* margin-right: 290px; */
+}
+
+.preview-area-caption-param-route {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    line-height: 24px;
+    margin-bottom: 10px;
+    float: left;
+    margin-right: 310px;
+}
+
+.preview-area-caption-param {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+
+.preview-area-caption-max-sym {
+    font-size: 14px;
+    text-align: end;
+}
+
+.preview-area-tour-name input {
+    margin-bottom: 30px;
+    width: 680px;
+    height: 46px;
+    background-color: #F7F7F7;
+    border: none;
+    border-radius: 10px;
+}
+
+.preview-area-short-description textarea {
+    margin-bottom: 30px;
+    width: 680px;
+    height: 188px;
+    background-color: #F7F7F7;
+    border: none;
+    border-radius: 10px;
+    resize: none;
+}
+
+.preview-area-select {
+    display: block;
+    border-radius: 10px;
+    width: 63px;
+    height: 29px;
+    background-color: #F7F7F7;
+    appearance: none;
+    position: relative;
+}
+
+.new-preview-area-select {
+    position: relative;
+    border: 1px solid #ebebeb;
+    border-radius: 10px;
+    padding: 2px 18px;
+    cursor: pointer;
+    user-select: none;
+    color: black;
+}
+
+.new-preview-area-select__list {
+    position: absolute;
+    top: 28px;
+    left: 0;
+    border: 1px solid #ebebeb;
+    border-radius: 0 0 10px 10px;
+    border-top: 1px solid #ebebeb;
+    cursor: pointer;
+    width: 100%;
+    z-index: 99;
+    background: #F7F7F7;
+    user-select: none;
+}
+
+.new-preview-area-select__list.on {
+    display: block;
+}
+
+.new-preview-area-select__item span {
+    display: block;
+    padding: 10px 15px;
+}
+
+.new-preview-area-select__item span:hover {
+    color: #1ABAA6;
+}
+
+.new-preview-area-select:after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 4px;
+    position: absolute;
+    right: 14px;
+    top: 13px;
+    background: url("./img/icons/Arrows.png") no-repeat right center / cover;
+    opacity: 0.6;
+
+    -webkit-transition: all .27s  ease-in-out;
+        -o-transition: all .27s ease-in-out;
+            transition: all .27s ease-in-out;
+
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+}
+
+.new-preview-area-select.on {
+    border-radius: 10px 10px 0 0;
+}
+
+.new-preview-area-select.on:after {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+         -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+
+.preview-area-tour-params {
+    display: flex;
+}
+
+.preview-area-tour-params > div > p{
+    margin-bottom: 5px;
+}
+
+.preview-area-tour-time {
+    width: 144px;
+    height: 30px;
+    background-color: #F7F7F7;
+    border-radius: 10px;
+    border: 1px solid #ebebeb;
+    margin-right: 10px;
+    font-size: 14px;
+    padding: 6px 10px 6px 18px;
+}
+
+.preview-area-tour-price {
+    margin-left: 144px;
+    margin-top: 5px;
+}
+
+.preview-area-tour-price input {
+    width: 138px;
+    height: 50px;
+    background-color: #F7F7F7;
+    border-radius: 10px;
+    border: 1px solid #ebebeb;
+    padding: 8px 3px 5px 18px;
+    font-size: 30px;
+}
+
+.preview-area-tour-photo {
+    margin-top: 30px;
+    padding-left: 11px;
+}
+
+div#drop-zone {
+    position: absolute;
+    height: 251px;
+    width: 480px;
+    border-radius: 10px;
+    z-index: 6;
+}
+  
+div#drop-zone:hover {
+    background-color: #ebebeb33;
+    cursor: move;
+    z-index: 8;
+    background-image: url(./img/icons/creating-tour-img1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+  
+div#content {
+    overflow: hidden;
+    border-radius: 10px;
+    position: absolute;
+    top: 34px;
+    z-index: 5;
+    height: 251px;
+    width: 480px;
+    background-color: #F7F7F7;
+    background-image: url(./img/icons/creating-tour-img1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.preview-photo-buttons {
+    margin-top: 394px;
+    text-align: end;
+}
+
+.preview-button-save {
+    width: 145px;
+    height: 46px;
+    border-radius: 10px;
+    background-color: #FF7A00;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-left: 20px;
+}
+
+.preview-button-cancel {
+    width: 142px;
+    height: 46px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: white;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.file-upload {
+    position: absolute;
+    border-radius: 10px;
+    width: 480px;
+    height: 251px;
+    opacity: 0;
+}
+
+.file-upload:hover {
+    background-color: #ebebeb;
+}
+
+.creating-tour-list {
+    margin-top: 80px;
+}
+
+.creating-tour-area {
+    margin-top: 40px;
+}
+
+.tox-tinymce {
+    height: 600px !important;
+}
+
+.creating-tour-map {
+    margin: 80px auto;
+}
+
+.creating-tour-map-area {
+    width: 1180px;
+    height: 475px;
+    border-radius: 10px;
+    background-color: #1ABAA6;
+    margin-top: 40px;
 }
