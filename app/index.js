@@ -10,10 +10,6 @@
                 templateUrl: 'index.html',
                 controller: 'mainController'
             })
-            .when('/tours', {
-                templateUrl: 'tour-list.html',
-                controller: 'tourController'
-            })
             .otherwise({
                 redirectTo: '/'
             });
@@ -104,5 +100,14 @@ angular.module('WannaGo').controller('mainController', function ($scope, $rootSc
             }, function errorCallback(response) {
                 alert('UNAUTHORIZED');
             });
+    }
+
+    $scope.closeModalWindow = function () {
+        console.log($rootScope.isUserLoggedIn == false);
+        if ($rootScope.isUserLoggedIn == true) {
+            $("#myModal").modal("show");
+        } else {
+            $("#myModal").modal("hide");
+        }
     }
 });
