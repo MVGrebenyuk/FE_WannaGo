@@ -103,33 +103,31 @@
                         <button class="btn btn-submit tour-list-btn-find-tours" data-toggle="modal" data-target="#myModal">Поиск</button>
                     </div>
                 </div>
-                <table class="col-md-9 tour-list-table">
-                    <tbody>
-                        <tr>
+                <table class="col-md-9 tour-list-table" ng-controller="tourController">
+                        <tbody>
+                        <tr ng-repeat="t in tripsList">
                             <td>
                                 <div class="tour-list-block">
                                     <div class="tour-list-first-block">
-                                            <div class="place-name">Горная Аджария</div>
-                                            <div class="tour-description-text">Как принято считать, диаграммы связей могут быть призваны к ответу. А также ключевые особенности структуры проекта формируют глобальную экономическую сеть.
-                                                Лишь сделанные на базе интернет-аналитики выводы представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть смешаны.
-                                            </div>
+                                            <div class="place-name">{{t.title}}</div>
+                                            <div class="tour-description-text">{{t.shortTitle}}</div>
                                         <div class="tour-list-bottom-block">
                                             <div><span>Время в пути</span>
                                                 <div class="bottom-block-info">
                                                     <img src="./img/icons/tour-list-1.png">
-                                                    <p>8 дней</p>
+                                                    <p>{{t.duration}}</p>
                                                 </div>
                                             </div>
                                             <div><span>Расстояние</span>
                                                 <div class="bottom-block-info">
                                                     <img src="./img/icons/tour-list-2.png">
-                                                    <p>120 км.</p>
+                                                    <p>{{t.length}}</p>
                                                 </div>
                                             </div>
                                             <div><span>Сложность</span>
                                                 <div class="bottom-block-info">
                                                     <img src="./img/icons/tour-list-3.png">
-                                                    <p>2/5</p>
+                                                    <p>{{t.level}}/5</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -137,7 +135,7 @@
                                     <div class="tour-list-second-block">
                                         <div class="user-name">
                                             <img src="./img/icons/google.png">
-                                            <div class="tour-list-user-name">Александр Новиков</div>
+                                            <div class="tour-list-user-name">{{t.author.login}}</div>
                                         </div>
                                         <div class="tour-list-image">
                                             <img src="img/slider-img/1.jpg">
@@ -146,7 +144,7 @@
                                             <img src="img//tour-list/tour-list-image2.png">
                                         </div>
                                         <div class="tour-list-second-block-button">
-                                            <div class="tour-list-cost">95976</div>
+                                            <div class="tour-list-cost">{{t.price}}</div>
                                             <button class="tour-list-btn-favorites"></button>
                                             <button class="btn btn-submit tour-list-btn-buy-tour" data-toggle="modal" data-target="#myModal">Купить</button>
                                         </div>
@@ -160,6 +158,8 @@
         </div>
     </section>
     <!-- ****** Blog Area End ****** -->
+    <script src="index.js"></script>
+    <script src="js/tour.js"></script>
 
     <script src="index.js"></script>
     <script src="tour-list.js"></script>
