@@ -100,6 +100,11 @@ CSS
     color: white;
 }
 
+.container-btm-form-registrathion {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 .modal-header {
     border-bottom: 0;
 }
@@ -802,18 +807,22 @@ p {
 
 .inner-container {
     border-radius: 10px;
-    background: #EDEDED;
+    background: #F7F7F7;;
 }
 
 .tour-present {
+    position: relative;
     margin-top: 24px;
 }
 
 .tour-heading {
-    margin-bottom: 20px;
     font-weight: 600;
     font-size: 40px;
     line-height: 49px;
+}
+
+.tour-hero-characteristics {
+    padding: 0;
 }
 
 .tour-hero-description {
@@ -832,6 +841,9 @@ p {
 }
 
 .tour-hero-maps {
+    position: relative;
+    right: 0;
+    top: 0;
     max-width: 456px;
     padding: 0;
     align-items: flex-start;
@@ -843,26 +855,21 @@ p {
     padding: 0 15px 0 0;
 }
 
-.tour-hero-payment {
-    padding-right: 42px;
-    padding-left: 9px;
-}
-
 .tour-hero-maps-image-bottom {
     padding: 0 26px 0 0;
     margin-top: 10px;
 }
 
 .tour-hero-charactiristics-and-payment {
-    margin-top: 20px;
     padding: 0;
     align-items: center;
 }
 
 .tour-characteristics {
-    min-width: 600px;
+    min-width: 340px;
+    padding: 0;
     border-radius: 10px;
-    margin-left: 9px;
+    margin: 20px 0 24px 0;
 }
 
 .tour-hero-maps-image-bot {
@@ -909,6 +916,21 @@ p {
     background-image: url('./img/icons/cost.svg');
 }
 
+.route-description {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+
+}
+
+.tour-hero-payment {
+    margin-top: 20px;
+    padding: 0;
+}
+
 .tour-hero-payment-block {
     align-items: center;
 }
@@ -919,6 +941,10 @@ p {
     line-height: 49px;
     text-align: right;
     color: #000000;
+}
+
+.tour-hero-price-block {
+    margin-right: auto;
 }
 
 .tour-list-btn-favorites {
@@ -1049,6 +1075,159 @@ input[type="checkbox"]:checked + label span {
     border-radius: 10px;
     position: relative;
     margin: 24px 24px 88px 0;
+}
+
+/* Личный кабинет */
+
+.container-lk {
+    width: 800px;
+}
+
+.section-personal-account-info {
+    padding: 0%;
+}
+
+.personal-account-form input {
+    min-height: 60px;
+    padding-left: 22px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    border-radius: 10px;
+    color: #000000;
+    background: #F7F7F7;
+}
+.personal-account-form input::placeholder {
+    margin: auto;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    border-radius: 10px;
+    color: #000000;
+}
+
+.personal-account-heading {
+    font-weight: 600;
+    margin-top: 20px;
+    font-size: 40px;
+    line-height: 49px;
+    color: #000000
+}
+
+.personal-account-label {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.personal-account-label-name {
+    max-width: 180px;
+    border: none;
+}
+
+.personal-account-label-surname {
+    min-height: 60px;
+    width: 280px;
+    border: none;
+}
+
+.personal-account-label-date {
+    width: 180px;
+    min-height: 60px;
+    border: none;
+}
+
+.personal-account-label-city {
+    min-height: 60px;
+    width: 280px;
+    border: none;
+}
+
+.personal-account-label-about-us {
+    padding-left: 15px;
+    margin-top: 46px;
+}
+
+/* убрали календарь у type date */
+input[type=date]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+
+.header-section-pa {
+    margin-top: 36px;
+}
+
+.middle-section-pa {
+    margin-top: 33px;
+}
+
+.avatar {
+    margin-top: 24px;
+    margin-left: 60px;
+}
+
+.personal-account-label-avatar {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    color: #000000;
+}
+
+.form-control-lk {
+    min-width: 800px;
+    min-height: 190px;
+    padding: 24px 36px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    outline: none;
+    -moz-appearance: none;
+    background: #F7F7F7;
+    border-radius: 10px;
+    color: #000000;
+    overflow: hidden;
+    resize: none;
+    border: none; /* указание этого свойства также удалит обводку в FireFox */
+}
+
+.avatar-lk {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+}
+
+.avatar-hover {
+    position: absolute;
+    display: block;
+    top: 70px;
+    left: 50px;
+    opacity: 0;
+    width: 130px;
+    height: 130px;
+    background-image: url(./img/icons/avatar-lk-hover.svg);
+}
+
+.avatar-hover:hover {
+    opacity: 1;
+}
+
+.discriotion-lk {
+    position: relative;
+    margin: 0px;
+    margin-bottom: 90px;
+}
+
+.discriotion-lk-info {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    text-align: right;
 }
 
 /* --------------------
@@ -1276,14 +1455,18 @@ input[type="checkbox"]:checked + label span {
     border: none;
 
 }
+.reviews-cart-autor-block  {
+    margin: 0 5px;
+}
 
 .heading-reviews {
     margin-top: 41px;
+    padding: 0 15px;
 }
 
 .reviews-cart {
     margin-top: 30px;
-    padding: 0;
+    padding: 0 15px;
 
 }
 
@@ -1398,18 +1581,22 @@ input[type="checkbox"]:checked + label span {
     margin-left: 9px;
 }
 
-.tour-autor-block {
-    padding: 0 26px 0 0;
-}
-
 .section-tour-heading {
     font-weight: 400;
     font-size: 30px;
     line-height: 37px;
 }
 
+.section-tour-heading-small {
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
 .section-rating-and-author {
-    margin-top: 34px;
+    margin-top: 20px;
 }
 .tour-autor-info-block {
     margin-top: 20px;
@@ -1423,6 +1610,8 @@ input[type="checkbox"]:checked + label span {
 }
 
 .rating-descripthion {
+    padding-left: 6px;
+    margin: auto 0;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
@@ -1431,29 +1620,49 @@ input[type="checkbox"]:checked + label span {
 
 .autor-fhoto {
     display: inline-block;
-    width: 60px;
-    height: 60px;
+    min-width: 156px;
+    height: 156px;
     border-radius: 50%;
-    background-image: url('./img/icons/autor-photo.png');
+    background-size: cover;
+    background-image: url('./img/icons/autor-photo-big.png');
     background-repeat: no-repeat;
 }
 
+.autor-naming {
+    margin-left: 20px;
+}
+
 .autor-name {
-    max-width: 80px;
-    margin-left: 10px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    margin: auto 10px auto 0;
+    font-size: 30px;
     vertical-align: middle;
-    line-height: 24px;
+    line-height: 37px;
     color: #000000;
 
+}
+
+.autor-virification {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: auto 0;
+    background-image: url(./img/icons/Icon-virification.svg);
+    background-repeat: no-repeat;
 }
 
 .autor-rating {
     margin-top: 10px;
     margin-bottom: 5px;
+}
+
+.right-column {
+    position: sticky;
+    height: 100%;
+    top: 0;
+    bottom: 0;
 }
 
 /*  Звезды рейтинга  */
@@ -1493,7 +1702,7 @@ input[type="checkbox"]:checked + label span {
 
 .rating-mini {
 	display: inline-block;
-    margin-left: 0px;
+    margin: auto 0;
 	font-size: 0;
 }
 .rating-mini span {
@@ -1510,6 +1719,10 @@ input[type="checkbox"]:checked + label span {
 }
 
 /* Tour slider */
+
+.slider-block {
+    padding-top: 24px;
+}
 
 .tour-slider {
     position: relative;
