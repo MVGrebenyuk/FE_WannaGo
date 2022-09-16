@@ -10,12 +10,8 @@
                 templateUrl: 'index.html',
                 controller: 'mainController'
             })
-            .when('/wannago', {
-                templateUrl: 'tour-list.html',
-                controller: 'mainController'
-            })
             .otherwise({
-                redirectTo: '/wannago'
+                redirectTo: '/'
             });
     }
 
@@ -28,6 +24,10 @@
 
 angular.module('WannaGo').controller('mainController', function ($scope, $rootScope, $http, $localStorage) {
     const contextPath = 'http://localhost:8189/wannago/api/v1';
+
+    $scope.trips = [{name:'John', age:25},
+        {name:'Mary', age:40},
+        {name:'Peter', age:85}]
 
     $scope.tryToAuth = function () {
         $http.post('http://localhost:8189/wannago/auth', $scope.user)
@@ -69,6 +69,15 @@ angular.module('WannaGo').controller('mainController', function ($scope, $rootSc
         }
     };
 
+    $scope.saveImage = function (){
+        var image = $scope.myFile.file;
+        alert($scope.myFile.file)
+        $http.post("http://localhost:8189/wannago/addAvatar", image)
+            .then(function successCallback(response) {
+                alert(response);
+        })
+    };
+
     $scope.clearUser = function () {
         delete $localStorage.springWebUser;
         delete $localStorage.cartName;
@@ -91,5 +100,14 @@ angular.module('WannaGo').controller('mainController', function ($scope, $rootSc
             }, function errorCallback(response) {
                 alert('UNAUTHORIZED');
             });
+    }
+
+    $scope.closeModalWindow = function () {
+        console.log($rootScope.isUserLoggedIn == false);
+        if ($rootScope.isUserLoggedIn == true) {
+            $("#myModal").modal("show");
+        } else {
+            $("#myModal").modal("hide");
+        }
     }
 });

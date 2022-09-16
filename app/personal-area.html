@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="WannaGo">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Title -->
+        <title>WannaGo</title>
+
+        <!-- Favicon -->
+        <link rel="icon" href="img/core-img/favicon.ico">
+
+        <!-- Core Stylesheet -->
+        <link href="style.css" rel="stylesheet">
+
+        <!-- Responsive CSS -->
+        <link href="css/responsive/responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./components/jquery-ui/jquery-ui.min.css">
+        <link rel="stylesheet" href="./css/dialog.css">
+        <!-- Angular scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-route.min.js"></script>
+    </head>
+
+    <!-- ****** Body ****** -->
+    <div class="container">
+        <ul class="breadcrumbs">
+            <li><a href="./index.html">Главная</a></li>
+            <li><a href="./tour-list.html">Туры</a></li>
+            <li><a href="./touring.html">Горная Аджария</a></li>
+            <li>Иван Иванов</li>
+        </ul>
+    </div>
+    <body onload="gallery()">
+    <section class="personal-area">
+        <div class="container">
+            <div>
+                <h2 class="tour-catalog">Профиль пользователя</h2>
+                <div class="personal-area-edit-button">
+                    <button class="btn-edit-personal-area">Редактировать</button>
+                </div>
+            </div>
+            <div class="personal-area-top-block">
+                <img src="./img/personal-area/user-ava.png">
+                <div class="top-block-user-info">
+                    <div class="personal-area-user-date">
+                        <p class="personal-area-user-name">Иван Иванов</p>
+                        <p class="personal-area-user-login">@login</p>
+                        <div class="personal-area-user-info">
+                            <div>
+                                <span>Подписчики</span>
+                                <p>10</p>
+                            </div>
+                            <div>
+                                <span>Подписки</span>
+                                <p>18</p>
+                            </div>
+                        </div>
+                        <div class="personal-area-user-info">
+                            <div>
+                                <span>Дата рождения</span>
+                                <p>01.01.1992</p>
+                            </div>
+                        </div>
+                        <div class="personal-area-user-info">
+                            <div>
+                                <span>Город</span>
+                                <p>Москва</p>
+                            </div>
+                        </div>
+                        <button class="btn-subscribe-user-info">Подписаться</button>
+                    </div>
+                </div>
+            </div>
+            <div class="about-me">
+                <h5 class="about-me-caption">О себе</h5>
+                <div class="about-me-text">
+                    Банальные, но неопровержимые выводы, а также сделанные на базе интернет-аналитики выводы, превозмогая сложившуюся непростую экономическую ситуацию, заблокированы в рамках своих собственных рациональных ограничений.
+                    Предварительные выводы неутешительны: постоянное информационно-пропагандистское обеспечение нашей деятельности, а также свежий взгляд на привычные вещи — безусловно открывает новые горизонты для новых принципов формирования материально-технической и кадровой базы. 
+                </div>
+            </div>
+            <!-- <div class="user-photo">
+                <div class="user-more-photo">
+                    <p class="user-photo-caption">Фото пользователя</p>
+                    <button class="btn-more-photo">Смотреть больше</button>
+                </div>
+                <div id="gallery" class="user-photo-area">
+                    <a title="photo 1" class="img" href="./img/slider-img/1.jpg"><img height="100" src="./img/slider-img/1.jpg"></a>
+                    <a title="photo 2" class="img" href="./img/slider-img/2.jpg"><img height="100" src="./img/slider-img/2.jpg"></a>
+                    <a title="last photo" class="img" href="./img/slider-img/3.jpg"><img height="100" src="./img/slider-img/3.jpg"></a>
+                    <a title="last photo" class="img" href="./img/slider-img/4.jpg"><img height="100" src="./img/slider-img/4.jpg"></a>
+                    <a title="last photo" class="img" href="./img/tour-img/m1.jpg"><img height="100" src="./img/tour-img/m1.jpg"></a>
+                </div>
+            </div> -->
+            <div class="user-routes">
+                <h5 class="user-routes-caption">Маршруты автора</h5>
+                <table class="tour-list-table">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="user-route-block">
+                                    <div class="user-route-second-block">
+                                        <div class="user-route-user-name-block">
+                                            <img src="./img/icons/google.png">
+                                            <div class="user-route-user-name">Александр Новиков</div>
+                                            <div class="user-route-rating-mini">
+                                                <span class="active"></span>
+                                                <span class="active"></span>
+                                                <span class="active"></span>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                            <p class="user-route-route-evaluation">187 оценок</p>
+                                        </div>
+                                        <div class="user-route-image">
+                                            <img src="img/slider-img/1.jpg">
+                                        </div>
+                                        <div class="user-route-grad-image">
+                                            <img src="img//tour-list/tour-list-image2.png">
+                                        </div>
+                                        <div class="user-route-second-block-button">
+                                            <div class="user-route-cost">10000</div>
+                                            <button class="user-route-btn-favorites"></button>
+                                            <button class="btn btn-submit user-route-btn-buy-tour" data-toggle="modal" data-target="#myModal">Купить</button>
+                                        </div>
+                                    </div>
+                                    <div class="user-route-first-block">
+                                        <div class="user-route-place-name">Горная Аджария</div>
+                                        <div class="user-route-bottom-block">
+                                            <div><span>Время в пути</span>
+                                                <div class="bottom-block-info">
+                                                    <img src="./img/icons/tour-list-1.png">
+                                                    <p>8 дней</p>
+                                                </div>
+                                            </div>
+                                            <div><span>Расстояние</span>
+                                                <div class="bottom-block-info">
+                                                    <img src="./img/icons/tour-list-2.png">
+                                                    <p>120 км</p>
+                                                </div>
+                                            </div>
+                                            <div><span>Сложность</span>
+                                                <div class="bottom-block-info">
+                                                    <img src="./img/icons/tour-list-3.png">
+                                                    <p>2/5</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="user-route-description-text">Как принято считать, диаграммы связей могут быть призваны к ответу. А также ключевые особенности структуры проекта формируют глобальную экономическую сеть.
+                                            Лишь сделанные на базе интернет-аналитики выводы представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть смешаны.
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="personal-area-see-more text-center">
+                    <button class="btn-personal-area-see-more">Смотреть больше</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    </body>
+    <!-- ****** Blog Area End ****** -->
+
+    <script src="index.js"></script>
+    <script src="tour-list.js"></script>
+    <!-- Jquery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap-4 js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins JS -->
+    <script src="js/others/plugins.js"></script>
+    <!-- Active JS -->
+    <script src="js/tour-list.js"></script>
+    <!-- Header and Modal JS -->
+    <script src="js/header.js"></script>
+    <!-- Footer JS -->
+    <script src="js/footer.js"></script>
+    <!-- Jquery price-slider -->
+    <script src="./components/jquery-ui/jquery-ui.min.js"></script>
+
+	<script src="./js/gallery.js"></script>
+	<script src="./js/dialog.js"></script>
+    
+</body>
