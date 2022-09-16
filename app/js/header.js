@@ -147,7 +147,7 @@ var headerText = `
                                 </form>
                                 <div class="row"> 
                                     <div class="col-sm-12">
-                                        <div class="container-btm-form-registration"> 
+                                        <div class="container-btm-form-registration">
                                         <button type="submit" class="btn blt-login btn-submit btn-lg btn-block" ng-click="tryToRegistration()">Зарегистрироваться</button> 
                                         </div>
                                     </div> 
