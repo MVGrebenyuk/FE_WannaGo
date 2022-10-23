@@ -44,7 +44,7 @@ var headerText = `
                                             <div class="user-auth" ng-show="isUserLoggedIn()">
                                             <nav>
                                                 <ul class="topmenu">
-                                                <li><a href="" class="down"><img src='./img/icons/apple.png'>▼</a>
+                                                <li><a href="" class="down"><img src={{user.avatar}} width="50" height="50">▼</a>
                                                     <ul class="submenu">
                                                         <li><a href="./personal-area.html">Профиль</a></li>
                                                         <li><a href="">Мои туры</a></li>

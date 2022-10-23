@@ -33,14 +33,14 @@
         <li>Горная Аджария</li>
     </ul>
     </div>
-    <div class="container">
+    <div class="container" ng-controller="tourPageController">
         <div class="inner-container d-flex">
             <section class="section-tour-left col-md-7">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 d-flex tour-present">
                             <div class="col-md-12 tour-hero-description">
-                                <h2 class="tour-heading">Горная Аджария</h2>
+                                <h2 class="tour-heading">{{trip.title}}</h2>
                                     <div class="tour-hero-star-rating d-flex">
                                         <div class="rating-mini">
                                             <span class="active"></span>	
@@ -57,36 +57,30 @@
                                                 <div class="tour-characteristics-discription">Время в пути</div>
                                                 <div class="tour-characteristics-footer d-flex">
                                                     <span class=" tour-characteristics-icon tour-characteristics-icon-watch"></span>
-                                                    <div class="tour-characteristics-result">8 дней</div>
+                                                    <div class="tour-characteristics-result">{{trip.duration}}</div>
                                                 </div>
                                             </div>
                                             <div class="col-md-4 tour-characteristics-block">
                                                 <div class="tour-characteristics-discription">Расстояние</div>
                                                 <div class="tour-characteristics-footer  d-flex">
                                                     <span class="tour-characteristics-icon tour-characteristics-icon-point"></span>
-                                                    <div class="tour-characteristics-result">120 км.</div>
+                                                    <div class="tour-characteristics-result">{{trip.length}}</div>
                                                 </div>
                                             </div>
                                             <div class="col-md-4 tour-characteristics-block">
                                                 <div class="tour-characteristics-discription">Сложность</div>
                                                 <div class="tour-characteristics-footer  d-flex">
                                                     <span class="tour-characteristics-icon tour-characteristics-icon-level"></span>
-                                                    <div class="tour-characteristics-result">2/5</div>
+                                                    <div class="tour-characteristics-result">{{trip.level}}/5</div>
                                                 </div>
                                             </div>
                                         </div>  
                                     </div>
                                 </div>  
                             </div>
-                            <div class="col-md-5 tour-hero-payment d-flex justify-content-between">
-                                <div class="tour-hero-price-block">
-                                    <p class="tour-hero-price">98765</p>
-                                </div>
-                                <div class="tour-hero-payment-block">
-                                    <button class="tour-page-btn-favorites"></button>
-                                    <button class="buy btn-buy">Купить</button>
-                                </div>
+                        <div id="textDiv">
                         </div>
+                        <p></p>
                     </div>
                 </div>
                 <div class="container container-rating-and-author">
@@ -99,7 +93,7 @@
                                             <div class="autor-naming">
                                                 <h5 class="section-tour-heading-small">Автор маршрута</h3>
                                                     <div class="autor-name-and-virification d-flex">
-                                                        <p class="autor-name">Иван Иванов</p>
+                                                        <p class="autor-name">{{user.firstName + user.lastName}}</p>
                                                         <span class="autor-virification"></span>
                                                     </div>
                                                 <p class="description-paragraph-reviews">
@@ -203,7 +197,7 @@
                                   </div>
                                   <div class="col-md-12 tour-hero-payment d-flex">
                                       <div class="tour-hero-price-block">
-                                          <p class="tour-hero-price">1000 ₽</p>
+                                          <p class="tour-hero-price">{{trip.price}}</p>
                                       </div>
                                       <div class="tour-hero-payment-block">
                                           <button class="tour-list-btn-favorites"></button>
@@ -218,6 +212,7 @@
     </div>
 
     <script src="index.js"></script>
+    <script src="tourPageController.js"></script>
     <!-- Jquery-2.2.4 js -->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->

@@ -36,6 +36,7 @@
     <section class="tour-list">
         <div class="container">
             <h2 class="tour-catalog">Каталог туров</h2>
+            <a href="./create-route.html"><button class="btn btn-submit tour-list-btn-create-tour">Создать тур</button></a>
             <div class="row">
                 <div class="tour-list-filter col ml-3">
                     <div class="tour-list-filter-caption text-center">Поиск туров</div>
@@ -107,7 +108,7 @@
                         <tbody>
                         <tr ng-repeat="t in tripsList">
                             <td>
-                                <div class="tour-list-block">
+                                <a href="./touring.html?tourId={{t.id}}" ><div class="tour-list-block" >
                                     <div class="tour-list-first-block">
                                             <div class="place-name">{{t.title}}</div>
                                             <div class="tour-description-text">{{t.shortTitle}}</div>
@@ -134,22 +135,22 @@
                                     </div>
                                     <div class="tour-list-second-block">
                                         <div class="user-name">
-                                            <img src="./img/icons/google.png">
+                                            <img src={{user.avatar}}>
                                             <div class="tour-list-user-name">{{t.author.login}}</div>
                                         </div>
                                         <div class="tour-list-image">
-                                            <img src="img/slider-img/1.jpg">
+                                            <img src={{t.image}}>
                                         </div>
                                         <div class="tour-list-grad-image">
-                                            <img src="img//tour-list/tour-list-image2.png">
+                                            <img src="NONE">
                                         </div>
                                         <div class="tour-list-second-block-button">
                                             <div class="tour-list-cost">{{t.price}}</div>
                                             <button class="tour-list-btn-favorites"></button>
-                                            <button class="btn btn-submit tour-list-btn-buy-tour" data-toggle="modal" data-target="#myModal">Купить</button>
+                                            <button class="btn btn-submit tour-list-btn-buy-tour">Купить</button>
                                         </div>
                                     </div>
-                                </div>
+                                </div></a>
                             </td>
                         </tr>
                     </tbody>
@@ -160,9 +161,7 @@
     <!-- ****** Blog Area End ****** -->
     <script src="index.js"></script>
     <script src="js/tour.js"></script>
-
-    <script src="index.js"></script>
-    <script src="tour-list.js"></script>
+    <script src="js/tour-list.js"></script>
     <!-- Jquery-2.2.4 js -->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->

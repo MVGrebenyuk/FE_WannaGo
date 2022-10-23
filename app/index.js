@@ -10,6 +10,10 @@
                 templateUrl: 'index.html',
                 controller: 'mainController'
             })
+            .when('/personal', {
+                templateUrl: 'personal-area.html',
+                controller: 'lkController'
+            })
             .otherwise({
                 redirectTo: '/'
             });
@@ -102,6 +106,46 @@ angular.module('WannaGo').controller('mainController', function ($scope, $rootSc
             });
     }
 
+    $scope.simpleTest = function () {
+            var formData = new FormData();
+            formData.append("file", document.getElementById("file-uploader").files[0]);
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "http://localhost:8189/wannago/api/v1/trip/image");
+            xhr.send(formData);
+
+        xhr.onload = function() {
+            console.log(xhr.response)
+            if (xhr.status != 200) { // анализируем HTTP-статус ответа, если статус не 200, то произошла ошибка
+                alert(`Ошибка ${xhr.status}: ${xhr.statusText}`); // Например, 404: Not Found
+            } else { // если всё прошло гладко, выводим результат
+                $scope.trip.description = tinyMCE.activeEditor.getContent();
+                $scope.trip.image = xhr.response;
+                    $http.post('http://localhost:8189/wannago/api/v1/trip', $scope.trip)
+                        .then(function successCallback(response) {
+                            alert('Trip created ' + response.data.username);
+                        }, function errorCallback(response) {
+                            alert('Trip not created');
+                        });
+            }
+        };
+    }
+
+    $scope.getCurrentUser = function (){
+        if(!$localStorage.user) {
+            $http.get(contextPath + '/user')
+                .then(function successCallback(response) {
+                    $scope.user = response.data;
+                    $localStorage.user = $scope.user;
+                }, function errorCallback(response) {
+                    alert("Зарегистрируйтесь")
+                });
+        } else {
+            $scope.user = $localStorage.user;
+        }
+    }
+
+
     $scope.closeModalWindow = function () {
         console.log($rootScope.isUserLoggedIn == false);
         if ($rootScope.isUserLoggedIn == true) {
@@ -110,4 +154,11 @@ angular.module('WannaGo').controller('mainController', function ($scope, $rootSc
             $("#myModal").modal("hide");
         }
     }
+
+    $scope.saveId = function (id) {
+        console.log("id сохранен")
+        $localStorage.tripId = id;
+    }
+
+    $scope.getCurrentUser()
 });

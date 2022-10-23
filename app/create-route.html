@@ -47,7 +47,7 @@
         </div>
     </div>
 
-    <section class="creating-tour" ng-show="isUserLoggedIn()">
+    <section class="creating-tour" ng-show="isUserLoggedIn()" ng-controller="mainController">
         <div class="container">
             <div>
                 <h2 class="tour-catalog">Создание тура</h2>
@@ -59,12 +59,12 @@
                         <div class="preview-area-tour-name">
                             <p class="preview-area-caption">Название</p>
                             <p class="preview-area-caption-max-sym">*максимум 50 символов</p>
-                            <input class="preview-input-tour-name" maxlength="50">
+                            <input class="preview-input-tour-name" maxlength="50" ng-model="trip.title">
                         </div>
                         <div class="preview-area-short-description">
                             <p class="preview-area-caption">Краткое описание</p>
                             <p class="preview-area-caption-max-sym">*максимум 650 символов</p>
-                            <textarea class="preview-textarea" maxlength="650"></textarea>
+                            <textarea class="preview-textarea" maxlength="650" ng-model="trip.shortDescription"></textarea>
                         </div>
                         <div class="preview-area-route-options">
                             <p class="preview-area-caption-param-route">Параметры маршрута</p>
@@ -72,11 +72,11 @@
                             <div class="preview-area-tour-params">
                                 <div>
                                     <p>Время в пути</p>
-                                    <input class="preview-area-tour-time" placeholder="5 дней" type="number">
+                                    <input class="preview-area-tour-time" placeholder="5 дней" type="number" ng-model="trip.duration">
                                 </div>
                                 <div>
                                     <p>Расстояние</p>
-                                    <input class="preview-area-tour-time" placeholder="5 км" type="number">
+                                    <input class="preview-area-tour-time" placeholder="5 км" type="number" ng-model="trip.length">
                                 </div>
                                 <div>
                                     <p>Сложность</p>
@@ -89,7 +89,7 @@
                                     </select>
                                 </div>
                                 <div class="preview-area-tour-price">
-                                    <input class="oewq" placeholder="1000 ₽" type="number">
+                                    <input class="oewq" placeholder="200 ₽" type="number" ng-model="trip.price">
                                 </div>
                             </div>
                         </div>
@@ -98,15 +98,11 @@
                         <p class="preview-area-caption-param">Загрузите фото превью</p>
                         <div class="preview-photo">
                             <div id="drop-zone">
-                                <input type="file" name="file" id="file-uploader" accept=".jpg, .jpeg, .png" hidden>
+                                <input type="file" name="file" id="file-uploader" file-model = "myFile" accept=".jpg, .jpeg, .png" hidden>
                                 <label for="file-uploader" class="file-upload">Выберите файл</label>
                               </div>
                               <div id="content">
                               </div>
-                        </div>
-                        <div class="preview-photo-buttons">
-                            <button class="btn preview-button-cancel">Отменить</button>
-                            <button class="btn preview-button-save">Сохранить</button>
                         </div>
                     </div>
                 </div>
@@ -115,14 +111,17 @@
                 <h3>Страница машрута</h3>
                 <div class="creating-tour-area">
                     <form method="post">
-                        <textarea id="creating-tour-textarea"></textarea>
+                        <textarea id="creating-tour-textarea" ng-model="trip.description"></textarea>
                     </form>
                 </div>
+            </div>
+            <div class="preview-photo-buttons">
+                <button class="btn preview-button-cancel">Отменить</button>
+                <button class="btn preview-button-save" ng-click="simpleTest()">Сохранить</button>
             </div>
             <div class="creating-tour-map">
                 <h3>Создание карты</h3>
                 <div class="creating-tour-map-area">
-                    
                 </div>
             </div>
         </div>
