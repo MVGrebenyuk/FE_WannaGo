@@ -38,49 +38,50 @@
             <section class="section-tour-left col-md-7">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12 d-flex tour-present">
+                        <div class="col-md-12 tour-present">
                             <div class="col-md-12 tour-hero-description">
                                 <h2 class="tour-heading">{{trip.title}}</h2>
-                                    <div class="tour-hero-star-rating d-flex">
-                                        <div class="rating-mini">
-                                            <span class="active"></span>	
-                                            <span class="active"></span>    
-                                            <span class="active"></span>  
-                                            <span class="active"></span>    
-                                            <span></span>
+                                <!-- Описание сюда! -->
+                            </div>
+                            <div class="tour-hero-star-rating">
+                                <div class="rating-mini">
+                                    <span class="active"></span>
+                                    <span class="active"></span>
+                                    <span class="active"></span>
+                                    <span class="active"></span>
+                                    <span></span>
+                                </div>
+                                <p class="rating-descripthion">25 оценок</p>
+                            </div>
+                            <div class="col-md-7 tour-hero-characteristics">
+                                <div class="col-md-4 d-flex tour-characteristics">
+                                    <div class="col-md-4 tour-characteristics-block">
+                                        <div class="tour-characteristics-discription">Время в пути</div>
+                                        <div class="tour-characteristics-footer d-flex">
+                                            <span class=" tour-characteristics-icon tour-characteristics-icon-watch"></span>
+                                            <div class="tour-characteristics-result">{{trip.duration}}</div>
                                         </div>
-                                        <p class="rating-descripthion">25 оценок</p>
                                     </div>
-                                    <div class="col-md-7 tour-hero-characteristics">
-                                        <div class="col-md-4 d-flex tour-characteristics">
-                                            <div class="col-md-4 tour-characteristics-block">
-                                                <div class="tour-characteristics-discription">Время в пути</div>
-                                                <div class="tour-characteristics-footer d-flex">
-                                                    <span class=" tour-characteristics-icon tour-characteristics-icon-watch"></span>
-                                                    <div class="tour-characteristics-result">{{trip.duration}}</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 tour-characteristics-block">
-                                                <div class="tour-characteristics-discription">Расстояние</div>
-                                                <div class="tour-characteristics-footer  d-flex">
-                                                    <span class="tour-characteristics-icon tour-characteristics-icon-point"></span>
-                                                    <div class="tour-characteristics-result">{{trip.length}}</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 tour-characteristics-block">
-                                                <div class="tour-characteristics-discription">Сложность</div>
-                                                <div class="tour-characteristics-footer  d-flex">
-                                                    <span class="tour-characteristics-icon tour-characteristics-icon-level"></span>
-                                                    <div class="tour-characteristics-result">{{trip.level}}/5</div>
-                                                </div>
-                                            </div>
-                                        </div>  
+                                    <div class="col-md-4 tour-characteristics-block">
+                                        <div class="tour-characteristics-discription">Расстояние</div>
+                                        <div class="tour-characteristics-footer  d-flex">
+                                            <span class="tour-characteristics-icon tour-characteristics-icon-point"></span>
+                                            <div class="tour-characteristics-result">{{trip.length}}</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 tour-characteristics-block">
+                                        <div class="tour-characteristics-discription">Сложность</div>
+                                        <div class="tour-characteristics-footer  d-flex">
+                                            <span class="tour-characteristics-icon tour-characteristics-icon-level"></span>
+                                            <div class="tour-characteristics-result">{{trip.level}}/5</div>
+                                        </div>
                                     </div>
                                 </div>  
                             </div>
+                        </div>
                         <div id="textDiv">
                         </div>
-                        <p></p>
+                        <p></p> 
                     </div>
                 </div>
                 <div class="container container-rating-and-author">

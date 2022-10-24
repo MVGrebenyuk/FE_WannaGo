@@ -47,7 +47,7 @@
         </div>
     </div>
 
-    <section class="creating-tour" ng-show="isUserLoggedIn()" ng-controller="mainController">
+    <section class="creating-tour" ng-controller="mainController">
         <div class="container">
             <div>
                 <h2 class="tour-catalog">Создание тура</h2>
@@ -90,6 +90,22 @@
                                 </div>
                                 <div class="preview-area-tour-price">
                                     <input class="oewq" placeholder="200 ₽" type="number" ng-model="trip.price">
+                                </div>
+                            </div>
+                            <div class="preview-area-tour-country-params">
+                                <div>
+                                    <p>Страна</p>
+                                    <input class="preview-area-tour-time" placeholder="Россия" ng-model="trip.duration">
+                                </div>
+                                <div>
+                                    <p>Регион</p>
+                                    <select class="preview-area-select" name="region">
+                                        <option disabled>Москва</option>
+                                        <option value="option">Карелия</option>
+                                        <option value="option1">Крым</option>
+                                        <option value="option2">Дагестан</option>
+                                        <option value="option3">Якутия</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>

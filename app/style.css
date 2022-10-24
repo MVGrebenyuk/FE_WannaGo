@@ -14,16 +14,6 @@
 @import 'css/others/font-awesome.min.css';
 @import 'css/others/pe-icon-7-stroke.css';
 
-/* Отключил выделение текста */
-*{
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
 .container {
     max-width: 1180px !important;
     padding-left: 0 !important;
@@ -768,6 +758,7 @@ nav ul {
     width: 40px;
     height: 40px;
     margin-right: 6px;
+    border-radius: 50%;
 }
 
 .place-name {
@@ -816,6 +807,13 @@ nav ul {
     width: 880px;
     margin-left: 20px;
     cursor: pointer;
+}
+
+.tour-list-block:active,
+.tour-list-block:hover,
+.tour-list-block {
+    text-decoration: none;
+    color: black;
 }
 
 .tour-list-bottom-block * {
@@ -1006,10 +1004,11 @@ nav ul {
 
 .tour-hero-price {
     font-weight: 400;
-    font-size: 40px;
+    font-size: 45px;
     line-height: 49px;
     text-align: right;
     color: #000000;
+    margin-top: -3px;
 }
 
 .tour-hero-price-block {
@@ -1023,7 +1022,7 @@ nav ul {
     border-radius: 10px;
     float: left;
     background-image: url(./img//icons/favorites-tour-list1.png);
-    margin: 5px 10px 0 10px;
+    margin: 0 10px 0 10px;
     float: left;
     background-image: url(./img/icons/like-avourites.svg);
     background-repeat: no-repeat;
@@ -1248,6 +1247,22 @@ input[type="checkbox"]:checked + label span {
     margin-top: 46px;
 }
 
+.personal-account-btn-submit {
+    font-weight: 600;
+    padding: 15px 70px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 10px;
+    color: #FFFFFF;
+    background: #FF7A00;
+    border: none;
+    margin-bottom: 80px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
 /* убрали календарь у type date */
 input[type=date]::-webkit-calendar-picker-indicator {
     opacity: 0;
@@ -1312,13 +1327,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
     opacity: 1;
 }
 
-.discriotion-lk {
+.discription-lk {
     position: relative;
     margin: 0px;
-    margin-bottom: 90px;
+    margin-bottom: 50px;
 }
 
-.discriotion-lk-info {
+.discription-lk-info {
     position: absolute;
     top: 50px;
     right: 0;
@@ -2899,11 +2914,30 @@ input[type=date]::-webkit-calendar-picker-indicator {
             transform: rotate(180deg);
 }
 
+.preview-area-tour-country-params .preview-area-select {
+    display: block;
+    border-radius: 10px;
+    width: 145px;
+    height: 30px;
+    background-color: #F7F7F7;
+    appearance: none;
+    position: relative;
+}
+
 .preview-area-tour-params {
     display: flex;
 }
 
 .preview-area-tour-params > div > p{
+    margin-bottom: 5px;
+}
+
+.preview-area-tour-country-params {
+    display: flex;
+    margin-top: 10px;
+}
+
+.preview-area-tour-country-params > div > p {
     margin-bottom: 5px;
 }
 
