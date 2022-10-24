@@ -42,11 +42,12 @@ var headerText = `
                                         <div class="login/Registration">
                                             <button class="btn btn-submit login_register" data-toggle="modal"  ng-show="!isUserLoggedIn()" data-target="#myModal">Войти</button>
                                             <div class="user-auth" ng-show="isUserLoggedIn()">
-                                            <nav>
+                                            <nav class="nav-login-menu">
                                                 <ul class="topmenu">
-                                                <li><a href="" class="down"><img src={{user.avatar}} width="50" height="50">▼</a>
+                                                <li><a href="" class="down"><img class="img-logo-users" src={{user.avatar}} width="50" height="50"><span class="down-menu"></span></a>
                                                     <ul class="submenu">
                                                         <li><a href="./personal-area.html">Профиль</a></li>
+                                                        <li><a href="./create-route.html">Создать тур</a></li>
                                                         <li><a href="">Мои туры</a></li>
                                                         <li><a href="#" ng-click="tryToLogout()">Выход</a></li>
                                                     </ul>
