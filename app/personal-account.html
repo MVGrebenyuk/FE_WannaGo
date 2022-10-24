@@ -72,11 +72,12 @@
                         </div>
                         <div class="avatar col-md-4">
                             <label class="personal-account-label-avatar" for="disabledTextInput">Аватар</label>
-                            <div class="avatar-block">
-                                <div class="avatar-container">
-                                <img class="avatar-lk" src="./img/icons/avatar-lk.png" alt="Аватар пользователя">
-                                <span class="avatar-hover"></span>
+                            <div class="avatar-add-photo">
+                                <div id="drop-zone">
+                                    <input type="file" name="file" id="file-uploader" file-model = "myFile" accept=".jpg, .jpeg, .png" hidden>
+                                    <label for="file-uploader" class="file-upload">Выберите файл</label>
                                 </div>
+                                <div id="content"><img src={{user.avatar}} style="width: 200px; height: 200px;"></div>
                             </div>
                         </div>
                     </div>
@@ -87,36 +88,11 @@
                     </div>
                     <button class="personal-account-btn-submit">Сохранить</button>
                 </form>
-                <!-- <form>
-                    <div class="container-form-group row">
-                        <div class="form-group">
-                            <div class="test col-md-12">
-                            <div class="personal-account-info-block">
-                                <div class="personal-account-info-block-top">
-                                    <label for="exampleInputEmail1">Имя</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Иван">
-                                </div>
-                                <div class="personal-account-info-block-top">
-                                    <label for="exampleInputEmail1">Фамилия</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Иванов">
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                        </div>
-                        <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>
-                </form> -->
             </div>
       </div>
     </main>
+
+    <script src="index.js"></script>
     <!-- Jquery-2.2.4 js -->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
@@ -127,6 +103,7 @@
     <script src="js/others/plugins.js"></script>
     <!-- Active JS -->
     <script src="js/tour-slider.js"></script>
+    <script src="js/personal-account.js"></script>
     <!-- Header and Modal JS -->
     <script src="js/header.js"></script>
     <!-- Footer JS -->

@@ -3,7 +3,7 @@ var headerText = `
 
 <!-- ****** Header ****** -->
 <header class="header_area">
-    <div class="container" ng-controller="mainController">
+    <div class="header-container" ng-controller="mainController">
         <div class="row">
             <div class="col-12">
                 <div class="top_header_area">
