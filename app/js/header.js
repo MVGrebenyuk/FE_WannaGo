@@ -3,7 +3,7 @@ var headerText = `
 
 <!-- ****** Header ****** -->
 <header class="header_area">
-    <div class="header-container" ng-controller="mainController">
+    <div class="container" ng-controller="mainController">
         <div class="row">
             <div class="col-12">
                 <div class="top_header_area">
@@ -44,7 +44,7 @@ var headerText = `
                                             <div class="user-auth" ng-show="isUserLoggedIn()">
                                             <nav class="nav-login-menu">
                                                 <ul class="topmenu">
-                                                <li><a href="" class="down"><img class="img-logo-users" src={{user.avatar}} width="50" height="50"><span class="down-menu"></span></a>
+                                                <li><a href="" class="down"><img class="img-logo-users" src={{profile.avatar}} width="50" height="50"><span class="down-menu"></span></a>
                                                     <ul class="submenu">
                                                         <li><a href="./personal-area.html">Профиль</a></li>
                                                         <li><a href="./create-route.html">Создать тур</a></li>
@@ -138,18 +138,11 @@ var headerText = `
                                         <input type="password" class="form-control" id="password" ng-model="user.password" placeholder="*********" /> 
                                     </div> 
                                 </div> 
-                                <div class="form-group"> 
-                                    <label for="mobile" class="col-sm-12 control-label control-label-registration"> 
-                                        Повторите пароль:</label> 
-                                    <div class="col-sm-12"> 
-                                        <input type="password" class="form-control form-contral-lastchield" id="password" placeholder="*********" /> 
-                                    </div> 
-                                </div> 
                                 </form>
                                 <div class="row"> 
                                     <div class="col-sm-12">
                                         <div class="container-btm-form-registration">
-                                        <button type="submit" class="btn blt-login btn-submit btn-lg btn-block" ng-click="tryToRegistration()">Зарегистрироваться</button> 
+                                        <button type="submit" class="btn blt-login btn-submit btn-lg btn-block" ng-click="registration()">Зарегистрироваться</button> 
                                         </div>
                                     </div> 
                                 </div>  

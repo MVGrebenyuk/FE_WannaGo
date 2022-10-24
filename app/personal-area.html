@@ -36,7 +36,7 @@
         </ul>
     </div>
     <body onload="gallery()">
-    <section class="personal-area">
+    <section class="personal-area" ng-controller="lkController">
         <div class="container">
             <div>
                 <h2 class="tour-catalog">Профиль пользователя</h2>
@@ -44,7 +44,7 @@
                     <button class="btn-edit-personal-area">Редактировать</button>
                 </div>
             </div>
-            <div class="personal-area-top-block" ng-controller="lkController">
+            <div class="personal-area-top-block">
                 <img src={{user.avatar}}>
                 <div class="top-block-user-info">
                     <div class="personal-area-user-date">
@@ -79,8 +79,7 @@
             <div class="about-me">
                 <h5 class="about-me-caption">О себе</h5>
                 <div class="about-me-text">
-                    Банальные, но неопровержимые выводы, а также сделанные на базе интернет-аналитики выводы, превозмогая сложившуюся непростую экономическую ситуацию, заблокированы в рамках своих собственных рациональных ограничений.
-                    Предварительные выводы неутешительны: постоянное информационно-пропагандистское обеспечение нашей деятельности, а также свежий взгляд на привычные вещи — безусловно открывает новые горизонты для новых принципов формирования материально-технической и кадровой базы. 
+                    {{user.about}}
                 </div>
             </div>
             <!-- <div class="user-photo">
@@ -180,8 +179,8 @@
     </body>
     <!-- ****** Blog Area End ****** -->
 
-    <script src="index.js"></script>
-    <script src="lkController.js"></script>
+    <script src="js/angScripts/index.js"></script>
+    <script src="js/angScripts/lkController.js"></script>
     <script src="tour-list.js"></script>
     <!-- Jquery-2.2.4 js -->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
