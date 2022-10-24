@@ -1,5 +1,5 @@
 angular.module('WannaGo').controller('tourPageController', function ($scope, $rootScope, $http, $localStorage) {
-    const contextPath = 'http://localhost:8189/wannago/api/v1';
+    const contextPath = 'http://5.188.140.199:8189/wannago/api/v1';
 
     var params = window
         .location
@@ -16,7 +16,7 @@ angular.module('WannaGo').controller('tourPageController', function ($scope, $ro
         );
 
     $scope.tryToAuth = function () {
-        $http.post('http://localhost:8189/wannago/auth', $scope.user)
+        $http.post('http://5.188.140.199:8189/wannago/auth', $scope.user)
             .then(function successCallback(response) {
                 if (response.data.token) {
                     $http.defaults.headers.common.Authorization = 'Bearer ' + response.data.token;

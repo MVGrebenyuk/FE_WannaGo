@@ -2,7 +2,7 @@ angular.module('WannaGo').controller('tourController', function ($scope, $rootSc
     const contextPath = 'http://localhost:8189/wannago/api/v1';
 
 $scope.getAllTrips = function (){
-  $http.get("http://localhost:8189/wannago/api/v1/trip")
+  $http.get("http://5.188.140.199:8189/wannago/api/v1/trip")
       .then(function (response) {
          $scope.tripsList = response.data;
          console.log('NEW LOG: ' + $scope.tripsList.toString())

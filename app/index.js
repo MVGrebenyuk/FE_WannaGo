@@ -27,14 +27,14 @@
 })();
 
 angular.module('WannaGo').controller('mainController', function ($scope, $rootScope, $http, $localStorage) {
-    const contextPath = 'http://localhost:8189/wannago/api/v1';
+    const contextPath = 'http://5.188.140.199:8189/wannago/api/v1';
 
     $scope.trips = [{name:'John', age:25},
         {name:'Mary', age:40},
         {name:'Peter', age:85}]
 
     $scope.tryToAuth = function () {
-        $http.post('http://localhost:8189/wannago/auth', $scope.user)
+        $http.post('http://5.188.140.199:8189/wannago/auth', $scope.user)
             .then(function successCallback(response) {
                 if (response.data.token) {
                     $http.defaults.headers.common.Authorization = 'Bearer ' + response.data.token;
@@ -49,7 +49,7 @@ angular.module('WannaGo').controller('mainController', function ($scope, $rootSc
     }
 
     $scope.tryToRegistration = function () {
-        $http.post('http://localhost:8189/wannago/registration', $scope.user)
+        $http.post('http://5.188.140.199:8189/wannago/registration', $scope.user)
             .then(function successCallback(response) {
                 if (response.data.token) {
                     $http.defaults.headers.common.Authorization = 'Bearer ' + response.data.token;
@@ -76,7 +76,7 @@ angular.module('WannaGo').controller('mainController', function ($scope, $rootSc
     $scope.saveImage = function (){
         var image = $scope.myFile.file;
         alert($scope.myFile.file)
-        $http.post("http://localhost:8189/wannago/addAvatar", image)
+        $http.post("http://5.188.140.199:8189/wannago/addAvatar", image)
             .then(function successCallback(response) {
                 alert(response);
         })
@@ -98,7 +98,7 @@ angular.module('WannaGo').controller('mainController', function ($scope, $rootSc
     };
 
     $scope.showCurrentUserInfo = function () {
-        $http.get('http://localhost:8189/wannago/api/v1/profile')
+        $http.get('http://5.188.140.199:8189/wannago/api/v1/profile')
             .then(function successCallback(response) {
                 alert('MY NAME IS: ' + response.data.username);
             }, function errorCallback(response) {
@@ -111,7 +111,7 @@ angular.module('WannaGo').controller('mainController', function ($scope, $rootSc
             formData.append("file", document.getElementById("file-uploader").files[0]);
 
             var xhr = new XMLHttpRequest();
-            xhr.open("POST", "http://localhost:8189/wannago/api/v1/trip/image");
+            xhr.open("POST", "http://5.188.140.199:8189/wannago/api/v1/trip/image");
             xhr.send(formData);
 
         xhr.onload = function() {
@@ -121,7 +121,7 @@ angular.module('WannaGo').controller('mainController', function ($scope, $rootSc
             } else { // если всё прошло гладко, выводим результат
                 $scope.trip.description = tinyMCE.activeEditor.getContent();
                 $scope.trip.image = xhr.response;
-                    $http.post('http://localhost:8189/wannago/api/v1/trip', $scope.trip)
+                    $http.post('http://5.188.140.199:8189/wannago/api/v1/trip', $scope.trip)
                         .then(function successCallback(response) {
                             alert('Trip created ' + response.data.username);
                         }, function errorCallback(response) {
