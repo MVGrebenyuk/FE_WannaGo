@@ -94,6 +94,10 @@ $('div.tour-list-image').on('click', function(event) {
     window.location.href = './touring.html';
 });
 
+$('button.btn-edit-personal-area').on('click', function(event) {
+    window.location.href = './personal-account.html';
+});
+
 var myDiv = $('.tour-description-text');
 myDiv.text(myDiv.text().substring(0,320));
 
