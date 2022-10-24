@@ -41,6 +41,19 @@ var headerText = `
                                     <div class="login_register_area justify-content-end">
                                         <div class="login/Registration">
                                             <button class="btn btn-submit login_register" data-toggle="modal"  ng-show="!isUserLoggedIn()" data-target="#myModal">Войти</button>
+                                            <div class="user-auth" ng-show="isUserLoggedIn()">
+                                            <nav>
+                                                <ul class="topmenu">
+                                                <li><a href="" class="down"><img src={{user.avatar}} width="50" height="50">▼</a>
+                                                    <ul class="submenu">
+                                                        <li><a href="./personal-area.html">Профиль</a></li>
+                                                        <li><a href="">Мои туры</a></li>
+                                                        <li><a href="#" ng-click="tryToLogout()">Выход</a></li>
+                                                    </ul>
+                                                </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
@@ -88,13 +101,13 @@ var headerText = `
                                         <input type="password" class="form-control" id="exampleInputPassword1" ng-model="user.password" placeholder="Пароль" /> 
                                     </div> 
                                 </div> 
-                                <div class="container"> 
+                                <div class="container-btm-form-registration"> 
                                 <div class="row"> 
                                     <div class="col-sm-12"> 
-                                        <button type="submit" class="btn blt-login btn-submit btn-lg btn-block" ng-click="tryToAuth()">Войти</button> 
+                                        <button type="submit" class="btn blt-login btn-submit btn-lg btn-block" ng-click="tryToAuth(); closeModalWindow()">Войти</button> 
                                         <div><a href="#" class="forgot">Забыли пароль?</a></div> 
                                     </div> 
-                                </div> 
+                                </div>
                             </div> 
                                 </form> 
                             </div> 
@@ -133,8 +146,8 @@ var headerText = `
                                 </div> 
                                 </form>
                                 <div class="row"> 
-                                    <div class="col-sm-12"> 
-                                        <div class="container"> 
+                                    <div class="col-sm-12">
+                                        <div class="container-btm-form-registration">
                                         <button type="submit" class="btn blt-login btn-submit btn-lg btn-block" ng-click="tryToRegistration()">Зарегистрироваться</button> 
                                         </div>
                                     </div> 

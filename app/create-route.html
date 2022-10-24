@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="WannaGo">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Title -->
+        <title>WannaGo</title>
+
+        <!-- Favicon -->
+        <link rel="icon" href="img/core-img/favicon.ico">
+
+        <!-- Core Stylesheet -->
+        <link href="style.css" rel="stylesheet">
+
+        <!-- Responsive CSS -->
+        <link href="css/responsive/responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./components/jquery-ui/jquery-ui.min.css">
+        <link rel="stylesheet" href="./css/dialog.css">
+        <!-- Angular scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-route.min.js"></script>
+        <script src="./js/tinymce/tinymce.min.js"></script>
+        <script>
+            tinymce.init({
+                selector: '#creating-tour-textarea'
+            });
+          </script>
+    </head>
+
+    <!-- ****** Body ****** -->
+    <div class="container">
+        <ul class="breadcrumbs">
+            <li><a href="./index.html">Главная</a></li>
+            <li><a href="./tour-list.html">Туры</a></li>
+            <li>Создание тура</li>
+        </ul>
+    </div>
+
+    <div class="purchased-routes-not-login" ng-show="!isUserLoggedIn()">
+        <div class="container">
+            <p>Авторизуйтесь для просмотра этой страницы</p>
+        </div>
+    </div>
+
+    <section class="creating-tour" ng-show="isUserLoggedIn()" ng-controller="mainController">
+        <div class="container">
+            <div>
+                <h2 class="tour-catalog">Создание тура</h2>
+            </div>
+            <div class="creating-tour-preview">
+                <h3>Превью</h3>
+                <div class="row">
+                    <div class="col-md-7 creating-tour-preview-area">
+                        <div class="preview-area-tour-name">
+                            <p class="preview-area-caption">Название</p>
+                            <p class="preview-area-caption-max-sym">*максимум 50 символов</p>
+                            <input class="preview-input-tour-name" maxlength="50" ng-model="trip.title">
+                        </div>
+                        <div class="preview-area-short-description">
+                            <p class="preview-area-caption">Краткое описание</p>
+                            <p class="preview-area-caption-max-sym">*максимум 650 символов</p>
+                            <textarea class="preview-textarea" maxlength="650" ng-model="trip.shortDescription"></textarea>
+                        </div>
+                        <div class="preview-area-route-options">
+                            <p class="preview-area-caption-param-route">Параметры маршрута</p>
+                            <p class="preview-area-caption-param">Стоимость</p>
+                            <div class="preview-area-tour-params">
+                                <div>
+                                    <p>Время в пути</p>
+                                    <input class="preview-area-tour-time" placeholder="5 дней" type="number" ng-model="trip.duration">
+                                </div>
+                                <div>
+                                    <p>Расстояние</p>
+                                    <input class="preview-area-tour-time" placeholder="5 км" type="number" ng-model="trip.length">
+                                </div>
+                                <div>
+                                    <p>Сложность</p>
+                                    <select class="preview-area-select" name="complexity">
+                                        <option disabled>1</option>
+                                        <option value="option">1</option>
+                                        <option value="option1">2</option>
+                                        <option value="option2">3</option>
+                                        <option value="option3">4</option>
+                                    </select>
+                                </div>
+                                <div class="preview-area-tour-price">
+                                    <input class="oewq" placeholder="200 ₽" type="number" ng-model="trip.price">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 preview-area-tour-photo">
+                        <p class="preview-area-caption-param">Загрузите фото превью</p>
+                        <div class="preview-photo">
+                            <div id="drop-zone">
+                                <input type="file" name="file" id="file-uploader" file-model = "myFile" accept=".jpg, .jpeg, .png" hidden>
+                                <label for="file-uploader" class="file-upload">Выберите файл</label>
+                              </div>
+                              <div id="content">
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="creating-tour-list">
+                <h3>Страница машрута</h3>
+                <div class="creating-tour-area">
+                    <form method="post">
+                        <textarea id="creating-tour-textarea" ng-model="trip.description"></textarea>
+                    </form>
+                </div>
+            </div>
+            <div class="preview-photo-buttons">
+                <button class="btn preview-button-cancel">Отменить</button>
+                <button class="btn preview-button-save" ng-click="simpleTest()">Сохранить</button>
+            </div>
+            <div class="creating-tour-map">
+                <h3>Создание карты</h3>
+                <div class="creating-tour-map-area">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ****** Blog Area End ****** -->
+
+    <script src="index.js"></script>
+    <!-- Jquery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap-4 js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins JS -->
+    <script src="js/others/plugins.js"></script>
+    <!-- Active JS -->
+    <script src="js/create-route.js"></script>
+    <!-- Header and Modal JS -->
+    <script src="js/header.js"></script>
+    <!-- Footer JS -->
+    <script src="js/footer.js"></script>
+    <!-- Jquery price-slider -->
+    <script src="./components/jquery-ui/jquery-ui.min.js"></script>
+    
+</body>

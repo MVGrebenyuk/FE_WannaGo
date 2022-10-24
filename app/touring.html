@@ -29,126 +29,88 @@
     <div class="container container-breadcrumbs">
     <ul class="breadcrumbs">
         <li><a href="./index.html">Главная</a></li>
-        <li>Все туры</li>
+        <li><a href="./tour-list.html">Все туры</a></li>
         <li>Горная Аджария</li>
     </ul>
     </div>
-    <div class="container">
-        <div class="inner-container">
-            <section class="section-tour">
+    <div class="container" ng-controller="tourPageController">
+        <div class="inner-container d-flex">
+            <section class="section-tour-left col-md-7">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 d-flex tour-present">
-                            <div class="col-md-7 tour-hero-description">
-                                <h2 class="tour-heading">Горная Аджария</h2>
-                                Как принято считать, диаграммы связей могут быть призваны к ответу. А также ключевые особенности структуры проекта формируют глобальную экономическую сеть 
-                                и при этом — рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок.
-                                Лишь сделанные на базе интернет-аналитики выводы представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть смешаны с не уникальными данными до степени неузнаваемости.
-                                Задача организации, в особенности же разбавленное изрядной долей эмпатии, рациональное мышление требует анализа вывода текущих активов. Противоположная точка зрения подразумевает, что диаграммы связей, инициированные исключительно синтетически, преданы социально-демократической анафеме.
-                                Равным образом, социально-экономическое развитие предоставляет широкие возможности для укрепления моральных ценностей.Противоположная точка зрения подразумевает, что диаграммы связей, инициированные исключительно синтетически, преданы социально-демократической анафеме.
-                            </div>
-                            <div class="col-md-5 tour-hero-maps">
-                                <div class="tour-slider slider-height-padding">
-                                    <input class="checkbox frst" type="radio" id="slide-1" name="slider"/>
-                                    <label for="slide-1"></label>
-                                    <input class="checkbox scnd" type="radio" name="slider" id="slide-2"/>
-                                    <label for="slide-2"></label>
-                                    <input class="checkbox thrd" type="radio" name="slider" id="slide-3"/>
-                                    <label for="slide-3"></label>
-                                    <input class="checkbox foth" type="radio" name="slider" id="slide-4"/>
-                                    <label for="slide-4"></label>
-                                    <input class="checkbox fifth" type="radio" name="slider" id="slide-5"/>
-                                    <label for="slide-5"></label>
-                                    <input class="checkbox sixth" type="radio" name="slider" id="slide-6"/>
-                                    <label for="slide-6"></label>
-                                    <ul>
-                                        <li>
+                            <div class="col-md-12 tour-hero-description">
+                                <h2 class="tour-heading">{{trip.title}}</h2>
+                                    <div class="tour-hero-star-rating d-flex">
+                                        <div class="rating-mini">
+                                            <span class="active"></span>	
+                                            <span class="active"></span>    
+                                            <span class="active"></span>  
+                                            <span class="active"></span>    
                                             <span></span>
-                                        </li>
-                                        <li>
-                                            <span></span>
-                                        </li>
-                                        <li>
-                                            <span></span>
-                                        </li>
-                                        <li>
-                                            <span></span>
-                                        </li>
-                                        <li>
-                                            <span></span>
-                                        </li>
-                                        <li>
-                                            <span></span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 tour-hero-charactiristics-and-payment d-flex">
-                            <div class="col-md-7 tour-hero-characteristics">
-                                <div class="col-md-6 d-flex tour-characteristics">
-                                    <div class="col-md-3 tour-characteristics-block">
-                                        <div class="tour-characteristics-discription">Время в пути</div>
-                                        <div class="tour-characteristics-footer d-flex">
-                                            <span class=" tour-characteristics-icon tour-characteristics-icon-watch"></span>
-                                            <div class="tour-characteristics-result">8 дней</div>
                                         </div>
+                                        <p class="rating-descripthion">25 оценок</p>
                                     </div>
-                                    <div class="col-md-3 tour-characteristics-block">
-                                        <div class="tour-characteristics-discription">Расстояние</div>
-                                        <div class="tour-characteristics-footer  d-flex">
-                                            <span class="tour-characteristics-icon tour-characteristics-icon-point"></span>
-                                            <div class="tour-characteristics-result">120 км.</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 tour-characteristics-block">
-                                        <div class="tour-characteristics-discription">Сложность</div>
-                                        <div class="tour-characteristics-footer  d-flex">
-                                            <span class="tour-characteristics-icon tour-characteristics-icon-level"></span>
-                                            <div class="tour-characteristics-result">2/5</div>
-                                        </div>
+                                    <div class="col-md-7 tour-hero-characteristics">
+                                        <div class="col-md-4 d-flex tour-characteristics">
+                                            <div class="col-md-4 tour-characteristics-block">
+                                                <div class="tour-characteristics-discription">Время в пути</div>
+                                                <div class="tour-characteristics-footer d-flex">
+                                                    <span class=" tour-characteristics-icon tour-characteristics-icon-watch"></span>
+                                                    <div class="tour-characteristics-result">{{trip.duration}}</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 tour-characteristics-block">
+                                                <div class="tour-characteristics-discription">Расстояние</div>
+                                                <div class="tour-characteristics-footer  d-flex">
+                                                    <span class="tour-characteristics-icon tour-characteristics-icon-point"></span>
+                                                    <div class="tour-characteristics-result">{{trip.length}}</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 tour-characteristics-block">
+                                                <div class="tour-characteristics-discription">Сложность</div>
+                                                <div class="tour-characteristics-footer  d-flex">
+                                                    <span class="tour-characteristics-icon tour-characteristics-icon-level"></span>
+                                                    <div class="tour-characteristics-result">{{trip.level}}/5</div>
+                                                </div>
+                                            </div>
+                                        </div>  
                                     </div>
                                 </div>  
                             </div>
-                            <div class="col-md-5 tour-hero-payment d-flex justify-content-between">
-                                <div class="tour-hero-price-block">
-                                    <p class="tour-hero-price">1000 ₽</p>
-                                </div>
-                                <div class="tour-hero-payment-block">
-                                    <button class="tour-list-btn-favorites"></button>
-                                    <button class="buy btn-buy">Купить</button>
-                                </div>
-                            </div>
+                        <div id="textDiv">
                         </div>
+                        <p></p>
                     </div>
                 </div>
-            </section>
-            <section class="section-rating-and-author">
                 <div class="container container-rating-and-author">
                     <div class="row">
-                        <div class="col-md-12 rating-and-author-block d-flex">
-                            <div class="col-md-7 tour-rating-block">
-                                <h3 class="section-tour-heading">Рейтинг маршрута</h3>
-                                <form>
-                                    <div class="form-group">
-                                        <div class="star-rating">
-                                            <div class="star-rating__wrap">
-                                                <input class="star-rating__input" id="star-5" type="radio" name="rating" value="5">
-                                                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-5" title="Отлично"></label>
-                                                <input class="star-rating__input" id="star-4" type="radio" name="rating" value="4">
-                                                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-4" title="Хорошо"></label>
-                                                <input class="star-rating__input" id="star-3" type="radio" name="rating" value="3">
-                                                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-3" title="Удовлетворительно"></label>
-                                                <input class="star-rating__input" id="star-2" type="radio" name="rating" value="2">
-                                                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-2" title="Плохо"></label>
-                                                <input class="star-rating__input" id="star-1" type="radio" name="rating" value="1">
-                                                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-1" title="Ужасно"></label>
+                        <div class="container">
+                            <div class="col-md-12 rating-and-author-block">
+                                    <div class="col-md-12 tour-autor-block">
+                                        <div class="tour-autor-info-block d-flex">
+                                            <span class="autor-fhoto"></span>
+                                            <div class="autor-naming">
+                                                <h5 class="section-tour-heading-small">Автор маршрута</h3>
+                                                    <div class="autor-name-and-virification d-flex">
+                                                        <p class="autor-name">{{user.firstName + user.lastName}}</p>
+                                                        <span class="autor-virification"></span>
+                                                    </div>
+                                                <p class="description-paragraph-reviews">
+                                                    Занимаюсь туризмом уже 15 лет, обходил много мест, поднимался на Эверест.
+                                                    <br>
+                                                    Знаю много хороших маршрутов и самые удобные места 
+                                                    для остановок.
+                                                    <br>
+                                                    Буду рад, если вы будете двигаться по моему маршруту.
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
-                                </form>
-                                <p class="rating-descripthion">На основе 25 оценок покупателей</p>
-                                <h3 class="section-tour-heading heading-reviews">Отзывы</h3>
+                            </div>
+                        </div>     
+                        <div class="container">
+                                <h3 class="section-tour-heading heading-reviews">Отзывы маршрута</h3>
                                 <div class="col-md-12 reviews-cart">
                                     <div class="reviews-cart-autor-block d-flex">
                                         <span class="reviews-cart-autor-icon-man"></span>
@@ -169,6 +131,7 @@
                                         </p>
                                     </div>
                                 </div>
+                            
                                 <div class="col-md-12 reviews-cart">
                                     <div class="reviews-cart-autor-block d-flex">
                                         <span class="reviews-cart-autor-icon-woman"></span>
@@ -192,39 +155,64 @@
                                     <button class="btn-view-all">Посмотреть все</button>
                                 </div>
                             </div>
-                            <div class="col-md-5 tour-autor-block">
-                                <h3 class="section-tour-heading">Автор маршрута</h3>
-                                <div class="tour-autor-info-block d-flex">
-                                    <span class="autor-fhoto"></span>
-                                    <p class="autor-name">Иван Иванов</p>
-                                </div>
-                                <div class="autor-rating d-flex">
-                                    <p class="description-paragraph-reviews">Рейтинг автора:</p>
-                                    <div class="rating-mini">
-                                        <span class="active"></span>	
-                                        <span class="active"></span>    
-                                        <span class="active"></span>  
-                                        <span></span>    
-                                        <span></span>
-                                    </div>
-                                </div>
-                                <p class="description-paragraph-reviews">
-                                    Занимаюсь туризмом уже 15 лет, обходил много мест, поднимался на Эверест.
-                                    <br>
-                                    Знаю много хороших маршрутов и самые удобные места 
-                                    для остановок.
-                                    <br>
-                                    Буду рад, если вы будете двигаться по моему маршруту.
-                                </p>
-                            </div>
                         </div>
+                        </div>
+                    </section>
+                        <section class="right-column col-md-5">
+                            <div class="col-md-5 tour-hero-maps">
+                                <div class="slider-block">
+                                  <div class="tour-slider slider-height-padding">
+                                      <input class="checkbox frst" type="radio" id="slide-1" name="slider"/>
+                                      <label for="slide-1"></label>
+                                      <input class="checkbox scnd" type="radio" name="slider" id="slide-2"/>
+                                      <label for="slide-2"></label>
+                                      <input class="checkbox thrd" type="radio" name="slider" id="slide-3"/>
+                                      <label for="slide-3"></label>
+                                      <input class="checkbox foth" type="radio" name="slider" id="slide-4"/>
+                                      <label for="slide-4"></label>
+                                      <input class="checkbox fifth" type="radio" name="slider" id="slide-5"/>
+                                      <label for="slide-5"></label>
+                                      <input class="checkbox sixth" type="radio" name="slider" id="slide-6"/>
+                                      <label for="slide-6"></label>
+                                      <ul>
+                                          <li>
+                                              <span></span>
+                                          </li>
+                                          <li>
+                                              <span></span>
+                                          </li>
+                                          <li>
+                                              <span></span>
+                                          </li>
+                                          <li>
+                                              <span></span>
+                                          </li>
+                                          <li>
+                                              <span></span>
+                                          </li>
+                                          <li>
+                                              <span></span>
+                                          </li>
+                                      </ul>
+                                  </div>
+                                  <div class="col-md-12 tour-hero-payment d-flex">
+                                      <div class="tour-hero-price-block">
+                                          <p class="tour-hero-price">{{trip.price}}</p>
+                                      </div>
+                                      <div class="tour-hero-payment-block">
+                                          <button class="tour-list-btn-favorites"></button>
+                                          <button class="buy btn-buy">Купить</button>
+                                      </div>
+                                  </div>
+                              </div>
+                        </section>
                     </div>
                 </div>
-            </section>
         </div>
     </div>
 
     <script src="index.js"></script>
+    <script src="tourPageController.js"></script>
     <!-- Jquery-2.2.4 js -->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
