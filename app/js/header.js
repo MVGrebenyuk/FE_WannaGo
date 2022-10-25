@@ -128,14 +128,14 @@ var headerText = `
                                     <label for="email" class="col-sm-12 control-label control-label-registration"> 
                                         Логин:</label> 
                                     <div class="col-sm-12"> 
-                                        <input type="text" class="form-control" id="email"ng-model="user.login" placeholder="i.ivanov@example.ru" /> 
+                                        <input type="text" class="form-control" id="email"ng-model="registrationDto.login" placeholder="i.ivanov@example.ru" /> 
                                     </div> 
                                 </div> 
                                 <div class="form-group"> 
                                     <label for="password" class="col-sm-12 control-label control-label-registration">
                                     Пароль:</label> 
                                     <div class="col-sm-12"> 
-                                        <input type="password" class="form-control" id="password" ng-model="user.password" placeholder="*********" /> 
+                                        <input type="password" class="form-control" id="password" ng-model="registrationDto.password" placeholder="*********" /> 
                                     </div> 
                                 </div> 
                                 </form>

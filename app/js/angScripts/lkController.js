@@ -45,6 +45,8 @@ angular.module('WannaGo').controller('lkController', function ($scope, $rootScop
                     });
             }
         };
+        delete $localStorage.userProfile;
+        window.location.href = './personal-area.html'
     }
 
     $scope.getCurrentUser();

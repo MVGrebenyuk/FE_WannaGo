@@ -47,9 +47,9 @@ angular.module('WannaGo').controller('mainController', function ($scope, $rootSc
     $scope.registration = function (){
         $http.post(contextPath + '/api/v1/profile/register', $scope.registrationDto)
             .then(function successCallback(response) {
-               $scope.user = {login: response.data.login, password : response.data.password} //ХЗ мб не работает
+               $scope.user = {login: $scope.registrationDto.login, password : $scope.registrationDto.password};
                $scope.tryToAuth();
-               window.location.href = './profile-account.html'
+               window.location.href = './personal-account.html'
             }, function errorCallback(response) {
                 alert("Ошибка при регистрации")
             });
@@ -151,5 +151,7 @@ angular.module('WannaGo').controller('mainController', function ($scope, $rootSc
 
     if($localStorage.userProfile){
         $scope.profile =  $localStorage.userProfile;
+    } else {
+        $scope.getCurrentUser();
     }
 });
