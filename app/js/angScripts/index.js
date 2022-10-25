@@ -44,12 +44,26 @@ angular.module('WannaGo').controller('mainController', function ($scope, $rootSc
             });
     }
 
+    $scope.tryToAuthForReg = function () {
+        $http.post(contextPath + '/auth', $scope.user)
+            .then(function successCallback(response) {
+                if (response.data.token) {
+                    $http.defaults.headers.common.Authorization = 'Bearer ' + response.data.token;
+                    $localStorage.springWebUser = {username: $scope.user.login, token: response.data.token};
+                    $scope.user.login = null;
+                    $scope.user.password = null;
+                    window.location.href = './personal-account.html'
+                    $scope.getCurrentUser()
+                }
+            }, function errorCallback(response) {
+            });
+    }
+
     $scope.registration = function (){
         $http.post(contextPath + '/api/v1/profile/register', $scope.registrationDto)
             .then(function successCallback(response) {
                $scope.user = {login: $scope.registrationDto.login, password : $scope.registrationDto.password};
-               $scope.tryToAuth();
-               window.location.href = './personal-account.html'
+               $scope.tryToAuthForReg();
             }, function errorCallback(response) {
                 alert("Ошибка при регистрации")
             });
@@ -136,6 +150,7 @@ angular.module('WannaGo').controller('mainController', function ($scope, $rootSc
                     $localStorage.userProfile = response.data;
                     $scope.profile = response.data;
                 }, function errorCallback(response) {
+
                 });
     }
 
