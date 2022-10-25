@@ -92,6 +92,7 @@ angular.module('WannaGo').controller('mainController', function ($scope, $rootSc
         if ($scope.user.password) {
             $scope.user.password = null;
         }
+        window.location.href = './index.html';
     };
 
     $scope.clearUser = function () {

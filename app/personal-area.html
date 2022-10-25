@@ -100,12 +100,12 @@
                 <table class="tour-list-table">
                     <tbody>
                         <tr>
-                            <td>
+                            <td ng-repeat="t in trips">
                                 <div class="user-route-block">
                                     <div class="user-route-second-block">
                                         <div class="user-route-user-name-block">
-                                            <img src="./img/icons/google.png">
-                                            <div class="user-route-user-name">Александр Новиков</div>
+                                            <img src="{{t.author.avatar}}">
+                                            <div class="user-route-user-name">{{t.author.firstName + ' ' + t.author.lastName}}</div>
                                             <div class="user-route-rating-mini">
                                                 <span class="active"></span>
                                                 <span class="active"></span>
@@ -116,41 +116,40 @@
                                             <p class="user-route-route-evaluation">187 оценок</p>
                                         </div>
                                         <div class="user-route-image">
-                                            <img src="img/slider-img/1.jpg">
+                                            <img src="{{t.image}}">
                                         </div>
                                         <div class="user-route-grad-image">
                                             <img src="img//tour-list/tour-list-image2.png">
                                         </div>
                                         <div class="user-route-second-block-button">
-                                            <div class="user-route-cost">10000</div>
+                                            <div class="user-route-cost">{{t.price}}</div>
                                             <button class="user-route-btn-favorites"></button>
                                             <button class="btn btn-submit user-route-btn-buy-tour" data-toggle="modal" data-target="#myModal">Купить</button>
                                         </div>
                                     </div>
                                     <div class="user-route-first-block">
-                                        <div class="user-route-place-name">Горная Аджария</div>
+                                        <div class="user-route-place-name">{{t.title}}</div>
                                         <div class="user-route-bottom-block">
                                             <div><span>Время в пути</span>
                                                 <div class="bottom-block-info">
                                                     <img src="./img/icons/tour-list-1.png">
-                                                    <p>8 дней</p>
+                                                    <p>{{t.duration}}</p>
                                                 </div>
                                             </div>
                                             <div><span>Расстояние</span>
                                                 <div class="bottom-block-info">
                                                     <img src="./img/icons/tour-list-2.png">
-                                                    <p>120 км</p>
+                                                    <p>{{t.length}} км</p>
                                                 </div>
                                             </div>
                                             <div><span>Сложность</span>
                                                 <div class="bottom-block-info">
                                                     <img src="./img/icons/tour-list-3.png">
-                                                    <p>2/5</p>
+                                                    <p>{{t.level + '/5'}}</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="user-route-description-text">Как принято считать, диаграммы связей могут быть призваны к ответу. А также ключевые особенности структуры проекта формируют глобальную экономическую сеть.
-                                            Лишь сделанные на базе интернет-аналитики выводы представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть смешаны.
+                                        <div class="user-route-description-text">{{t.shortTitle}}
                                         </div>
                                     </div>
                                 </div>
@@ -171,7 +170,7 @@
                     </tbody>
                 </table>
                 <div class="personal-area-see-more text-center">
-                    <button class="btn-personal-area-see-more">Смотреть больше</button>
+                    <button class="btn-personal-area-see-more" ng-show="trips.length > 4">Смотреть больше</button>
                 </div>
             </div>
         </div>

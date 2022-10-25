@@ -52,7 +52,7 @@ angular.module('WannaGo').controller('tourPageController', function ($scope, $ro
                 $scope.trip = response.data;
                 var div = document.getElementById('textDiv');
                 var newDiv = document.createElement('div')
-                newDiv.innerHTML = $scope.trip.description;
+                newDiv.innerHTML = $scope.trip.shortTitle;
                 div.insertAdjacentElement('afterbegin', newDiv)
             }, function errorCallback(response) {
                 alert("Зарегистрируйтесь")

@@ -91,16 +91,11 @@
                                             <div class="autor-naming">
                                                 <h5 class="section-tour-heading-small">Автор маршрута</h3>
                                                     <div class="autor-name-and-virification d-flex">
-                                                        <p class="autor-name">{{user.firstName + user.lastName}}</p>
+                                                        <p class="autor-name">{{trip.author.firstName + ' ' + trip.author.lastName}}</p>
                                                         <span class="autor-virification"></span>
                                                     </div>
                                                 <p class="description-paragraph-reviews">
-                                                    Занимаюсь туризмом уже 15 лет, обходил много мест, поднимался на Эверест.
-                                                    <br>
-                                                    Знаю много хороших маршрутов и самые удобные места 
-                                                    для остановок.
-                                                    <br>
-                                                    Буду рад, если вы будете двигаться по моему маршруту.
+                                                    {{trip.author.about}}
                                                 </p>
                                             </div>
                                         </div>
