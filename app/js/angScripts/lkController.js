@@ -1,5 +1,5 @@
 angular.module('WannaGo').controller('lkController', function ($scope, $rootScope, $http, $localStorage) {
-    const contextPath = 'http://localhost:8189/wannago';
+    const contextPath = 'http://5.188.140.199:8189/wannago';
 
     $scope.getCurrentUser = function (){
         if ($localStorage.springWebUser) {
