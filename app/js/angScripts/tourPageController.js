@@ -1,5 +1,5 @@
 angular.module('WannaGo').controller('tourPageController', function ($scope, $rootScope, $http, $localStorage) {
-    const contextPath = 'http://5.188.140.199:8189/wannago/api/v1';
+    const contextPath = 'http://localhost:8189/wannago';
 
     var params = window
         .location
@@ -16,7 +16,7 @@ angular.module('WannaGo').controller('tourPageController', function ($scope, $ro
         );
 
     $scope.tryToAuth = function () {
-        $http.post('http://5.188.140.199:8189/wannago/auth', $scope.user)
+        $http.post(contextPath + '/auth', $scope.user)
             .then(function successCallback(response) {
                 if (response.data.token) {
                     $http.defaults.headers.common.Authorization = 'Bearer ' + response.data.token;
@@ -33,20 +33,21 @@ angular.module('WannaGo').controller('tourPageController', function ($scope, $ro
     $scope.getCurrentUser = function (){
         if ($localStorage.springWebUser) {
             $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.springWebUser.token;
-        }
-            $http.get(contextPath + '/user')
+
+            $http.get(contextPath + '/api/v1/user')
                 .then(function successCallback(response) {
                     $scope.user = response.data;
                 }, function errorCallback(response) {
-                    alert("Зарегистрируйтесь")
+
                 });
+        }
     }
 
     $scope.getTrip = function (){
         if ($localStorage.springWebUser) {
             $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.springWebUser.token;
         }
-        $http.get(contextPath + '/trip/' + params['tourId'])
+        $http.get(contextPath + '/api/v1/trip/' + params['tourId'])
             .then(function successCallback(response) {
                 $scope.trip = response.data;
                 var div = document.getElementById('textDiv');
