@@ -75,5 +75,5 @@ angular.module('WannaGo').controller('lkController', function ($scope, $rootScop
     };
 
     $scope.getCurrentUser();
-    $scope.getAllTrips()
+    // $scope.getAllTrips()
 });
