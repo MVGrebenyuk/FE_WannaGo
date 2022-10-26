@@ -23,6 +23,7 @@ angular.module('WannaGo').controller('lkController', function ($scope, $rootScop
                 .then(function successCallback(response) {
                     $scope.user = response.data;
                     $localStorage.userProfile = response.data;
+                    $scope.getAllTrips()
                     window.location.href = './personal-area.html'
                 }, function errorCallback(response) {
 
@@ -88,5 +89,7 @@ angular.module('WannaGo').controller('lkController', function ($scope, $rootScop
     };
 
     $scope.getCurrentUser();
-    $scope.getAllTrips()
+    if($localStorage.userProfile) {
+        $scope.getAllTrips()
+    }
 });
