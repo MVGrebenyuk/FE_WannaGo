@@ -22,17 +22,25 @@
     margin-left: auto;
 }
 
+section {
+    margin-top: 80px;
+}
+
 .container {
     max-width: 1180px !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
-    margin-top: 80px;
 }
 
 .blog_area {
-    background-image: url(./img/back/background.png);
+    /* background-image: url(./img/back/background.png); */
     background-size: 100%;
-    height: 650px;
+}
+
+.blog_area_image {
+    /* background-image: url(./img/back/image\ 44.png); */
+    background-size: 644px 429px;
+    height: 429px;
 }
 
 .modal-content {
@@ -274,7 +282,15 @@ CSS
     font-size: 99px;
     font-family: 'Montserrat';
     font-weight: 800;
-    color: white;
+    color: #1ABAA6;
+}
+
+.blog-logo-second {
+    margin-top: 40px;
+    font-size: 99px;
+    font-family: 'Montserrat';
+    font-weight: 800;
+    color: #FF820E;
 }
 
 .description-area {
@@ -286,7 +302,7 @@ CSS
 
 .description {
     font-size: 16px;
-    color: white;
+    color: black;
     width: 480px;
 }
 
@@ -438,8 +454,13 @@ p {
     font-weight: 700;
     font-size: 40px;
     display: inline-block;
-    color: #232d37;
+    color: #1ABAA6;
     text-decoration: none;
+    margin-right: -10px;
+}
+
+.wannago-logo-second {
+    color: #FF820E;
 }
 
 .navbar.navbar-expand-lg {
@@ -890,7 +911,6 @@ nav ul {
     height: 46px;
     border-radius: 10px;
     cursor: pointer;
-    margin-top: 5px;
     font-weight: 600;
     line-height: 24px;
     letter-spacing: 1px;
@@ -918,7 +938,6 @@ nav ul {
 
 .tour-present {
     position: relative;
-    margin-top: 24px;
 }
 
 .tour-heading {
@@ -937,7 +956,6 @@ nav ul {
     max-height: 750px;
     padding: 0;
     margin-right: 26px;
-    margin-left: 24px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -1335,7 +1353,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
     font-size: 14px;
     line-height: 17px;
     outline: none;
-    -moz-appearance: none;
     background: #F7F7F7;
     border-radius: 10px;
     color: #000000;
@@ -1515,13 +1532,19 @@ input[type=date]::-webkit-calendar-picker-indicator {
     font-weight: 400;
     height: 49px;
     width: 152px;
-    /* margin-bottom: 10px; */
+    margin-top: -3px;
 }
 
 .tour-list-grad-image {
+    background-image: url(./img/tour-list/tour-list-image2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 356px;
     position: absolute;
     z-index: 99;
     margin-top: 169px;
+    border-radius: 0 0 10px 10px;
+    height: 60px;
 }
 
 .select {
@@ -1734,6 +1757,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 /* Рейтинг и Автор */
 .container-rating-and-author {
+    margin-top: 40px;
     padding: 0 15px;
 }
 
@@ -1777,6 +1801,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     font-size: 14px;
     line-height: 17px;
     color: #1A1919;
+    display: inherit;
 }
 
 .autor-fhoto {
@@ -1785,7 +1810,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     height: 156px;
     border-radius: 50%;
     background-size: cover;
-    background-image: url('./img/icons/autor-photo-big.png');
+
     background-repeat: no-repeat;
 }
 
@@ -1822,7 +1847,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .right-column {
     position: sticky;
     height: 100%;
-    top: 0;
+    top: 60px;
     bottom: 0;
 }
 
@@ -1867,16 +1892,48 @@ input[type=date]::-webkit-calendar-picker-indicator {
 	font-size: 0;
 }
 .rating-mini span {
-	padding: 0;
+	padding: 0 3px;
 	font-size: 25px;
 	line-height: 1;
 	color: lightgrey;
 }
 .rating-mini > span:before {
-	content: '★';
+	content: url(./img/icons/StarUn.png);
 }
 .rating-mini > span.active {
-	color: gold;
+	content: url(./img/icons/Star.png);
+}
+
+/* Рейтинг тура на странице туров */
+
+.rating-mini-tour-list {
+	display: inline-block;
+    margin: auto 5px;
+	font-size: 0;
+}
+.rating-mini-tour-list span {
+	padding: 0 2px;
+}
+.rating-mini-tour-list > span:before {
+	content: url(./img/icons/StarTlUn.png);
+}
+.rating-mini-tour-list > span.active {
+	content: url(./img/icons/StarTl.png);
+}
+
+.rating-tour-list-description {
+    padding-left: 6px;
+    margin: auto 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: white;
+    display: inherit;
+}
+
+.tour-list-hero-star-rating {
+    text-align: right;
+    margin-top: 30px;
 }
 
 /* Tour slider */

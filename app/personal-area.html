@@ -27,16 +27,16 @@
     </head>
 
     <!-- ****** Body ****** -->
-    <div class="container" ng-controller="lkController">
-        <ul class="breadcrumbs">
-            <li><a href="./index.html">Главная</a></li>
-            <li><a href="./tour-list.html">Туры</a></li>
-            <li><a href="./touring.html">Горная Аджария</a></li>
-            <li>{{user.firstName + ' ' + user.lastName}}</li>
-        </ul>
-    </div>
     <body onload="gallery()">
     <section class="personal-area" ng-controller="lkController">
+        <div class="container" ng-controller="lkController">
+            <ul class="breadcrumbs">
+                <li><a href="./index.html">Главная</a></li>
+                <li><a href="./tour-list.html">Туры</a></li>
+                <li><a href="./touring.html">Горная Аджария</a></li>
+                <li>{{user.firstName + ' ' + user.lastName}}</li>
+            </ul>
+        </div>
         <div class="container">
             <div>
                 <h2 class="tour-catalog">Профиль пользователя</h2>
