@@ -27,12 +27,6 @@
     </head>
 
     <!-- ****** Body ****** -->
-    <div class="container">
-        <ul class="breadcrumbs">
-            <li><a href="./index.html">Главная</a></li>
-            <li>Ваши приобретенные туры</li>
-        </ul>
-    </div>
 
     <div class="purchased-routes-not-login" ng-show="!isUserLoggedIn()">
         <div class="container">
@@ -41,6 +35,12 @@
     </div>
 
     <section class="favorites" ng-show="isUserLoggedIn()">
+        <div class="container">
+            <ul class="breadcrumbs">
+                <li><a href="./index.html">Главная</a></li>
+                <li>Ваши приобретенные туры</li>
+            </ul>
+        </div>
         <div class="container">
             <div>
                 <h2 class="tour-catalog">Ваши приобретенные маршруты</h2>

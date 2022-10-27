@@ -3,7 +3,7 @@ var headerText = `
 
 <!-- ****** Header ****** -->
 <header class="header_area">
-    <div class="container" ng-controller="mainController">
+    <div class="header-container" ng-controller="mainController">
         <div class="row">
             <div class="col-12">
                 <div class="top_header_area">
@@ -13,7 +13,9 @@ var headerText = `
                                 <!--  Top Social bar start -->
                                 <div class="top_social_bar">
                                     <div class="logo_area text-center">
-                                        <a href="index.html" class="wannago-logo">WannaGo</a>
+                                        <a href="index.html" class="wannago-logo">
+                                        <span class="wannago-logo">Wanna</span>
+                                        <span class="wannago-logo-second">Go</span></a>
                                     </div>
                                 </div>
                             </div>
