@@ -1232,6 +1232,82 @@ input[type="checkbox"]:checked + label span {
     margin: 24px 24px 88px 0;
 }
 
+/* Страница купленного тура */
+
+.container-heading-tour {
+    margin-top: 24px;
+}
+
+.tour-present-buy {
+    padding: 0;
+}
+
+.tour-present-buy-short__description-block-heading {
+  padding-top: 30px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+
+
+.tour-present-buy-short__description-block-paragraph {
+    font-family: 'Montserrat';
+    font-style: normal;
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.tour-present-buy-short__description {
+    border-radius: 10px;
+    background: #F7F7F7;
+    margin-right: 15px;
+}
+
+.tour-present-buy-short__description-block {
+    padding: 0;
+    
+
+}
+
+.rating-descripthion-buy-tour {
+    margin: auto 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #1A1919;
+} 
+
+.leave-feedback {
+    margin-top: 4px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration-line: underline;
+    color: #000000;
+}
+
+.tour-present-buy-short__maps {
+    border-radius: 5px;
+    padding: 0;
+    background-size: cover;
+    background-image: url(./img/icons/maps-tour-buy.png);
+    background-repeat: no-repeat;
+}
+
+.section-tour-full-description-heading {
+    font-size: 30px;
+    line-height: 37px;
+    color: #000000;
+}
+
 /* Личный кабинет */
 
 .container-lk {
