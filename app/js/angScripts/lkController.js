@@ -8,11 +8,26 @@ angular.module('WannaGo').controller('lkController', function ($scope, $rootScop
             $http.get(contextPath + '/api/v1/user')
                 .then(function successCallback(response) {
                     $scope.user = response.data;
-                    $scope.userProfile = response.data;
+                    $localStorage.userProfile = response.data;
                 }, function errorCallback(response) {
 
                 });
-        } else {
+        }
+    }
+
+    $scope.getCurrentUserForRegister = function (){
+        if ($localStorage.springWebUser) {
+            $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.springWebUser.token;
+
+            $http.get(contextPath + '/api/v1/user')
+                .then(function successCallback(response) {
+                    $scope.user = response.data;
+                    $localStorage.userProfile = response.data;
+                    $scope.getAllTrips()
+                    window.location.href = './personal-area.html'
+                }, function errorCallback(response) {
+
+                });
         }
     }
 
@@ -29,27 +44,26 @@ angular.module('WannaGo').controller('lkController', function ($scope, $rootScop
             xhr.timeout = 3000;
             xhr.onload = function() {
                 console.log(xhr.response)
-                if (xhr.status != 200) { // анализируем HTTP-статус ответа, если статус не 200, то произошла ошибка
+                if (xhr.status != 200) { // если фото не загрузилось
                     $scope.updateProfileDto.avatar = $localStorage.userProfile.avatar;
                     $http.post(contextPath + '/api/v1/profile/update', $scope.updateProfileDto)
                         .then(function successCallback(response) {
                             delete $localStorage.userProfile;
-                            window.location.href = './personal-area.html'
+                            $scope.getCurrentUserForRegister();
                         }, function errorCallback(response) {
                             alert("Ошибка при обновлении профиля")
                         });
-                } else { // если всё прошло гладко, выводим результат
+                } else { // если фото загрузилось
                     if($scope.updateProfileDto){
                         $scope.updateProfileDto.avatar = xhr.response;
                     } else {
                         $scope.updateProfileDto = {}
                         $scope.updateProfileDto.avatar = xhr.response;
                     }
-                    $scope.updateProfileDto.avatar = xhr.response;
                     $http.post(contextPath + '/api/v1/profile/update', $scope.updateProfileDto)
                         .then(function successCallback(response) {
                             delete $localStorage.userProfile;
-                            window.location.href = './personal-area.html'
+                            $scope.getCurrentUserForRegister();
                         }, function errorCallback(response) {
                             alert("Ошибка при обновлении профиля")
                         });
@@ -60,7 +74,7 @@ angular.module('WannaGo').controller('lkController', function ($scope, $rootScop
             $http.post(contextPath + '/api/v1/profile/update', $scope.updateProfileDto)
                 .then(function successCallback(response) {
                     delete $localStorage.userProfile;
-                    window.location.href = './personal-area.html'
+                    $scope.getCurrentUserForRegister();
                 }, function errorCallback(response) {
                     alert("Ошибка при обновлении профиля")
                 });
@@ -75,5 +89,7 @@ angular.module('WannaGo').controller('lkController', function ($scope, $rootScop
     };
 
     $scope.getCurrentUser();
-    // $scope.getAllTrips()
+    if($localStorage.userProfile) {
+        $scope.getAllTrips()
+    }
 });

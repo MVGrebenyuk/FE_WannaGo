@@ -27,13 +27,13 @@
     </head>
 
     <!-- ****** Body ****** -->
-    <div class="container">
-        <ul class="breadcrumbs">
-            <li><a href="./index.html">Главная</a></li>
-            <li>Туры</li>
-        </ul>
-    </div>
     <section class="tour-list">
+        <div class="container">
+            <ul class="breadcrumbs">
+                <li><a href="./index.html">Главная</a></li>
+                <li>Туры</li>
+            </ul>
+        </div>
         <div class="container">
             <h2 class="tour-catalog">Каталог туров</h2>
             <a href="./create-route.html"><button class="btn btn-submit tour-list-btn-create-tour">Создать тур</button></a>
@@ -136,13 +136,23 @@
                                     <div class="tour-list-second-block">
                                         <div class="user-name">
                                             <img src={{t.author.avatar}}>
-                                            <div class="tour-list-user-name">{{t.author.login}}</div>
+                                            <div class="tour-list-user-name">{{t.author.firstName + ' ' + t.author.lastName}}</div>
+                                            
                                         </div>
                                         <div class="tour-list-image">
                                             <img src={{t.image}}>
                                         </div>
                                         <div class="tour-list-grad-image">
-                                            <img src="img/tour-list/tour-list-image2.png">
+                                            <div class="tour-list-hero-star-rating">
+                                                <div class="rating-mini-tour-list">
+                                                    <span class="active"></span>
+                                                    <span class="active"></span>
+                                                    <span class="active"></span>
+                                                    <span class="active"></span>
+                                                    <span></span>
+                                                    <div class="rating-tour-list-description">25 оценок</div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="tour-list-second-block-button">
                                             <div class="tour-list-cost">{{t.price}}</div>
