@@ -50,7 +50,7 @@ var headerText = `
                                                     <ul class="submenu">
                                                         <li><a href="./personal-area.html">Профиль</a></li>
                                                         <li><a href="./create-route.html">Создать тур</a></li>
-                                                        <li><a href="">Мои туры</a></li>
+                                                        <li><a href="./favourites-routes.html">Избранное</a></li>
                                                         <li><a href="#" ng-click="tryToLogout()">Выход</a></li>
                                                     </ul>
                                                 </li>

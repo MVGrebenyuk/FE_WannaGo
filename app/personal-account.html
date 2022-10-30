@@ -39,7 +39,7 @@
         <div class="container container-breadcrumbs">
             <ul class="breadcrumbs">
                 <li><a href="./index.html">Главная</a></li>
-                <li>{{user.login}}</li>
+                <li><a href="./personal-area.html">{{user.firstName + ' ' + user.lastName}}</a></li>
                 <li>Настройки профиля</li>
             </ul>
             </div>
@@ -52,21 +52,21 @@
                             <div class="header-section-pa d-flex ">
                                 <div class="col-5">
                                     <label class="personal-account-label" for="disabledTextInput">Имя</label>
-                                    <input class="form-control personal-account-label-name" type="text" placeholder="Иван" ng-model="updateProfileDto.firstName">
+                                    <input class="form-control personal-account-label-name" type="text" value="{{user.firstName}}" placeholder="{{user.firstName}}" ng-model="updateProfileDto.firstName">
                                 </div>
                                 <div class="col-7">
                                     <label class="personal-account-label" for="disabledTextInput">Фамилия</label>
-                                    <input class="form-control personal-account-label-surname" type="text" ng-model="updateProfileDto.lastName" placeholder="Иванов">
+                                    <input class="form-control personal-account-label-surname" type="text" ng-model="updateProfileDto.lastName" value="{{user.lastName}}" placeholder="{{user.lastName}}">
                                 </div>
                             </div>
                             <div class="middle-section-pa d-flex">
                                 <div class="col-5">
                                     <label class="personal-account-label" for="disabledTextInput">Дата рождения</label>
-                                    <input class="form-control personal-account-label-date" ng-model="updateProfileDto.dateOfBirth" type="date" value="0000-00-00">
+                                    <input class="form-control personal-account-label-date" ng-model="updateProfileDto.dateOfBirth" type="date" value="{{user.dateOfBirth}}">
                                 </div>
                                 <div class="col-7">
                                     <label class="personal-account-label" for="disabledTextInput">Город</label>
-                                    <input type="text" class="form-control personal-account-label-city" ng-model="updateProfileDto.city" placeholder="Москва">
+                                    <input type="text" class="form-control personal-account-label-city" ng-model="updateProfileDto.city" placeholder="{{user.city}}">
                                 </div>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                     </div>
                     <div class="discription-lk col-md-12">
                             <label class="personal-account-label personal-account-label-about-us" for="exampleFormControlTextarea1">О себе</label>
-                            <textarea class="form-control form-control-lk" id="exampleFormControlTextarea1" rows="3" ng-model="updateProfileDto.about">Пару слов о себе</textarea>
+                            <textarea class="form-control form-control-lk" id="exampleFormControlTextarea1" rows="3" ng-model="updateProfileDto.about" placeholder="{{user.about}}">{{user.about}}</textarea>
                             <span class="discription-lk-info">*максимум 650 символов</span>
                     </div>
                 </form>
@@ -105,7 +105,6 @@
     <!-- All Plugins JS -->
     <script src="js/others/plugins.js"></script>
     <!-- Active JS -->
-    <script src="js/tour-slider.js"></script>
     <script src="js/personal-account.js"></script>
     <!-- Header and Modal JS -->
     <script src="js/header.js"></script>

@@ -37,12 +37,12 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
-var i = 1;
-  setInterval(function(){
-  currentSlide(i)
-  i++;
-  if(i == 5)
-  {
-   i = 1;
-  }
-},5000)
+// var i = 1;
+//   setInterval(function(){
+//   currentSlide(i)
+//   i++;
+//   if(i == 5)
+//   {
+//    i = 1;
+//   }
+// },5000)

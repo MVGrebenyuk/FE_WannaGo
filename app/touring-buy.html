@@ -20,181 +20,134 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <!-- Angular scripts -->
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-route.min.js"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-route.min.js"></script>
+
     </head>
-    <body>
-    <!-- ****** Body ****** -->
+<body>
+    <div class="container" ng-controller="tourPageController">
 
-    <div class="container container-breadcrumbs">
-        <ul class="breadcrumbs">
-            <li><a href="./index.html">Главная</a></li>
-            <li><a href="./tour-list.html">Все туры</a></li>
-            <li>Горная Аджария</li>
-        </ul>
-    </div>
-    
-    <section class="section-heading-tour">
-        <div class="container container-heading-tour">
-            <div class="col-md-12 tour-hero-description">
-                <!-- <h2 class="tour-heading">{{trip.title}}</h2> -->
-                <h2 class="tour-heading">
-                    Горная Аджария
-                </h2> 
-            </div>
-            <div class="tour-hero-star-rating">
-                <div class="rating-mini">
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span></span>
-                </div>
-                <p class="rating-descripthion-buy-tour">
-                    25 оценок
-                </p>
-            </div>
-            <a class="leave-feedback" href="#">
-                Оставить отзыв
-            </a>
+        <div class="container container-breadcrumbs">
+            <ul class="breadcrumbs">
+                <li><a href="./index.html">Главная</a></li>
+                <li><a href="./tour-list.html">Все туры</a></li>
+                <li>Горная Аджария</li>
+            </ul>
         </div>
-    </section>
+        
+        <section class="section-heading-tour">
+            <div class="container container-heading-tour">
+                <div class="col-md-12 tour-hero-description">
+                    <h2 class="tour-heading">Горная Аджария</h2>
+                </div>
+                <div class="tour-hero-star-rating">
+                    <div class="rating-mini">
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span></span>
+                    </div>
+                    <p class="rating-descripthion-buy-tour">
+                        25 оценок
+                    </p>
+                </div>
+                <a class="leave-feedback" href="#">
+                    Оставить отзыв
+                </a>
+            </div>
+        </section>
 
-    <section class="section-tour-present-buy">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12  d-flex tour-present-buy">
-                    <div class="col-md-6 tour-present-buy-short__description">
-                        <div class="tour-present-buy-short__description-block">
-                                <div class="col-md-12 reviews-descripthion">
-                                    <h3 class="tour-present-buy-short__description-block-heading">Краткое описание</h2>
-                                    <p class="tour-present-buy-short__description-block-paragraph">
-                                        Разнообразный и богатый опыт говорит нам, что внедрение современных методик способствует повышению качества кластеризации усилий. Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: перспективное. Разнообразный и богатый опыт говорит нам, что внедрение современных методик способствует повышению качества кластеризации усилий                                    </p>
-                                </div> 
-                                <div class="col-md-12 d-flex tour-characteristics">
-                                    <div class="col-md-3 tour-characteristics-block">
-                                        <div class="tour-characteristics-discription">Время в пути</div>
-                                        <div class="tour-characteristics-footer d-flex">
-                                            <span class=" tour-characteristics-icon tour-characteristics-icon-watch"></span>
-                                            <div class="tour-characteristics-result">{{trip.duration}}</div>
+        <section class="section-tour-present-buy">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12  d-flex tour-present-buy">
+                        <div class="col-md-6 tour-present-buy-short__description">
+                            <div class="tour-present-buy-short__description-block">
+                                    <div class="col-md-12 reviews-descripthion">
+                                        <h3 class="tour-present-buy-short__description-block-heading">Краткое описание</h2>
+                                        <p class="tour-present-buy-short__description-block-paragraph">
+                                            Разнообразный и богатый опыт говорит нам, что внедрение современных методик способствует повышению качества кластеризации усилий. Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: перспективное. Разнообразный и богатый опыт говорит нам, что внедрение современных методик способствует повышению качества кластеризации усилий                                    </p>
+                                    </div> 
+                                    <div class="col-md-12 d-flex tour-characteristics">
+                                        <div class="col-md-3 tour-characteristics-block">
+                                            <div class="tour-characteristics-discription">Время в пути</div>
+                                            <div class="tour-characteristics-footer d-flex">
+                                                <span class=" tour-characteristics-icon tour-characteristics-icon-watch"></span>
+                                                <div class="tour-characteristics-result">{{trip.duration}}</div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-3 tour-characteristics-block">
-                                        <div class="tour-characteristics-discription">Расстояние</div>
-                                        <div class="tour-characteristics-footer  d-flex">
-                                            <span class="tour-characteristics-icon tour-characteristics-icon-point"></span>
-                                            <div class="tour-characteristics-result">{{trip.length}}</div>
+                                        <div class="col-md-3 tour-characteristics-block">
+                                            <div class="tour-characteristics-discription">Расстояние</div>
+                                            <div class="tour-characteristics-footer  d-flex">
+                                                <span class="tour-characteristics-icon tour-characteristics-icon-point"></span>
+                                                <div class="tour-characteristics-result">{{trip.length}}</div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-3 tour-characteristics-block">
-                                        <div class="tour-characteristics-discription">Сложность</div>
-                                        <div class="tour-characteristics-footer  d-flex">
-                                            <span class="tour-characteristics-icon tour-characteristics-icon-level"></span>
-                                            <div class="tour-characteristics-result">{{trip.level}}/5</div>
+                                        <div class="col-md-3 tour-characteristics-block">
+                                            <div class="tour-characteristics-discription">Сложность</div>
+                                            <div class="tour-characteristics-footer  d-flex">
+                                                <span class="tour-characteristics-icon tour-characteristics-icon-level"></span>
+                                                <div class="tour-characteristics-result">{{trip.level}}/5</div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-3 tour-characteristics-block d-flex">
-                                        <img src={{t.author.avatar}}>
-                                        <div class="tour-characteristics-footer  d-flex">
-                                            <div class="tour-characteristics-result">{{trip.author.firstName + ' ' + trip.author.lastName}}</div>
+                                        <div class="col-md-3 tour-characteristics-block d-flex">
+                                            <img src={{t.author.avatar}}>
+                                            <div class="tour-characteristics-footer  d-flex">
+                                                <div class="tour-characteristics-result">{{trip.author.firstName + ' ' + trip.author.lastName}}</div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>   
+                                    </div>   
+                            </div>
+                        </div>
+                        <div class="col-md-6 tour-present-buy-short__maps">
+                            <!-- Карта -->
                         </div>
                     </div>
-                    <div class="col-md-6 tour-present-buy-short__maps">
-                        <!-- Карта -->
+                </div>
+            </div>
+        </section>
+
+        <section class="section-tour-full-description">
+            <div class="container container-full-description">
+                <div class="row">
+                    <h2 class="section-tour-full-description-heading">
+                        Описание маршрута
+                    </h2>
+                    <div class="full-description-blok d-flex col-md-12">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, repellat. Fugit dolore sequi, omnis expedita voluptas molestias laboriosam obcaecati asperiores magnam iure cum voluptates, autem, adipisci odit dignissimos at minima.
+                        Nemo iusto delectus accusamus voluptatibus, quam obcaecati velit exercitationem dignissimos. Harum culpa repudiandae libero dolorem laboriosam quaerat. Harum adipisci exercitationem dicta officia consequuntur consectetur non, vel minima cum veritatis sunt.
+                        Voluptatem voluptas soluta sapiente sequi quidem minima corporis ipsum, delectus, totam velit sunt laboriosam debitis molestiae eius, porro optio? Enim vitae dicta dignissimos odio veniam assumenda doloribus, possimus repudiandae eum.
+                        Repellat laborum nisi architecto impedit nesciunt nihil labore qui temporibus quisquam et voluptatibus dolorum ullam quaerat, accusantium odio pariatur quae libero! Numquam cum quam quasi ea, et deleniti eaque illum.
+                        Possimus iusto itaque neque facilis error laboriosam voluptatem libero magni corporis? Placeat assumenda voluptates ab pariatur perspiciatis totam veniam sed a, consequuntur ullam aut maiores nihil tempora necessitatibus explicabo alias.
+                        Nam ut deserunt sunt aut eveniet, quas tempore architecto tempora dignissimos quia dolorum dolor expedita culpa reprehenderit corrupti beatae inventore. Excepturi dolorem ea recusandae totam eos similique ipsa consequuntur quas.
+                        Minus non blanditiis magni temporibus et nihil placeat. Porro ut numquam sint assumenda nemo quae cumque fuga voluptatum laudantium quas quis distinctio harum, beatae laboriosam facilis laborum aliquid, ducimus et.
+                        Quisquam dignissimos quidem, eaque ullam excepturi itaque dicta explicabo quaerat commodi tempora, impedit obcaecati molestiae! Reprehenderit assumenda numquam vitae, quaerat magnam deleniti architecto! Sequi maxime vitae nihil voluptatum voluptas aliquid.
+                        Dignissimos beatae quae, minima ut voluptatum eum! Quam modi quia alias sapiente itaque, harum et quaerat veritatis aperiam vitae mollitia ducimus sunt neque culpa nobis consectetur impedit repellendus maiores praesentium?
+                        Ullam suscipit iure accusamus debitis atque error? Amet blanditiis aspernatur, quis aliquam eveniet dolor, iusto tempora, sint temporibus dolores laboriosam iure architecto nihil. A alias debitis reprehenderit quae recusandae iste.
+                        Nisi, neque repellat. Quasi, dolores dignissimos dicta aperiam quo modi similique tenetur delectus fugiat molestias consectetur obcaecati. Aspernatur aliquam modi reprehenderit, ab, quidem id expedita beatae quasi alias atque harum?
+                        Libero reprehenderit natus voluptas illo velit ut suscipit nihil quasi eum reiciendis labore dolorum veniam neque, voluptates, laudantium est repellendus quod inventore incidunt sunt ducimus quos ex doloribus. Eaque, voluptates.
+                        Eius aliquam ducimus assumenda quod vitae laudantium ex tenetur error maxime reiciendis eum, quas, porro consequatur rem officia ipsum numquam quae quasi itaque pariatur veritatis! Necessitatibus libero eveniet magni excepturi?
+                        Laudantium cumque natus accusamus cupiditate itaque, error voluptatum laboriosam enim corporis iste modi, consequuntur facilis minus delectus alias quibusdam eius debitis, velit perspiciatis architecto? Distinctio nesciunt placeat magnam atque deleniti?</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="section-tour-full-description">
-        <div class="container container-full-description">
-            <div class="row">
-                <h2 class="section-tour-full-description-heading">
-                    Описание маршрута
-                </h2>
-                <div class="full-description-blok d-flex col-md-12">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, repellat. Fugit dolore sequi, omnis expedita voluptas molestias laboriosam obcaecati asperiores magnam iure cum voluptates, autem, adipisci odit dignissimos at minima.
-                    Nemo iusto delectus accusamus voluptatibus, quam obcaecati velit exercitationem dignissimos. Harum culpa repudiandae libero dolorem laboriosam quaerat. Harum adipisci exercitationem dicta officia consequuntur consectetur non, vel minima cum veritatis sunt.
-                    Voluptatem voluptas soluta sapiente sequi quidem minima corporis ipsum, delectus, totam velit sunt laboriosam debitis molestiae eius, porro optio? Enim vitae dicta dignissimos odio veniam assumenda doloribus, possimus repudiandae eum.
-                    Repellat laborum nisi architecto impedit nesciunt nihil labore qui temporibus quisquam et voluptatibus dolorum ullam quaerat, accusantium odio pariatur quae libero! Numquam cum quam quasi ea, et deleniti eaque illum.
-                    Possimus iusto itaque neque facilis error laboriosam voluptatem libero magni corporis? Placeat assumenda voluptates ab pariatur perspiciatis totam veniam sed a, consequuntur ullam aut maiores nihil tempora necessitatibus explicabo alias.
-                    Nam ut deserunt sunt aut eveniet, quas tempore architecto tempora dignissimos quia dolorum dolor expedita culpa reprehenderit corrupti beatae inventore. Excepturi dolorem ea recusandae totam eos similique ipsa consequuntur quas.
-                    Minus non blanditiis magni temporibus et nihil placeat. Porro ut numquam sint assumenda nemo quae cumque fuga voluptatum laudantium quas quis distinctio harum, beatae laboriosam facilis laborum aliquid, ducimus et.
-                    Quisquam dignissimos quidem, eaque ullam excepturi itaque dicta explicabo quaerat commodi tempora, impedit obcaecati molestiae! Reprehenderit assumenda numquam vitae, quaerat magnam deleniti architecto! Sequi maxime vitae nihil voluptatum voluptas aliquid.
-                    Dignissimos beatae quae, minima ut voluptatum eum! Quam modi quia alias sapiente itaque, harum et quaerat veritatis aperiam vitae mollitia ducimus sunt neque culpa nobis consectetur impedit repellendus maiores praesentium?
-                    Ullam suscipit iure accusamus debitis atque error? Amet blanditiis aspernatur, quis aliquam eveniet dolor, iusto tempora, sint temporibus dolores laboriosam iure architecto nihil. A alias debitis reprehenderit quae recusandae iste.
-                    Nisi, neque repellat. Quasi, dolores dignissimos dicta aperiam quo modi similique tenetur delectus fugiat molestias consectetur obcaecati. Aspernatur aliquam modi reprehenderit, ab, quidem id expedita beatae quasi alias atque harum?
-                    Libero reprehenderit natus voluptas illo velit ut suscipit nihil quasi eum reiciendis labore dolorum veniam neque, voluptates, laudantium est repellendus quod inventore incidunt sunt ducimus quos ex doloribus. Eaque, voluptates.
-                    Eius aliquam ducimus assumenda quod vitae laudantium ex tenetur error maxime reiciendis eum, quas, porro consequatur rem officia ipsum numquam quae quasi itaque pariatur veritatis! Necessitatibus libero eveniet magni excepturi?
-                    Laudantium cumque natus accusamus cupiditate itaque, error voluptatum laboriosam enim corporis iste modi, consequuntur facilis minus delectus alias quibusdam eius debitis, velit perspiciatis architecto? Distinctio nesciunt placeat magnam atque deleniti?
-                    Minus error earum exercitationem? Dolore atque mollitia corrupti. Dicta voluptates eaque rerum veniam dolore nam, praesentium earum quia ullam ipsam neque architecto modi quae nostrum accusamus minima. Sit, explicabo vitae!
-                    Vero labore voluptas, aliquam tenetur impedit hic culpa adipisci explicabo vitae. Repellat eaque quidem repudiandae ullam quibusdam cum quo enim autem. Quo fugit sint voluptatem error voluptate atque quia aliquam.
-                    Aperiam ab beatae quibusdam repellat accusantium perspiciatis unde distinctio aut error officia expedita amet ipsa reiciendis deserunt natus cumque velit maxime nisi fugiat quas harum, quod iure deleniti illum. Consequatur.
-                    Libero architecto, odio voluptatem provident et culpa laboriosam assumenda similique veritatis earum eum veniam recusandae minus harum cum maiores, corporis ipsa quasi neque iste dolor? Iusto atque quam dolorum cumque.
-                    Maxime, aut expedita dolorem facere fuga esse delectus, perspiciatis ea at quis molestias a sit incidunt quas repellat eaque? Porro, consectetur ducimus. Optio nemo fugiat dolor in magnam ut totam.
-                    Ipsa cupiditate rem blanditiis hic pariatur repellat voluptatibus quas possimus, fuga nobis recusandae quis voluptates illum ipsum perspiciatis impedit reiciendis eveniet officia deserunt minus dolorem nulla dignissimos laboriosam. Voluptatibus, molestias.
-                    Magnam temporibus modi consequuntur eaque qui quos recusandae, quasi illo at dolore quas amet provident expedita! Beatae, omnis odit laudantium optio ex blanditiis ab nostrum. Vitae harum accusamus quis est.
-                    Unde quae quas ab eaque culpa excepturi libero eos facere, minus earum consequuntur ad distinctio perspiciatis et at voluptatibus obcaecati a praesentium cupiditate, odit reprehenderit! Fugiat perferendis temporibus maiores accusantium.
-                    Enim quod quos at dolorem porro laboriosam harum impedit tenetur nihil mollitia, fugit eius quam quae atque possimus ipsa, repellendus blanditiis eos iusto nobis sint quasi nesciunt ratione. At, aperiam!
-                    Deserunt doloribus perspiciatis iure quisquam qui porro soluta, laboriosam eligendi molestias ipsum quasi minus, dolorum quia officia illum, suscipit blanditiis voluptatibus modi deleniti similique ducimus beatae unde explicabo commodi? Voluptates!
-                    Beatae veniam quo dicta quis, cupiditate odio sit optio dolorem nesciunt vel blanditiis eveniet tempora ipsam voluptatibus mollitia, ea accusantium temporibus voluptatum quam natus ipsum! Magni debitis minus quis laudantium!
-                    Maiores saepe libero magni fugiat commodi pariatur obcaecati ut vel nulla ipsum! Vel doloremque nulla sapiente sequi eum in asperiores. Officia quae quis natus placeat repellat magni delectus beatae quia?
-                    Explicabo, nostrum ducimus quas enim iure numquam impedit eligendi. Maxime commodi aliquam amet incidunt, explicabo quidem sed voluptates neque nihil repellendus molestiae praesentium odio tempora pariatur reprehenderit beatae quam consequuntur!
-                    Molestiae, quis! Deleniti, aut eligendi officiis necessitatibus nam eveniet tempore facere, vitae optio temporibus consequatur reprehenderit, quam molestias libero inventore commodi. Quisquam similique doloremque cumque, reiciendis amet iusto non blanditiis!
-                    Veniam in saepe deserunt earum ipsa praesentium voluptate illo distinctio culpa ipsam accusamus eveniet molestiae error placeat, adipisci corporis aperiam quo voluptatum fugiat voluptatem iste quidem veritatis expedita? Quibusdam, ex.
-                    Praesentium assumenda vel pariatur quidem sequi nemo illo. Facere ipsum est obcaecati culpa mollitia? Vero tenetur fugiat at, quis ut rerum odio in nobis cupiditate sit. Animi ea perferendis facilis?</p>
-                    <!-- <div class="full-description-blok_text col-md-6">
-                        <p class="full-description-blok-text__paragraph">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia amet modi ad minus voluptas harum. Quis, saepe labore. Fugit sint ipsam cumque, aspernatur reprehenderit eos adipisci magni pariatur itaque voluptate.
-                            Cupiditate eveniet magni eos iure nam magnam ratione officia culpa, repudiandae voluptas dolorum facilis sapiente debitis blanditiis architecto. Impedit nobis perspiciatis nihil! Ut, repellendus? Dolor corrupti inventore libero dolores quidem!
-                            Maiores illo dolor autem rerum et nisi fuga voluptatem nesciunt, quod mollitia sint repudiandae aperiam, cum, nobis quo cumque! Dicta rem officia amet ipsum. Nisi veritatis expedita vitae quaerat provident!
-                            Fugiat consequatur vitae ab eos officia minus est rem quisquam sequi itaque aut, tenetur veniam, facere quasi pariatur dolores tempora officiis, distinctio quod assumenda quos placeat corporis numquam aliquid. Soluta.
-
-                            <br>
-
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam quibusdam sunt vitae ad quisquam earum fugiat modi, voluptatibus, tempore accusamus, temporibus dolor sapiente qui veniam facere doloremque laborum pariatur.
-                            Fuga maxime iste ut nobis repudiandae quisquam optio voluptatem est tempore aperiam. Consequuntur dolorem vero voluptatum minima. Cum, eum aperiam hic esse ipsa incidunt rerum totam, nemo est quia tempore!
-                            Reiciendis vitae tenetur quod maxime numquam distinctio beatae a, error deserunt nostrum aliquam, dolor blanditiis quasi itaque? Repellendus ipsum ullam, consequatur necessitatibus nesciunt similique accusantium expedita odio. Distinctio, commodi nostrum.
-                            Nihil quos rem quia, quasi molestiae soluta, vel qui nesciunt sint velit quis cupiditate sit ab repellat. Quia eveniet saepe asperiores nam at, est, culpa suscipit earum numquam fuga mollitia.
-                            Pariatur labore deserunt in error voluptatum nostrum dolorum esse est nesciunt ea officia, mollitia eos doloremque iusto non quas aliquid, vel suscipit iure incidunt facere. Quis numquam fugit dolores sunt!
-
-                            <br>
-
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi exercitationem excepturi quae veniam minima inventore sapiente praesentium recusandae tenetur expedita dolor blanditiis sunt iusto laborum minus, assumenda temporibus soluta! Veniam!
-                            Vitae nihil neque libero impedit consequuntur quia voluptas sunt animi, aperiam possimus placeat unde odio at reprehenderit fuga iure recusandae est id? In possimus qui assumenda sit dolore. Cupiditate, impedit?
-                        </p>
-                    </div>
-                    <div class="full-description-blok_image col-md-6">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint rem soluta, at delectus omnis reprehenderit nesciunt architecto quod molestiae iste! Culpa esse soluta a vero? Reprehenderit dolores blanditiis aperiam totam?
-                        Magnam minus modi voluptatem corporis deserunt blanditiis, recusandae cupiditate omnis nesciunt tenetur! Vitae est quod esse temporibus optio laudantium tenetur ab totam perferendis, sit ducimus recusandae ut et quaerat assumenda!
-                        Commodi sequi doloribus, perspiciatis, dolor incidunt libero ullam illum at voluptatem enim assumenda quam debitis molestias aspernatur numquam vitae cupiditate ab? Sequi reprehenderit magni nam vero veniam? Sit, commodi sunt.
-                        Fugiat tempora quibusdam quaerat ipsa dignissimos sit quam mollitia! At, nam quos atque reprehenderit voluptates expedita ipsum architecto totam omnis doloribus cupiditate, nostrum quaerat? Cumque maxime ullam minus ratione illo?
-                        Amet quaerat, cumque quisquam, tempora dolore dolorum placeat expedita voluptatum dignissimos aliquid laboriosam quas perferendis sequi quis quidem. Quisquam doloremque quibusdam aliquid nemo nobis error magni ullam similique provident laborum!
-                    </div> -->
-                </div>
-            </div>
-        </div>
-    </section>
-
+        </section>
+    </div>
     <!-- ****** End Body ****** -->
     </body>
+
     <script src="js/angScripts/index.js"></script>
+    <script src="js/angScripts/tourPageController.js"></script>
     <!-- Jquery-2.2.4 js -->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <script type="text/javascript" src="http://ipic.su/javascript/functions.js" language="javascript"></script>
     <!-- Popper js -->
     <script src="js/bootstrap/popper.min.js"></script>
     <!-- Bootstrap-4 js -->
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <!-- All Plugins JS -->
     <script src="js/others/plugins.js"></script>
-    <!-- Active JS -->
-    <script src="js/active.js"></script>
     <!-- Header and Modal JS -->
     <script src="js/header.js"></script>
     <!-- Footer JS -->
