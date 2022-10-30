@@ -41,6 +41,7 @@
             <div>
                 <h2 class="tour-catalog">Профиль пользователя</h2>
                 <div class="personal-area-edit-button">
+                    <button class="btn-purchased-tours-area">Купленные туры</button>
                     <button class="btn-edit-personal-area">Редактировать</button>
                 </div>
             </div>
@@ -97,80 +98,62 @@
             </div> -->
             <div class="user-routes">
                 <h5 class="user-routes-caption">Маршруты автора</h5>
-                <table class="tour-list-table">
-                    <tbody>
-                        <tr>
-                            <td ng-repeat="t in trips">
-                                <div class="user-route-block">
-                                    <div class="user-route-second-block">
-                                        <div class="user-route-user-name-block">
-                                            <img src="{{t.author.avatar}}">
-                                            <div class="user-route-user-name">{{t.author.firstName + ' ' + t.author.lastName}}</div>
-                                            <div class="user-route-rating-mini">
-                                                <span class="active"></span>
-                                                <span class="active"></span>
-                                                <span class="active"></span>
-                                                <span></span>
-                                                <span></span>
-                                            </div>
-                                            <p class="user-route-route-evaluation">187 оценок</p>
-                                        </div>
-                                        <div class="user-route-image">
-                                            <img src="{{t.image}}">
-                                        </div>
-                                        <div class="user-route-grad-image">
-                                            <img src="img//tour-list/tour-list-image2.png">
-                                        </div>
-                                        <div class="user-route-second-block-button">
-                                            <div class="user-route-cost">{{t.price}}</div>
-                                            <button class="user-route-btn-favorites"></button>
-                                            <button class="btn btn-submit user-route-btn-buy-tour" data-toggle="modal" data-target="#myModal">Купить</button>
-                                        </div>
-                                    </div>
-                                    <div class="user-route-first-block">
-                                        <div class="user-route-place-name">{{t.title}}</div>
-                                        <div class="user-route-bottom-block">
-                                            <div><span>Время в пути</span>
-                                                <div class="bottom-block-info">
-                                                    <img src="./img/icons/tour-list-1.png">
-                                                    <p>{{t.duration}}</p>
-                                                </div>
-                                            </div>
-                                            <div><span>Расстояние</span>
-                                                <div class="bottom-block-info">
-                                                    <img src="./img/icons/tour-list-2.png">
-                                                    <p>{{t.length}} км</p>
-                                                </div>
-                                            </div>
-                                            <div><span>Сложность</span>
-                                                <div class="bottom-block-info">
-                                                    <img src="./img/icons/tour-list-3.png">
-                                                    <p>{{t.level + '/5'}}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="user-route-description-text">{{t.shortTitle}}
-                                        </div>
+                <div class="flex-container wrap">
+                    <div class="flex-item" ng-repeat="t in trips"><div class="user-route-block">
+                        <div class="user-route-second-block">
+                            <div class="user-route-user-name-block">
+                                <img src="{{t.author.avatar}}">
+                                <div class="user-route-user-name">{{t.author.firstName + ' ' + t.author.lastName}}</div>
+                                <div class="user-route-rating-mini">
+                                    <span class="active"></span>
+                                    <span class="active"></span>
+                                    <span class="active"></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <p class="user-route-route-evaluation">187 оценок</p>
+                            </div>
+                            <div class="user-route-image">
+                                <img src="{{t.image}}">
+                            </div>
+                            <div class="user-route-grad-image">
+                                <img src="img//tour-list/tour-list-image2.png">
+                            </div>
+                            <div class="user-route-second-block-button">
+                                <div class="user-route-cost">{{t.price}}</div>
+                                <button class="user-route-btn-favorites"></button>
+                                <button class="btn btn-submit user-route-btn-buy-tour" data-toggle="modal" data-target="#myModal">Купить</button>
+                            </div>
+                        </div>
+                        <div class="user-route-first-block"><a href="./touring.html?tourId={{t.id}}">
+                            <div class="user-route-place-name">{{t.title}}</div>
+                            <div class="user-route-bottom-block">
+                                <div><span>Время в пути</span>
+                                    <div class="bottom-block-info">
+                                        <img src="./img/icons/tour-list-1.png">
+                                        <p>{{t.duration}}</p>
                                     </div>
                                 </div>
-                            </td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
+                                <div><span>Расстояние</span>
+                                    <div class="bottom-block-info">
+                                        <img src="./img/icons/tour-list-2.png">
+                                        <p>{{t.length}} км</p>
+                                    </div>
+                                </div>
+                                <div><span>Сложность</span>
+                                    <div class="bottom-block-info">
+                                        <img src="./img/icons/tour-list-3.png">
+                                        <p>{{t.level + '/5'}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user-route-description-text">{{t.shortTitle}}
+                            </div>
+                        </div></a>
+                    </div></div>
+                  </div>
                 <div class="personal-area-see-more text-center">
-                    <button class="btn-personal-area-see-more" ng-show="trips.length > 4">Смотреть больше</button>
+                    <button class="btn-personal-area-see-more" ng-show="trips.length > 9">Смотреть больше</button>
                 </div>
             </div>
         </div>

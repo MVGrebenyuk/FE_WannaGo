@@ -145,11 +145,6 @@ CSS
     margin-right: 20px;
 }
 
-.forgot {
-    color: #000;
-    font-size: 10px; /* изменили размер шрифта на 12 */
-}
-
 .control-label-registration {
     margin-top: 0; /* убрали маргин */
 }
@@ -215,7 +210,7 @@ CSS
 
 .forgot {
     color: #000;
-    font-size: 10px; /* изменили размер шрифта на 12 */
+    font-size: 12px;
 }
 
 /* Регистрация */
@@ -557,6 +552,7 @@ p {
     height: 50px;
     box-shadow: none;
     margin: 13px 0 0 20px;
+    border-radius: 50%;
 }
 
 .slideText .slide_info a{
@@ -567,6 +563,10 @@ p {
 .slideText .slide_tour_name {
     font-size: 40px;
     margin: 10px 0 0 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 666px;
 }
 
 .slideText .slide_rating {
@@ -577,6 +577,8 @@ p {
 .slideText .slide_tour_info {
     font-size: 16px;
     margin: 10px 100px 0 20px;
+    overflow: hidden;
+    max-height: 50px;
 }
 
 .slideText .slide_tour_price {
@@ -590,6 +592,8 @@ p {
     width: 130px;
     height: 40px;
     cursor: pointer;
+    text-decoration: none;
+    color: white;
 }
 
 .slideText .slide_btn_details {
@@ -730,7 +734,7 @@ nav ul {
     background: white;
     /* border: 2px solid #003559;  Убрал обводку */
     position: absolute;
-    left: 35px;
+    left: 65px;
     top: 8px;
     visibility: hidden;
     opacity: 0;
@@ -822,10 +826,14 @@ nav ul {
 }
 
 .place-name {
-    font-size: 40px;
+    font-size: 38px;
     font-weight: bold;
     margin-top: 10px;
     color: #000;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 456px;
 }
 
 .tour-description-text {
@@ -836,6 +844,8 @@ nav ul {
     margin-top: 10px;
     margin-bottom: 20px;
     color: #000;
+    overflow: hidden;
+    max-height: 143px;
 }
 
 .tour-description {
@@ -866,12 +876,11 @@ nav ul {
     margin-bottom: 20px;
     width: 880px;
     margin-left: 20px;
-    cursor: pointer;
 }
 
-.tour-list-block:active,
-.tour-list-block:hover,
-.tour-list-block {
+.tour-list-first-block:active,
+.tour-list-first-block:hover,
+.tour-list-first-block {
     text-decoration: none;
     color: black;
 }
@@ -912,8 +921,13 @@ nav ul {
     border-radius: 10px;
     cursor: pointer;
     font-weight: 600;
-    line-height: 24px;
+    line-height: 27px;
     letter-spacing: 1px;
+}
+
+.tour-list-btn-buy-tour:hover {
+    text-decoration: none;
+    color: white;
 }
 
 .tour-list-btn-create-tour {
@@ -1142,7 +1156,7 @@ nav ul {
     padding-left: 40px;
     margin-top: 30px;
     position: sticky;
-    top: 0;
+    top: 80px;
 }
 
 .tour-list-filter-caption {
@@ -1230,82 +1244,6 @@ input[type="checkbox"]:checked + label span {
     border-radius: 10px;
     position: relative;
     margin: 24px 24px 88px 0;
-}
-
-/* Страница купленного тура */
-
-.container-heading-tour {
-    margin-top: 24px;
-}
-
-.tour-present-buy {
-    padding: 0;
-}
-
-.tour-present-buy-short__description-block-heading {
-  padding-top: 30px;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
-  color: #000000;
-}
-
-
-.tour-present-buy-short__description-block-paragraph {
-    font-family: 'Montserrat';
-    font-style: normal;
-    margin-bottom: 24px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color: #000000;
-}
-
-.tour-present-buy-short__description {
-    border-radius: 10px;
-    background: #F7F7F7;
-    margin-right: 15px;
-}
-
-.tour-present-buy-short__description-block {
-    padding: 0;
-    
-
-}
-
-.rating-descripthion-buy-tour {
-    margin: auto 0;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color: #1A1919;
-} 
-
-.leave-feedback {
-    margin-top: 4px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    text-decoration-line: underline;
-    color: #000000;
-}
-
-.tour-present-buy-short__maps {
-    border-radius: 5px;
-    padding: 0;
-    background-size: cover;
-    background-image: url(./img/icons/maps-tour-buy.png);
-    background-repeat: no-repeat;
-}
-
-.section-tour-full-description-heading {
-    font-size: 30px;
-    line-height: 37px;
-    color: #000000;
 }
 
 /* Личный кабинет */
@@ -1880,7 +1818,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     display: inherit;
 }
 
-.autor-fhoto {
+.autor-fhoto img {
     display: inline-block;
     min-width: 156px;
     height: 156px;
@@ -2326,13 +2264,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .user-routes-caption {
     margin-top: 40px;
+    margin-bottom: 30px;
     font-size: 30px;
     line-height: 10px;
 }
 
 .personal-area-edit-button {
     display: inline-block;
-    margin-left: 454px;
+    margin-left: 208px;
 }
 
 .btn-edit-personal-area {
@@ -2350,6 +2289,56 @@ input[type=date]::-webkit-calendar-picker-indicator {
     background-size: auto;
     background-position: 188px 13px;
     background-color: white;
+    cursor: pointer;
+}
+
+.btn-edit-personal-area:hover {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    display: inline-block;
+    width: 232px;
+    height: 46px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 11px 50px 11px 20px;
+    background-image: url(./img/personal-area/edit.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 188px 13px;
+    background-color: #e7e6e6;
+    color: black;
+    cursor: pointer;
+}
+
+.btn-purchased-tours-area {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    display: inline-block;
+    width: 232px;
+    height: 46px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 11px 11px 11px 8px;
+    background-color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-purchased-tours-area:hover {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    display: inline-block;
+    width: 232px;
+    height: 46px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 11px 11px 11px 8px;
+    background-color: #FF820E;
+    color: white;
+    cursor: pointer;
 }
 
 .user-photo-area {
@@ -2450,6 +2439,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .user-route-user-name-block img {
     width: 40px;
     height: 40px;
+    border-radius: 50%;
 }
 
 .user-route-user-name {
@@ -2551,6 +2541,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
     margin: 0 24px;
 }
 
+.user-route-first-block > a {
+    text-decoration: none;
+}
+
 .user-route-place-name {
     font-size: 20px;
     font-weight: bold;
@@ -2590,18 +2584,18 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .user-route-rating-mini span {
-	padding: 0;
+	padding: 0 2px;
 	font-size: 21px;
 	line-height: 1;
 	color: lightgrey;
 }
 
 .user-route-rating-mini > span:before {
-	content: '★';
+	content: url(./img/icons/StarTlUn.png);
 }
 
 .user-route-rating-mini > span.active {
-	color: gold;
+	content: url(./img/icons/StarTl.png);
 }
 
 /* Favourites */
@@ -2772,18 +2766,18 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .favorites-rating-mini span {
-	padding: 0;
+	padding: 0 2px;
 	font-size: 21px;
 	line-height: 1;
 	color: lightgrey;
 }
 
 .favorites-rating-mini > span:before {
-	content: '★';
+	content: url(./img/icons/StarTlUn.png);
 }
 
 .favorites-rating-mini > span.active {
-	color: gold;
+	content: url(./img/icons/StarTl.png);
 }
 
 .btn-favorites-see-more {
@@ -2842,13 +2836,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
     border: none;
     border-radius: 10px;
     position: relative;
-    margin: 24px 24px 0 0;
+    margin: 24px 24px 0 4px;
 }
 
 .purchased-routes-grad-image {
     position: absolute;
     z-index: 99;
     margin-top: -57px;
+    margin-left: 4px;
 }
 
 .purchased-routes-grad-image img {
@@ -2859,6 +2854,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     width: 356px;
     margin-top: 10px;
     margin-bottom: 75px;
+    margin-left: 4px;
 }
 
 .purchased-routes-route-evaluation {
@@ -2924,18 +2920,18 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .purchased-routes-rating-mini span {
-	padding: 0;
+	padding: 0 2px;
 	font-size: 19px;
 	line-height: 1;
 	color: lightgrey;
 }
 
 .purchased-routes-rating-mini > span:before {
-	content: '★';
+	content: url(./img/icons/StarTlUn.png);
 }
 
 .purchased-routes-rating-mini > span.active {
-	color: gold;
+	content: url(./img/icons/StarTl.png);
 }
 
 .btn-purchased-routes-see-more {
@@ -3287,3 +3283,9 @@ div#content {
     background-color: #1ABAA6;
     margin-top: 40px;
 }
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+  }

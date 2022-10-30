@@ -101,15 +101,15 @@
                         <div id="slider-distance"></div>
                     </div>
                     <div class="tour-list-filter-name">
-                        <button class="btn btn-submit tour-list-btn-find-tours" data-toggle="modal" data-target="#myModal">Поиск</button>
+                        <button class="btn btn-submit tour-list-btn-find-tours">Поиск</button>
                     </div>
                 </div>
                 <table class="col-md-9 tour-list-table" ng-controller="tourController">
                         <tbody>
                         <tr ng-repeat="t in tripsList">
                             <td>
-                                <a href="./touring.html?tourId={{t.id}}" ><div class="tour-list-block" >
-                                    <div class="tour-list-first-block">
+                                <div class="tour-list-block">
+                                    <a href="./touring.html?tourId={{t.id}}"><div class="tour-list-first-block">
                                             <div class="place-name">{{t.title}}</div>
                                             <div class="tour-description-text">{{t.shortTitle}}</div>
                                         <div class="tour-list-bottom-block">
@@ -132,7 +132,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div></a>
                                     <div class="tour-list-second-block">
                                         <div class="user-name">
                                             <img src={{t.author.avatar}}>
@@ -157,10 +157,11 @@
                                         <div class="tour-list-second-block-button">
                                             <div class="tour-list-cost">{{t.price}}</div>
                                             <button class="tour-list-btn-favorites"></button>
-                                            <button class="btn btn-submit tour-list-btn-buy-tour">Купить</button>
+                                            <button  class="btn btn-submit tour-list-btn-buy-tour">Купить</button>
+                                            <a href="./touring.html?tourId={{t.id}}" class="btn btn-submit tour-list-btn-buy-tour">Купить</a>
                                         </div>
                                     </div>
-                                </div></a>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
@@ -171,7 +172,6 @@
     <!-- ****** Blog Area End ****** -->
     <script src="js/angScripts/index.js"></script>
     <script src="js/angScripts/tour.js"></script>
-    <script src="js/tour-list.js"></script>
     <!-- Jquery-2.2.4 js -->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->

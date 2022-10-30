@@ -98,6 +98,10 @@ $('button.btn-edit-personal-area').on('click', function(event) {
     window.location.href = './personal-account.html';
 });
 
+$('button.btn-purchased-tours-area').on('click', function(event) {
+    window.location.href = './touring-buy.html';
+});
+
 var myDiv = $('.tour-description-text');
 myDiv.text(myDiv.text().substring(0,320));
 
