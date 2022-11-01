@@ -23,7 +23,7 @@
         color: #fff;
         margin-bottom: 30px;
     }
-    .footer_area .navbar-toggler {
+    .footer-area .navbar-toggler {
         margin-bottom: 0;
     }
     .navbar.navbar-expand-lg .navbar-nav .nav-link {
@@ -47,7 +47,7 @@
     }
 
     .post-author a,
-    .top_header_area .top_social_bar > a {
+    .top-header-area .top-social-bar > a {
         margin-right: 15px;
     }
 
@@ -60,7 +60,7 @@
     .footer-social-area .single-icon:last-of-type > a > i {
         padding-right: 0;
     }
-    .top_header_area .signup-search-area .search_button {
+    .top-header-area .signup-search-area .search-button {
         margin-left: 15px;
     }
     .navbar-toggler {
@@ -69,7 +69,7 @@
         color: #fff;
         margin-bottom: 30px;
     }
-    .footer_area .navbar-toggler {
+    .footer-area .navbar-toggler {
         margin-bottom: 0;
     }
     .navbar.navbar-expand-lg .navbar-nav .nav-link {

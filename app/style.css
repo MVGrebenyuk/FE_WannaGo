@@ -22,23 +22,18 @@
     margin-left: auto;
 }
 
-section {
-    margin-top: 80px;
-}
-
 .container {
     max-width: 1180px !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
 
-.blog_area {
-    /* background-image: url(./img/back/background.png); */
+.blog-area {
+    margin-top: 80px;
     background-size: 100%;
 }
 
-.blog_area_image {
-    /* background-image: url(./img/back/image\ 44.png); */
+.blog-area-image {
     background-size: 644px 429px;
     height: 429px;
 }
@@ -265,7 +260,7 @@ CSS
     font-weight: 600;
 }
 
-.login_register {
+.login-register {
     margin-top: 8px;
     padding: 9px 23px;
     cursor: pointer;
@@ -313,7 +308,7 @@ CSS
     margin-bottom: 0;
 }
 
-.blog_area_second {
+.blog-area-second {
     margin-top: 60px;
     margin-bottom: 110px;
 }
@@ -379,7 +374,7 @@ p {
     background-image: url('./img/icons/down-menu.svg');
 }
 
-.header_area {
+.header-area {
     position: fixed;
     width: 100%;
     border-bottom: 1px solid #eeeeee;
@@ -389,14 +384,14 @@ p {
 }
 
 
-.top_header_area {
+.top-header-area {
     width: 100%;
     height: 65px;
     margin-top: 10px;
     margin-bottom: 4px;
 }
 
-.top_header_area .top_social_bar {
+.top-header-area .top-social-bar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -405,38 +400,38 @@ p {
     align-items: center;
 }
 
-.top_header_area .top_social_bar > a {
+.top-header-area .top-social-bar > a {
     font-size: 12px;
     color: #232d37;
     margin-right: 30px;
 }
 
-.top_header_area .top_social_bar > a:hover {
+.top-header-area .top-social-bar > a:hover {
     color: #fc6c3f;
 }
 
-.top_header_area .top_social_bar > a:last-of-type {
+.top-header-area .top-social-bar > a:last-of-type {
     margin-right: 0;
 }
 
-.top_header_area .signup-search-area {
+.top-header-area .signup-search-area {
     height: 40px;
     width: 100px;
     /* position: relative; */
 }
 
-.top_header_area .signup-search-area a {
+.top-header-area .signup-search-area a {
     font-size: 13px;
     color: #222;
 }
 
-.top_header_area .signup-search-area .login a {
+.top-header-area .signup-search-area .login a {
     margin-right: 13px;
     border-right: 2px solid #c2c2c2;
     padding-right: 13px;
 }
 
-.top_header_area .signup-search-area .search_button {
+.top-header-area .signup-search-area .search-button {
     margin-left: 54px;
 }
 
@@ -444,7 +439,7 @@ p {
 :: Menu Area CSS
 -------------------- */
 
-.logo_area .wannago-logo {
+.logo-area .wannago-logo {
     font-family: 'Nunito';
     font-weight: 700;
     font-size: 40px;
@@ -528,7 +523,7 @@ p {
     margin-bottom: 100px;
 }
 
-.slider-dots_item{
+.slider-dots-item {
     cursor: pointer;
     height: 12px;
     width: 12px;
@@ -539,15 +534,15 @@ p {
     transition: background-color 0.6s ease;
 }
 
-.slider-dots_item:hover {
+.slider-dots-item:hover {
     background-color: #B6B6B6;
 }
 
-.slider-dots > .slider-dots_item.active {
+.slider-dots > .slider-dots-item.active {
     background-color: #B6B6B6;
 }
 
-.slideText .slide_info img{
+.slideText .slide-info img{
     width: 50px;
     height: 50px;
     box-shadow: none;
@@ -555,12 +550,12 @@ p {
     border-radius: 50%;
 }
 
-.slideText .slide_info a{
+.slideText .slide-info a{
     font-size: 20px;
     font-family: 'Montserrat';
 }
 
-.slideText .slide_tour_name {
+.slideText .slide-tour-name {
     font-size: 40px;
     margin: 10px 0 0 20px;
     overflow: hidden;
@@ -569,24 +564,24 @@ p {
     max-width: 666px;
 }
 
-.slideText .slide_rating {
+.slideText .slide-rating {
     font-size: 18px;
     margin: 5px 0 0 20px;
 }
 
-.slideText .slide_tour_info {
+.slideText .slide-tour-info {
     font-size: 16px;
     margin: 10px 100px 0 20px;
     overflow: hidden;
     max-height: 50px;
 }
 
-.slideText .slide_tour_price {
+.slideText .slide-tour-price {
     font-size: 20px;
     margin: 10px 0 10px 20px;
 }
 
-.slideText .slide_btn_buy_tour {
+.slideText .slide-btn-buy-tour {
     border-radius: 10px;
     margin: -10px 0 10px 20px;
     width: 130px;
@@ -596,7 +591,7 @@ p {
     color: white;
 }
 
-.slideText .slide_btn_details {
+.slideText .slide-btn-details {
     border-radius: 10px;
     margin: -10px 10px 10px 20px;
     width: 130px;
@@ -604,7 +599,7 @@ p {
     cursor: pointer;
 }
 
-.slideText .slide_btn_details:hover {
+.slideText .slide-btn-details:hover {
     color: #000;
 }
 
@@ -619,7 +614,7 @@ p {
     justify-content: space-between
 }
 
-.footer_area {
+.footer-area {
     border-top: 1px solid #eeeeee;
 }
 
@@ -811,6 +806,10 @@ nav ul {
     z-index: 100;
 }
 
+.tour-list {
+    margin-top: 80px;
+}
+
 .tour-list-user-name {
     word-wrap: break-word;
     max-width: 90px;
@@ -946,6 +945,7 @@ nav ul {
 /* СТРАНИЦА ТУРА */
 
 .inner-container {
+    margin-top: 80px;
     border-radius: 10px;
     background: #F7F7F7;
 }
@@ -1084,6 +1084,10 @@ nav ul {
 
 .tour-hero-price-block {
     margin-right: auto;
+}
+
+.favorites {
+    margin-top: 80px;
 }
 
 .tour-list-btn-favorites {
@@ -1248,15 +1252,19 @@ input[type="checkbox"]:checked + label span {
 
 /* Личный кабинет */
 
+.personal-settings {
+    margin-top: 80px;
+}
+
 .container-lk {
     width: 800px;
 }
 
-.section-personal-account-info {
+.section-profile-settings-info {
     padding: 0%;
 }
 
-.personal-account-form input {
+.profile-settings-form input {
     min-height: 60px;
     padding-left: 22px;
     font-weight: 600;
@@ -1266,7 +1274,7 @@ input[type="checkbox"]:checked + label span {
     color: #000000;
     background: #F7F7F7;
 }
-.personal-account-form input::placeholder {
+.profile-settings-form input::placeholder {
     margin: auto;
     font-weight: 600;
     font-size: 20px;
@@ -1275,7 +1283,7 @@ input[type="checkbox"]:checked + label span {
     color: #000000;
 }
 
-.personal-account-heading {
+.profile-settings-heading {
     font-weight: 600;
     margin-top: 20px;
     font-size: 40px;
@@ -1283,42 +1291,42 @@ input[type="checkbox"]:checked + label span {
     color: #000000
 }
 
-.personal-account-label {
+.profile-settings-label {
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
     color: #000000;
 }
 
-.personal-account-label-name {
+.profile-settings-label-name {
     max-width: 180px;
     border: none;
 }
 
-.personal-account-label-surname {
+.profile-settings-label-surname {
     min-height: 60px;
     width: 280px;
     border: none;
 }
 
-.personal-account-label-date {
+.profile-settings-label-date {
     width: 180px;
     min-height: 60px;
     border: none;
 }
 
-.personal-account-label-city {
+.profile-settings-label-city {
     min-height: 60px;
     width: 280px;
     border: none;
 }
 
-.personal-account-label-about-us {
+.profile-settings-label-about-us {
     padding-left: 15px;
     margin-top: 46px;
 }
 
-.personal-account-btn-submit {
+.profile-settings-btn-submit {
     font-weight: 600;
     padding: 15px 70px;
     font-size: 20px;
@@ -1352,7 +1360,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     margin-left: 60px;
 }
 
-.personal-account-label-avatar {
+.profile-settings-label-avatar {
     font-weight: 600;
     font-size: 30px;
     line-height: 37px;
@@ -1867,28 +1875,28 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 /*  Звезды рейтинга  */
 
-.star-rating{
+.star-rating {
     font-size: 0;
    }
-   .star-rating__wrap{
+   .star-rating__wrap {
     display: inline-block;
     font-size: 35px;
    }
-   .star-rating__wrap:after{
+   .star-rating__wrap:after {
     content: "";
     display: table;
     clear: both;
    }
-   .star-rating__ico{
+   .star-rating__ico {
     float: right;
     padding-left: 10px;
     cursor: pointer;
     color: #FFB300;
    }
-   .star-rating__ico:last-child{
+   .star-rating__ico:last-child {
     padding-left: 0;
    }
-   .star-rating__input{
+   .star-rating__input {
     display: none;
    }
    .star-rating__ico:hover:before,
@@ -2120,6 +2128,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 /* Personal area */
+
+.personal-area {
+    margin-top: 80px;
+}
 
 .personal-area-top-block {
     height: 293px;
@@ -2947,6 +2959,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 /* creating tour */
 
+.creating-tour {
+    margin-top: 80px;
+}
+
 .creating-tour-preview {
     margin-top: 40px;
 }
@@ -3220,7 +3236,7 @@ div#content {
 }
 
 .preview-photo-buttons {
-    margin-top: 394px;
+    margin-top: 39px;
     text-align: end;
 }
 
@@ -3289,3 +3305,7 @@ div#content {
     flex-wrap: wrap;
     width: 1200px;
   }
+
+.touring-buy-page {
+    margin-top: 80px;
+}

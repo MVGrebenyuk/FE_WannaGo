@@ -5,152 +5,136 @@
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
-        <!-- Title -->
+
         <title>WannaGo</title>
-        
-        <!-- Favicon -->
+
         <link rel="icon" href="img/core-img/favicon.ico">
-        
-        <!-- Core Stylesheet -->
         <link href="style.css" rel="stylesheet">
-        
-        <!-- Responsive CSS -->
         <link href="css/responsive/responsive.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <!-- Angular scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-route.min.js"></script>
-
     </head>
-<body>
-    <div class="container" ng-controller="tourPageController">
 
-        <div class="container container-breadcrumbs">
-            <ul class="breadcrumbs">
-                <li><a href="./index.html">Главная</a></li>
-                <li><a href="./tour-list.html">Все туры</a></li>
-                <li>Горная Аджария</li>
-            </ul>
-        </div>
-        
-        <section class="section-heading-tour">
-            <div class="container container-heading-tour">
-                <div class="col-md-12 tour-hero-description">
-                    <h2 class="tour-heading">Горная Аджария</h2>
-                </div>
-                <div class="tour-hero-star-rating">
-                    <div class="rating-mini">
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span class="active"></span>
-                        <span></span>
-                    </div>
-                    <p class="rating-descripthion-buy-tour">
-                        25 оценок
-                    </p>
-                </div>
-                <a class="leave-feedback" href="#">
-                    Оставить отзыв
-                </a>
+    <body>
+        <div class="container touring-buy-page" ng-controller="tourPageController">
+            <div class="container container-breadcrumbs">
+                <ul class="breadcrumbs">
+                    <li><a href="./index.html">Главная</a></li>
+                    <li><a href="./tour-list.html">Все туры</a></li>
+                    <li>Горная Аджария</li>
+                </ul>
             </div>
-        </section>
+            <div class="section-heading-tour">
+                <div class="container container-heading-tour">
+                    <div class="col-md-12 tour-hero-description">
+                        <h2 class="tour-heading">Горная Аджария</h2>
+                    </div>
+                    <div class="tour-hero-star-rating">
+                        <div class="rating-mini">
+                            <span class="active"></span>
+                            <span class="active"></span>
+                            <span class="active"></span>
+                            <span class="active"></span>
+                            <span></span>
+                        </div>
+                        <p class="rating-descripthion-buy-tour">
+                            25 оценок
+                        </p>
+                    </div>
+                    <a class="leave-feedback" href="#">
+                        Оставить отзыв
+                    </a>
+                </div>
+            </div>
 
-        <section class="section-tour-present-buy">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12  d-flex tour-present-buy">
-                        <div class="col-md-6 tour-present-buy-short__description">
-                            <div class="tour-present-buy-short__description-block">
-                                    <div class="col-md-12 reviews-descripthion">
-                                        <h3 class="tour-present-buy-short__description-block-heading">Краткое описание</h2>
-                                        <p class="tour-present-buy-short__description-block-paragraph">
-                                            Разнообразный и богатый опыт говорит нам, что внедрение современных методик способствует повышению качества кластеризации усилий. Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: перспективное. Разнообразный и богатый опыт говорит нам, что внедрение современных методик способствует повышению качества кластеризации усилий                                    </p>
-                                    </div> 
-                                    <div class="col-md-12 d-flex tour-characteristics">
-                                        <div class="col-md-3 tour-characteristics-block">
-                                            <div class="tour-characteristics-discription">Время в пути</div>
-                                            <div class="tour-characteristics-footer d-flex">
-                                                <span class=" tour-characteristics-icon tour-characteristics-icon-watch"></span>
-                                                <div class="tour-characteristics-result">{{trip.duration}}</div>
+            <div class="section-tour-present-buy">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12  d-flex tour-present-buy">
+                            <div class="col-md-6 tour-present-buy-short__description">
+                                <div class="tour-present-buy-short__description-block">
+                                        <div class="col-md-12 reviews-descripthion">
+                                            <h3 class="tour-present-buy-short__description-block-heading">Краткое описание</h2>
+                                            <p class="tour-present-buy-short__description-block-paragraph">
+                                                Разнообразный и богатый опыт говорит нам, что внедрение современных методик способствует повышению качества кластеризации усилий. Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: перспективное. Разнообразный и богатый опыт говорит нам, что внедрение современных методик способствует повышению качества кластеризации усилий                                    </p>
+                                        </div> 
+                                        <div class="col-md-12 d-flex tour-characteristics">
+                                            <div class="col-md-3 tour-characteristics-block">
+                                                <div class="tour-characteristics-discription">Время в пути</div>
+                                                <div class="tour-characteristics-footer d-flex">
+                                                    <span class=" tour-characteristics-icon tour-characteristics-icon-watch"></span>
+                                                    <div class="tour-characteristics-result">{{trip.duration}}</div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-3 tour-characteristics-block">
-                                            <div class="tour-characteristics-discription">Расстояние</div>
-                                            <div class="tour-characteristics-footer  d-flex">
-                                                <span class="tour-characteristics-icon tour-characteristics-icon-point"></span>
-                                                <div class="tour-characteristics-result">{{trip.length}}</div>
+                                            <div class="col-md-3 tour-characteristics-block">
+                                                <div class="tour-characteristics-discription">Расстояние</div>
+                                                <div class="tour-characteristics-footer  d-flex">
+                                                    <span class="tour-characteristics-icon tour-characteristics-icon-point"></span>
+                                                    <div class="tour-characteristics-result">{{trip.length}}</div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-3 tour-characteristics-block">
-                                            <div class="tour-characteristics-discription">Сложность</div>
-                                            <div class="tour-characteristics-footer  d-flex">
-                                                <span class="tour-characteristics-icon tour-characteristics-icon-level"></span>
-                                                <div class="tour-characteristics-result">{{trip.level}}/5</div>
+                                            <div class="col-md-3 tour-characteristics-block">
+                                                <div class="tour-characteristics-discription">Сложность</div>
+                                                <div class="tour-characteristics-footer  d-flex">
+                                                    <span class="tour-characteristics-icon tour-characteristics-icon-level"></span>
+                                                    <div class="tour-characteristics-result">{{trip.level}}/5</div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-3 tour-characteristics-block d-flex">
-                                            <img src={{t.author.avatar}}>
-                                            <div class="tour-characteristics-footer  d-flex">
-                                                <div class="tour-characteristics-result">{{trip.author.firstName + ' ' + trip.author.lastName}}</div>
+                                            <div class="col-md-3 tour-characteristics-block d-flex">
+                                                <img src={{t.author.avatar}}>
+                                                <div class="tour-characteristics-footer  d-flex">
+                                                    <div class="tour-characteristics-result">{{trip.author.firstName + ' ' + trip.author.lastName}}</div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>   
+                                        </div>   
+                                </div>
+                            </div>
+                            <div class="col-md-6 tour-present-buy-short__maps">
+                                <!-- Карта -->
                             </div>
                         </div>
-                        <div class="col-md-6 tour-present-buy-short__maps">
-                            <!-- Карта -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-tour-full-description">
+                <div class="container container-full-description">
+                    <div class="row">
+                        <h2 class="section-tour-full-description-heading">
+                            Описание маршрута
+                        </h2>
+                        <div class="full-description-blok d-flex col-md-12">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, repellat. Fugit dolore sequi, omnis expedita voluptas molestias laboriosam obcaecati asperiores magnam iure cum voluptates, autem, adipisci odit dignissimos at minima.
+                            Nemo iusto delectus accusamus voluptatibus, quam obcaecati velit exercitationem dignissimos. Harum culpa repudiandae libero dolorem laboriosam quaerat. Harum adipisci exercitationem dicta officia consequuntur consectetur non, vel minima cum veritatis sunt.
+                            Voluptatem voluptas soluta sapiente sequi quidem minima corporis ipsum, delectus, totam velit sunt laboriosam debitis molestiae eius, porro optio? Enim vitae dicta dignissimos odio veniam assumenda doloribus, possimus repudiandae eum.
+                            Repellat laborum nisi architecto impedit nesciunt nihil labore qui temporibus quisquam et voluptatibus dolorum ullam quaerat, accusantium odio pariatur quae libero! Numquam cum quam quasi ea, et deleniti eaque illum.
+                            Possimus iusto itaque neque facilis error laboriosam voluptatem libero magni corporis? Placeat assumenda voluptates ab pariatur perspiciatis totam veniam sed a, consequuntur ullam aut maiores nihil tempora necessitatibus explicabo alias.
+                            Nam ut deserunt sunt aut eveniet, quas tempore architecto tempora dignissimos quia dolorum dolor expedita culpa reprehenderit corrupti beatae inventore. Excepturi dolorem ea recusandae totam eos similique ipsa consequuntur quas.
+                            Minus non blanditiis magni temporibus et nihil placeat. Porro ut numquam sint assumenda nemo quae cumque fuga voluptatum laudantium quas quis distinctio harum, beatae laboriosam facilis laborum aliquid, ducimus et.
+                            Quisquam dignissimos quidem, eaque ullam excepturi itaque dicta explicabo quaerat commodi tempora, impedit obcaecati molestiae! Reprehenderit assumenda numquam vitae, quaerat magnam deleniti architecto! Sequi maxime vitae nihil voluptatum voluptas aliquid.
+                            Dignissimos beatae quae, minima ut voluptatum eum! Quam modi quia alias sapiente itaque, harum et quaerat veritatis aperiam vitae mollitia ducimus sunt neque culpa nobis consectetur impedit repellendus maiores praesentium?
+                            Ullam suscipit iure accusamus debitis atque error? Amet blanditiis aspernatur, quis aliquam eveniet dolor, iusto tempora, sint temporibus dolores laboriosam iure architecto nihil. A alias debitis reprehenderit quae recusandae iste.
+                            Nisi, neque repellat. Quasi, dolores dignissimos dicta aperiam quo modi similique tenetur delectus fugiat molestias consectetur obcaecati. Aspernatur aliquam modi reprehenderit, ab, quidem id expedita beatae quasi alias atque harum?
+                            Libero reprehenderit natus voluptas illo velit ut suscipit nihil quasi eum reiciendis labore dolorum veniam neque, voluptates, laudantium est repellendus quod inventore incidunt sunt ducimus quos ex doloribus. Eaque, voluptates.
+                            Eius aliquam ducimus assumenda quod vitae laudantium ex tenetur error maxime reiciendis eum, quas, porro consequatur rem officia ipsum numquam quae quasi itaque pariatur veritatis! Necessitatibus libero eveniet magni excepturi?
+                            Laudantium cumque natus accusamus cupiditate itaque, error voluptatum laboriosam enim corporis iste modi, consequuntur facilis minus delectus alias quibusdam eius debitis, velit perspiciatis architecto? Distinctio nesciunt placeat magnam atque deleniti?</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section class="section-tour-full-description">
-            <div class="container container-full-description">
-                <div class="row">
-                    <h2 class="section-tour-full-description-heading">
-                        Описание маршрута
-                    </h2>
-                    <div class="full-description-blok d-flex col-md-12">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, repellat. Fugit dolore sequi, omnis expedita voluptas molestias laboriosam obcaecati asperiores magnam iure cum voluptates, autem, adipisci odit dignissimos at minima.
-                        Nemo iusto delectus accusamus voluptatibus, quam obcaecati velit exercitationem dignissimos. Harum culpa repudiandae libero dolorem laboriosam quaerat. Harum adipisci exercitationem dicta officia consequuntur consectetur non, vel minima cum veritatis sunt.
-                        Voluptatem voluptas soluta sapiente sequi quidem minima corporis ipsum, delectus, totam velit sunt laboriosam debitis molestiae eius, porro optio? Enim vitae dicta dignissimos odio veniam assumenda doloribus, possimus repudiandae eum.
-                        Repellat laborum nisi architecto impedit nesciunt nihil labore qui temporibus quisquam et voluptatibus dolorum ullam quaerat, accusantium odio pariatur quae libero! Numquam cum quam quasi ea, et deleniti eaque illum.
-                        Possimus iusto itaque neque facilis error laboriosam voluptatem libero magni corporis? Placeat assumenda voluptates ab pariatur perspiciatis totam veniam sed a, consequuntur ullam aut maiores nihil tempora necessitatibus explicabo alias.
-                        Nam ut deserunt sunt aut eveniet, quas tempore architecto tempora dignissimos quia dolorum dolor expedita culpa reprehenderit corrupti beatae inventore. Excepturi dolorem ea recusandae totam eos similique ipsa consequuntur quas.
-                        Minus non blanditiis magni temporibus et nihil placeat. Porro ut numquam sint assumenda nemo quae cumque fuga voluptatum laudantium quas quis distinctio harum, beatae laboriosam facilis laborum aliquid, ducimus et.
-                        Quisquam dignissimos quidem, eaque ullam excepturi itaque dicta explicabo quaerat commodi tempora, impedit obcaecati molestiae! Reprehenderit assumenda numquam vitae, quaerat magnam deleniti architecto! Sequi maxime vitae nihil voluptatum voluptas aliquid.
-                        Dignissimos beatae quae, minima ut voluptatum eum! Quam modi quia alias sapiente itaque, harum et quaerat veritatis aperiam vitae mollitia ducimus sunt neque culpa nobis consectetur impedit repellendus maiores praesentium?
-                        Ullam suscipit iure accusamus debitis atque error? Amet blanditiis aspernatur, quis aliquam eveniet dolor, iusto tempora, sint temporibus dolores laboriosam iure architecto nihil. A alias debitis reprehenderit quae recusandae iste.
-                        Nisi, neque repellat. Quasi, dolores dignissimos dicta aperiam quo modi similique tenetur delectus fugiat molestias consectetur obcaecati. Aspernatur aliquam modi reprehenderit, ab, quidem id expedita beatae quasi alias atque harum?
-                        Libero reprehenderit natus voluptas illo velit ut suscipit nihil quasi eum reiciendis labore dolorum veniam neque, voluptates, laudantium est repellendus quod inventore incidunt sunt ducimus quos ex doloribus. Eaque, voluptates.
-                        Eius aliquam ducimus assumenda quod vitae laudantium ex tenetur error maxime reiciendis eum, quas, porro consequatur rem officia ipsum numquam quae quasi itaque pariatur veritatis! Necessitatibus libero eveniet magni excepturi?
-                        Laudantium cumque natus accusamus cupiditate itaque, error voluptatum laboriosam enim corporis iste modi, consequuntur facilis minus delectus alias quibusdam eius debitis, velit perspiciatis architecto? Distinctio nesciunt placeat magnam atque deleniti?</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <!-- ****** End Body ****** -->
+        <script src="js/angScripts/index.js"></script>
+        <script src="js/angScripts/tourPageController.js"></script>
+        <script src="js/jquery/jquery-2.2.4.min.js"></script>
+        <script src="js/bootstrap/popper.min.js"></script>
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+        <script src="js/others/plugins.js"></script>
+        <script src="js/header.js"></script>
+        <script src="js/footer.js"></script>
+
     </body>
-
-    <script src="js/angScripts/index.js"></script>
-    <script src="js/angScripts/tourPageController.js"></script>
-    <!-- Jquery-2.2.4 js -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
-    <!-- Bootstrap-4 js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-    <!-- All Plugins JS -->
-    <script src="js/others/plugins.js"></script>
-    <!-- Header and Modal JS -->
-    <script src="js/header.js"></script>
-    <!-- Footer JS -->
-    <script src="js/footer.js"></script>
-
-</body>
+</html>

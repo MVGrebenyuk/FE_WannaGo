@@ -2,17 +2,17 @@ var headerText = `
 <body>
 
 <!-- ****** Header ****** -->
-<header class="header_area">
+<header class="header-area">
     <div class="container" ng-controller="mainController">
         <div class="row">
             <div class="col-12">
-                <div class="top_header_area">
+                <div class="top-header-area">
                     <div class="container-lg">
                         <div class="row">
                             <div class="col-5 col-sm-3">
                                 <!--  Top Social bar start -->
-                                <div class="top_social_bar">
-                                    <div class="logo_area text-center">
+                                <div class="top-social-bar">
+                                    <div class="logo-area text-center">
                                         <a href="index.html" class="wannago-logo">WannaGo</a>
                                     </div>
                                 </div>
@@ -38,7 +38,7 @@ var headerText = `
                             <!--  Login Register Area -->
                             <div class="col-1">
                                 <div class="signup-search-area">
-                                    <div class="login_register_area justify-content-end">
+                                    <div class="login-register_area justify-content-end">
                                         <div class="user-auth">
                                         <img src='./img/icons/apple.png'>
                                         <nav class="menu">

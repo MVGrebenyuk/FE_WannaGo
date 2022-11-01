@@ -2,17 +2,17 @@ var headerText = `
 <body>
 
 <!-- ****** Header ****** -->
-<header class="header_area">
+<header class="header-area">
     <div class="header-container" ng-controller="mainController">
         <div class="row">
             <div class="col-12">
-                <div class="top_header_area">
+                <div class="top-header-area">
                     <div class="container-lg">
                         <div class="row">
                             <div class="col-5 col-sm-3">
                                 <!--  Top Social bar start -->
-                                <div class="top_social_bar">
-                                    <div class="logo_area text-center">
+                                <div class="top-social-bar">
+                                    <div class="logo-area text-center">
                                         <a href="index.html" class="wannago-logo">
                                         <span class="wannago-logo">Wanna</span>
                                         <span class="wannago-logo-second">Go</span></a>
@@ -40,9 +40,9 @@ var headerText = `
                             <!--  Login Register Area -->
                             <div class="col-1">
                                 <div class="signup-search-area">
-                                    <div class="login_register_area justify-content-end">
+                                    <div class="login-register_area justify-content-end">
                                         <div class="login/Registration">
-                                            <button class="btn btn-submit login_register" data-toggle="modal"  ng-show="!isUserLoggedIn()" data-target="#myModal">Войти</button>
+                                            <button class="btn btn-submit login-register" data-toggle="modal"  ng-show="!isUserLoggedIn()" data-target="#myModal">Войти</button>
                                             <div class="user-auth" ng-show="isUserLoggedIn()">
                                             <nav class="nav-login-menu">
                                                 <ul class="topmenu">

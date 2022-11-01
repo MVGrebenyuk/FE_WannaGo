@@ -1,6 +1,6 @@
 var headerText = `
 <!-- ****** Footer Menu Area Start ****** -->
-<footer class="footer_area">
+<footer class="footer-area">
     <div class="container">
         <div class="row">
             <div class="col-12">
