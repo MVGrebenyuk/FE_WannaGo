@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="WannaGo">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Настройки профиля</title>
+
+        <link rel="icon" href="img/core-img/favicon.ico">
+        <link href="./style.css" rel="stylesheet">
+        <link href="css/responsive/responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-route.min.js"></script>
+    </head>
+
+    <body ng-controller="lkController">
+        <div class="personal-settings">
+            <div class="container container-breadcrumbs">
+                <ul class="breadcrumbs">
+                    <li><a href="./index.html">Главная</a></li>
+                    <li><a href="./personal-area.html">{{user.firstName + ' ' + user.lastName}}</a></li>
+                    <li>Настройки профиля</li>
+                </ul>
+            </div>
+            <div class="container container-lk">
+                <h1 class="profile-settings-heading">Настройки профиля</h1>
+                <div class="row">
+                    <form class="col-md-12 profile-settings-form" action="">
+                        <div class="section-profile-settings-info col-md-12 d-flex">
+                            <div class="test-block col-md-8">
+                                <div class="header-section-pa d-flex ">
+                                    <div class="col-5">
+                                        <label class="profile-settings-label" for="disabledTextInput">Имя</label>
+                                        <input class="form-control profile-settings-label-name" type="text" value="{{user.firstName}}" placeholder="{{user.firstName}}" ng-model="updateProfileDto.firstName">
+                                    </div>
+                                    <div class="col-7">
+                                        <label class="profile-settings-label" for="disabledTextInput">Фамилия</label>
+                                        <input class="form-control profile-settings-label-surname" type="text" ng-model="updateProfileDto.lastName" value="{{user.lastName}}" placeholder="{{user.lastName}}">
+                                    </div>
+                                </div>
+                                <div class="middle-section-pa d-flex">
+                                    <div class="col-5">
+                                        <label class="profile-settings-label" for="disabledTextInput">Дата рождения</label>
+                                        <input class="form-control profile-settings-label-date" ng-model="updateProfileDto.dateOfBirth" type="date" value="{{user.dateOfBirth}}">
+                                    </div>
+                                    <div class="col-7">
+                                        <label class="profile-settings-label" for="disabledTextInput">Город</label>
+                                        <input type="text" class="form-control profile-settings-label-city" ng-model="updateProfileDto.city" placeholder="{{user.city}}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="avatar col-md-4">
+                                <label class="profile-settings-label-avatar" for="disabledTextInput">Аватар</label>
+                                <div class="avatar-add-photo">
+                                    <div id="drop-zone">
+                                        <input type="file" name="file" id="file-uploader" file-model = "myFile" accept=".jpg, .jpeg, .png" hidden>
+                                        <label for="file-uploader" class="file-upload">Выберите файл</label>
+                                    </div>
+                                    <div id="content"><img src={{user.avatar}} style="width: 200px; height: 200px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="discription-lk col-md-12">
+                                <label class="profile-settings-label profile-settings-label-about-us" for="exampleFormControlTextarea1">О себе</label>
+                                <textarea class="form-control form-control-lk" id="exampleFormControlTextarea1" rows="3" ng-model="updateProfileDto.about" placeholder="{{user.about}}">{{user.about}}</textarea>
+                                <span class="discription-lk-info">*максимум 650 символов</span>
+                        </div>
+                    </form>
+                    <button class="profile-settings-btn-submit" ng-click="updateProfile()">Сохранить</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+        <script src="js/angScripts/index.js"></script>
+        <script src="js/angScripts/lkController.js"></script>
+        <script src="js/jquery/jquery-2.2.4.min.js"></script>
+        <script src="js/bootstrap/popper.min.js"></script>
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+        <script src="js/others/plugins.js"></script>
+        <script src="js/profile-settings.js"></script>
+        <script src="js/header.js"></script>
+        <script src="js/footer.js"></script>
+
+    </body>
+</html>

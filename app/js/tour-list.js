@@ -95,11 +95,11 @@ $('div.tour-list-image').on('click', function(event) {
 });
 
 $('button.btn-edit-personal-area').on('click', function(event) {
-    window.location.href = './personal-account.html';
+    window.location.href = './profile-settings.html';
 });
 
 $('button.btn-purchased-tours-area').on('click', function(event) {
-    window.location.href = './touring-buy.html';
+    window.location.href = './purchased-routes.html';
 });
 
 var myDiv = $('.tour-description-text');

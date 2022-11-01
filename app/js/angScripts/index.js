@@ -52,7 +52,7 @@ angular.module('WannaGo').controller('mainController', function ($scope, $rootSc
                     $localStorage.springWebUser = {username: $scope.user.login, token: response.data.token};
                     $scope.user.login = null;
                     $scope.user.password = null;
-                    window.location.href = './personal-account.html'
+                    window.location.href = './profile-settings.html'
                     $scope.getCurrentUser()
                 }
             }, function errorCallback(response) {

@@ -6,218 +6,204 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
-        <!-- Title -->
         <title>WannaGo</title>
         
-        <!-- Favicon -->
         <link rel="icon" href="img/core-img/favicon.ico">
-        
-        <!-- Core Stylesheet -->
         <link href="./style.css" rel="stylesheet">
-        
-        <!-- Responsive CSS -->
         <link href="css/responsive/responsive.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <!-- Angular scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-route.min.js"></script>
-
     </head>
-<body>
-    <div class="container" ng-controller="tourPageController">
 
-        <section class="inner-container d-flex">
-            <div class="section-tour-left col-md-7">
-                <div class="container container-breadcrumbs">
-                    <ul class="breadcrumbs">
-                        <li><a href="./index.html">Главная</a></li>
-                        <li><a href="./tour-list.html">Все туры</a></li>
-                        <li>Горная Аджария</li>
-                    </ul>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 tour-present">
-                            <div class="col-md-12 tour-hero-description">
-                                <h2 class="tour-heading">{{trip.title}}</h2>
-                            </div>
-                            <div class="tour-hero-star-rating">
-                                <div class="rating-mini">
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                    <span></span>
-                                    <div class="rating-descripthion">25 оценок</div>
+    <body>
+        <div class="container" ng-controller="tourPageController">
+            <div class="inner-container d-flex">
+                <div class="section-tour-left col-md-7">
+                    <div class="container container-breadcrumbs">
+                        <ul class="breadcrumbs">
+                            <li><a href="./index.html">Главная</a></li>
+                            <li><a href="./tour-list.html">Все туры</a></li>
+                            <li>Горная Аджария</li>
+                        </ul>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 tour-present">
+                                <div class="col-md-12 tour-hero-description">
+                                    <h2 class="tour-heading">{{trip.title}}</h2>
+                                </div>
+                                <div class="tour-hero-star-rating">
+                                    <div class="rating-mini">
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span></span>
+                                        <div class="rating-descripthion">25 оценок</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 tour-hero-characteristics">
+                                    <div class="col-md-4 d-flex tour-characteristics">
+                                        <div class="col-md-4 tour-characteristics-block">
+                                            <div class="tour-characteristics-discription">Время в пути</div>
+                                            <div class="tour-characteristics-footer d-flex">
+                                                <span class=" tour-characteristics-icon tour-characteristics-icon-watch"></span>
+                                                <div class="tour-characteristics-result">{{trip.duration}}</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 tour-characteristics-block">
+                                            <div class="tour-characteristics-discription">Расстояние</div>
+                                            <div class="tour-characteristics-footer  d-flex">
+                                                <span class="tour-characteristics-icon tour-characteristics-icon-point"></span>
+                                                <div class="tour-characteristics-result">{{trip.length}}</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 tour-characteristics-block">
+                                            <div class="tour-characteristics-discription">Сложность</div>
+                                            <div class="tour-characteristics-footer  d-flex">
+                                                <span class="tour-characteristics-icon tour-characteristics-icon-level"></span>
+                                                <div class="tour-characteristics-result">{{trip.level}}/5</div>
+                                            </div>
+                                        </div>
+                                    </div>  
                                 </div>
                             </div>
-                            <div class="col-md-7 tour-hero-characteristics">
-                                <div class="col-md-4 d-flex tour-characteristics">
-                                    <div class="col-md-4 tour-characteristics-block">
-                                        <div class="tour-characteristics-discription">Время в пути</div>
-                                        <div class="tour-characteristics-footer d-flex">
-                                            <span class=" tour-characteristics-icon tour-characteristics-icon-watch"></span>
-                                            <div class="tour-characteristics-result">{{trip.duration}}</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 tour-characteristics-block">
-                                        <div class="tour-characteristics-discription">Расстояние</div>
-                                        <div class="tour-characteristics-footer  d-flex">
-                                            <span class="tour-characteristics-icon tour-characteristics-icon-point"></span>
-                                            <div class="tour-characteristics-result">{{trip.length}}</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 tour-characteristics-block">
-                                        <div class="tour-characteristics-discription">Сложность</div>
-                                        <div class="tour-characteristics-footer  d-flex">
-                                            <span class="tour-characteristics-icon tour-characteristics-icon-level"></span>
-                                            <div class="tour-characteristics-result">{{trip.level}}/5</div>
-                                        </div>
-                                    </div>
-                                </div>  
-                            </div>
+                            <div id="textDiv">{{trip.Title}}</div>
                         </div>
-                        <div id="textDiv">{{trip.Title}}</div>
                     </div>
-                </div>
-                <div class="container container-rating-and-author">
-                    <div class="row">
-                        <div class="container">
-                            <div class="col-md-12 rating-and-author-block">
-                                    <div class="col-md-12 tour-autor-block">
-                                        <div class="tour-autor-info-block d-flex">
-                                            <span class="autor-fhoto"><img src={{trip.author.avatar}}></span>
-                                            <div class="autor-naming">
-                                                <h5 class="section-tour-heading-small">Автор маршрута</h5>
-                                                    <div class="autor-name-and-virification d-flex">
-                                                        <p class="autor-name">{{trip.author.firstName + ' ' + trip.author.lastName}}</p>
-                                                        <span class="autor-virification"></span>
-                                                    </div>
-                                                <p class="description-paragraph-reviews">
-                                                    {{trip.author.about}}
-                                                </p>
+                    <div class="container container-rating-and-author">
+                        <div class="row">
+                            <div class="container">
+                                <div class="col-md-12 rating-and-author-block">
+                                        <div class="col-md-12 tour-autor-block">
+                                            <div class="tour-autor-info-block d-flex">
+                                                <span class="autor-fhoto"><img src={{trip.author.avatar}}></span>
+                                                <div class="autor-naming">
+                                                    <h5 class="section-tour-heading-small">Автор маршрута</h5>
+                                                        <div class="autor-name-and-virification d-flex">
+                                                            <p class="autor-name">{{trip.author.firstName + ' ' + trip.author.lastName}}</p>
+                                                            <span class="autor-virification"></span>
+                                                        </div>
+                                                    <p class="description-paragraph-reviews">
+                                                        {{trip.author.about}}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>     
+                            <div class="container">
+                                <h3 class="section-tour-heading heading-reviews">Отзывы маршрута</h3>
+                                <div class="col-md-12 reviews-cart">
+                                    <div class="reviews-cart-autor-block d-flex">
+                                        <span class="reviews-cart-autor-icon-man"></span>
+                                        <div class="riviews-cart-autor-name">
+                                            <p>Дмитрий Денисов</p>
+                                            <div class="rating-mini">
+                                                <span class="active"></span>	
+                                                <span class="active"></span>    
+                                                <span class="active"></span>  
+                                                <span class="active"></span>    
+                                                <span></span>
                                             </div>
                                         </div>
                                     </div>
-                            </div>
-                        </div>     
-                        <div class="container">
-                            <h3 class="section-tour-heading heading-reviews">Отзывы маршрута</h3>
-                            <div class="col-md-12 reviews-cart">
-                                <div class="reviews-cart-autor-block d-flex">
-                                    <span class="reviews-cart-autor-icon-man"></span>
-                                    <div class="riviews-cart-autor-name">
-                                        <p>Дмитрий Денисов</p>
-                                        <div class="rating-mini">
-                                            <span class="active"></span>	
-                                            <span class="active"></span>    
-                                            <span class="active"></span>  
-                                            <span class="active"></span>    
-                                            <span></span>
-                                        </div>
+                                    <div class="col-md-12 reviews-descripthion">
+                                        <p class="description-paragraph">
+                                            Безусловно, базовый вектор развития создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса системы массового участия. Вот вам яркий пример современных тенденций — понимание сути ресурсосберегающих технологий требует анализа модели развития.
+                                        </p>
                                     </div>
                                 </div>
-                                <div class="col-md-12 reviews-descripthion">
-                                    <p class="description-paragraph">
-                                        Безусловно, базовый вектор развития создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса системы массового участия. Вот вам яркий пример современных тенденций — понимание сути ресурсосберегающих технологий требует анализа модели развития.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-md-12 reviews-cart">
-                                <div class="reviews-cart-autor-block d-flex">
-                                    <span class="reviews-cart-autor-icon-woman"></span>
-                                    <div class="riviews-cart-autor-name">
-                                        <p>Мария</p>
-                                        <div class="rating-mini">
-                                            <span class="active"></span>	
-                                            <span class="active"></span>    
-                                            <span class="active"></span>  
-                                            <span></span>    
-                                            <span></span>
+                                <div class="col-md-12 reviews-cart">
+                                    <div class="reviews-cart-autor-block d-flex">
+                                        <span class="reviews-cart-autor-icon-woman"></span>
+                                        <div class="riviews-cart-autor-name">
+                                            <p>Мария</p>
+                                            <div class="rating-mini">
+                                                <span class="active"></span>	
+                                                <span class="active"></span>    
+                                                <span class="active"></span>  
+                                                <span></span>    
+                                                <span></span>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="col-md-12 reviews-descripthion">
+                                        <p class="description-paragraph">
+                                            Имеется спорная точка зрения, гласящая примерно следующее: независимые государства лишь добавляют фракционных разногласий и подвергнуты целой серии независимых исследований. Предварительные выводы неутешительны: консультация с широким активом в значительной степени обусловливает важность укрепления моральных ценностей.                                </p>
+                                    </div>
                                 </div>
-                                <div class="col-md-12 reviews-descripthion">
-                                    <p class="description-paragraph">
-                                        Имеется спорная точка зрения, гласящая примерно следующее: независимые государства лишь добавляют фракционных разногласий и подвергнуты целой серии независимых исследований. Предварительные выводы неутешительны: консультация с широким активом в значительной степени обусловливает важность укрепления моральных ценностей.                                </p>
+                                <div class="col-md-12 btn-view-all-block d-flex justify-content-center">
+                                    <button class="btn-view-all">Посмотреть все</button>
                                 </div>
                             </div>
-                            <div class="col-md-12 btn-view-all-block d-flex justify-content-center">
-                                <button class="btn-view-all">Посмотреть все</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-column col-md-5">
+                    <div class="col-md-5 tour-hero-maps">
+                        <div class="slider-block">
+                            <div class="tour-slider slider-height-padding">
+                                <input class="checkbox frst" type="radio" id="slide-1" name="slider">
+                                <label for="slide-1"></label>
+                                <input class="checkbox scnd" type="radio" name="slider" id="slide-2">
+                                <label for="slide-2"></label>
+                                <input class="checkbox thrd" type="radio" name="slider" id="slide-3">
+                                <label for="slide-3"></label>
+                                <input class="checkbox foth" type="radio" name="slider" id="slide-4">
+                                <label for="slide-4"></label>
+                                <input class="checkbox fifth" type="radio" name="slider" id="slide-5">
+                                <label for="slide-5"></label>
+                                <input class="checkbox sixth" type="radio" name="slider" id="slide-6">
+                                <label for="slide-6"></label>
+                                <ul>
+                                    <li>
+                                        <span></span>
+                                    </li>
+                                    <li>
+                                        <span></span>
+                                    </li>
+                                    <li>
+                                        <span></span>
+                                    </li>
+                                    <li>
+                                        <span></span>
+                                    </li>
+                                    <li>
+                                        <span></span>
+                                    </li>
+                                    <li>
+                                        <span></span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-12 tour-hero-payment d-flex">
+                                <div class="tour-hero-price-block">
+                                    <p class="tour-hero-price">{{trip.price}}</p>
+                                </div>
+                                <div class="tour-hero-payment-block">
+                                    <button class="tour-list-btn-favorites"></button>
+                                    <button class="buy btn-buy">Купить</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="right-column col-md-5">
-                <div class="col-md-5 tour-hero-maps">
-                    <div class="slider-block">
-                        <div class="tour-slider slider-height-padding">
-                            <input class="checkbox frst" type="radio" id="slide-1" name="slider">
-                            <label for="slide-1"></label>
-                            <input class="checkbox scnd" type="radio" name="slider" id="slide-2">
-                            <label for="slide-2"></label>
-                            <input class="checkbox thrd" type="radio" name="slider" id="slide-3">
-                            <label for="slide-3"></label>
-                            <input class="checkbox foth" type="radio" name="slider" id="slide-4">
-                            <label for="slide-4"></label>
-                            <input class="checkbox fifth" type="radio" name="slider" id="slide-5">
-                            <label for="slide-5"></label>
-                            <input class="checkbox sixth" type="radio" name="slider" id="slide-6">
-                            <label for="slide-6"></label>
-                            <ul>
-                                <li>
-                                    <span></span>
-                                </li>
-                                <li>
-                                    <span></span>
-                                </li>
-                                <li>
-                                    <span></span>
-                                </li>
-                                <li>
-                                    <span></span>
-                                </li>
-                                <li>
-                                    <span></span>
-                                </li>
-                                <li>
-                                    <span></span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-12 tour-hero-payment d-flex">
-                            <div class="tour-hero-price-block">
-                                <p class="tour-hero-price">{{trip.price}}</p>
-                            </div>
-                            <div class="tour-hero-payment-block">
-                                <button class="tour-list-btn-favorites"></button>
-                                <button class="buy btn-buy">Купить</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+        </div>
 
-    <script src="js/angScripts/index.js"></script>
-    <script src="js/angScripts/tourPageController.js"></script>
-    <!-- Jquery-2.2.4 js -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
-    <!-- Bootstrap-4 js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-    <!-- All Plugins JS -->
-    <script src="js/others/plugins.js"></script>
-    <!-- Active JS -->
-    <script src="js/tour-slider.js"></script>
-    <!-- Header and Modal JS -->
-    <script src="js/header.js"></script>
-    <!-- Footer JS -->
-    <script src="js/footer.js"></script>
-</body>
+        <script src="js/angScripts/index.js"></script>
+        <script src="js/angScripts/tourPageController.js"></script>
+        <script src="js/jquery/jquery-2.2.4.min.js"></script>
+        <script src="js/bootstrap/popper.min.js"></script>
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+        <script src="js/others/plugins.js"></script>
+        <script src="js/tour-slider.js"></script>
+        <script src="js/header.js"></script>
+        <script src="js/footer.js"></script>
+
+    </body>
 </html>

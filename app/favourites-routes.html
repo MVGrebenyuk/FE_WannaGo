@@ -6,144 +6,130 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Title -->
-        <title>WannaGo</title>
+        <title>Избранное</title>
 
-        <!-- Favicon -->
         <link rel="icon" href="img/core-img/favicon.ico">
-
-        <!-- Core Stylesheet -->
         <link href="style.css" rel="stylesheet">
-
-        <!-- Responsive CSS -->
         <link href="css/responsive/responsive.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./components/jquery-ui/jquery-ui.min.css">
         <link rel="stylesheet" href="./css/dialog.css">
-        <!-- Angular scripts -->
+
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-route.min.js"></script>
     </head>
 
-    <!-- ****** Body ****** -->
-    <!-- <div class="purchased-routes-not-login" ng-show="!isUserLoggedIn()">
-        <div class="container">
-            <p>Авторизуйтесь для просмотра этой страницы</p>
-        </div>
-    </div> -->
-
-    <section class="favorites">
-        <div class="container">
-            <ul class="breadcrumbs">
-                <li><a href="./index.html">Главная</a></li>
-                <li><a href="./tour-list.html">Туры</a></li>
-                <li>Избранное</li>
-            </ul>
-        </div>
-        <div class="container">
-            <div>
-                <h2 class="tour-catalog">Избранное</h2>
+    <body>
+        <!-- <div class="purchased-routes-not-login" ng-show="!isUserLoggedIn()">
+            <div class="container">
+                <p>Авторизуйтесь для просмотра этой страницы</p>
             </div>
-            <div class="favorites-area">
-                <table class="favorites-table">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div class="favorites-block">
-                                    <div class="favorites-second-block">
-                                        <div class="favorites-user-name-block">
-                                            <img src="./img/icons/google.png">
-                                            <div class="favorites-user-name">Александр Новиков</div>
-                                            <div class="favorites-rating-mini">
-                                                <span class="active"></span>
-                                                <span class="active"></span>
-                                                <span class="active"></span>
-                                                <span></span>
-                                                <span></span>
+        </div> -->
+
+        <div class="favorites">
+            <div class="container">
+                <ul class="breadcrumbs">
+                    <li><a href="./index.html">Главная</a></li>
+                    <li><a href="./tour-list.html">Туры</a></li>
+                    <li>Избранное</li>
+                </ul>
+            </div>
+            <div class="container">
+                <div>
+                    <h2 class="tour-catalog">Избранное</h2>
+                </div>
+                <div class="favorites-area">
+                    <table class="favorites-table">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="favorites-block">
+                                        <div class="favorites-second-block">
+                                            <div class="favorites-user-name-block">
+                                                <img src="./img/icons/google.png">
+                                                <div class="favorites-user-name">Александр Новиков</div>
+                                                <div class="favorites-rating-mini">
+                                                    <span class="active"></span>
+                                                    <span class="active"></span>
+                                                    <span class="active"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                                <p class="favorites-route-evaluation">187 оценок</p>
                                             </div>
-                                            <p class="favorites-route-evaluation">187 оценок</p>
+                                            <div class="favorites-image">
+                                                <img src="img/slider-img/1.jpg">
+                                            </div>
+                                            <div class="favorites-grad-image">
+                                                <img src="img//tour-list/tour-list-image2.png">
+                                            </div>
+                                            <div class="favorites-second-block-button">
+                                                <div class="favorites-cost">10000</div>
+                                                <button class="favorites-btn-favorites"></button>
+                                                <button class="btn btn-submit favorites-btn-buy-tour" data-toggle="modal" data-target="#myModal">Купить</button>
+                                            </div>
                                         </div>
-                                        <div class="favorites-image">
-                                            <img src="img/slider-img/1.jpg">
-                                        </div>
-                                        <div class="favorites-grad-image">
-                                            <img src="img//tour-list/tour-list-image2.png">
-                                        </div>
-                                        <div class="favorites-second-block-button">
-                                            <div class="favorites-cost">10000</div>
-                                            <button class="favorites-btn-favorites"></button>
-                                            <button class="btn btn-submit favorites-btn-buy-tour" data-toggle="modal" data-target="#myModal">Купить</button>
+                                        <div class="favorites-first-block">
+                                            <div class="favorites-place-name">Горная Аджария</div>
+                                            <div class="favorites-bottom-block">
+                                                <div><span>Время в пути</span>
+                                                    <div class="bottom-block-info">
+                                                        <img src="./img/icons/tour-list-1.png">
+                                                        <p>8 дней</p>
+                                                    </div>
+                                                </div>
+                                                <div><span>Расстояние</span>
+                                                    <div class="bottom-block-info">
+                                                        <img src="./img/icons/tour-list-2.png">
+                                                        <p>120 км</p>
+                                                    </div>
+                                                </div>
+                                                <div><span>Сложность</span>
+                                                    <div class="bottom-block-info">
+                                                        <img src="./img/icons/tour-list-3.png">
+                                                        <p>2/5</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="favorites-description-text">Как принято считать, диаграммы связей могут быть призваны к ответу. А также ключевые особенности структуры проекта формируют глобальную экономическую сеть.
+                                                Лишь сделанные на базе интернет-аналитики выводы представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть смешаны.
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="favorites-first-block">
-                                        <div class="favorites-place-name">Горная Аджария</div>
-                                        <div class="favorites-bottom-block">
-                                            <div><span>Время в пути</span>
-                                                <div class="bottom-block-info">
-                                                    <img src="./img/icons/tour-list-1.png">
-                                                    <p>8 дней</p>
-                                                </div>
-                                            </div>
-                                            <div><span>Расстояние</span>
-                                                <div class="bottom-block-info">
-                                                    <img src="./img/icons/tour-list-2.png">
-                                                    <p>120 км</p>
-                                                </div>
-                                            </div>
-                                            <div><span>Сложность</span>
-                                                <div class="bottom-block-info">
-                                                    <img src="./img/icons/tour-list-3.png">
-                                                    <p>2/5</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="favorites-description-text">Как принято считать, диаграммы связей могут быть призваны к ответу. А также ключевые особенности структуры проекта формируют глобальную экономическую сеть.
-                                            Лишь сделанные на базе интернет-аналитики выводы представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть смешаны.
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="favorites-area-see-more text-center">
-                    <button class="btn-favorites-see-more">Смотреть больше</button>
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="favorites-area-see-more text-center">
+                        <button class="btn-favorites-see-more">Смотреть больше</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- ****** Blog Area End ****** -->
 
-    <script src="js/angScripts/index.js"></script>
-    <script src="tour-list.js"></script>
-    <!-- Jquery-2.2.4 js -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
-    <!-- Bootstrap-4 js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-    <!-- All Plugins JS -->
-    <script src="js/others/plugins.js"></script>
-    <!-- Active JS -->
-    <script src="js/tour-list.js"></script>
-    <!-- Header and Modal JS -->
-    <script src="js/header.js"></script>
-    <!-- Footer JS -->
-    <script src="js/footer.js"></script>
-    <!-- Jquery price-slider -->
-    <script src="./components/jquery-ui/jquery-ui.min.js"></script>
-    
-</body>
+        <script src="js/angScripts/index.js"></script>
+        <script src="tour-list.js"></script>
+        <script src="js/jquery/jquery-2.2.4.min.js"></script>
+        <script src="js/bootstrap/popper.min.js"></script>
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+        <script src="js/others/plugins.js"></script>
+        <script src="js/tour-list.js"></script>
+        <script src="js/header.js"></script>
+        <script src="js/footer.js"></script>
+        <script src="./components/jquery-ui/jquery-ui.min.js"></script>
+        
+    </body>
+</html>
