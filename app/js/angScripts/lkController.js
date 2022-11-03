@@ -1,6 +1,10 @@
 angular.module('WannaGo').controller('lkController', function ($scope, $rootScope, $http, $localStorage) {
     const contextPath = 'http://5.188.140.199:8189/wannago';
 
+    if ($localStorage.springWebUser) {
+        $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.springWebUser.token;
+    }
+
     $scope.getCurrentUser = function (){
         if ($localStorage.springWebUser) {
             $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.springWebUser.token;
