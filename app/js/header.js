@@ -94,12 +94,14 @@ var headerText = `
                                 <form role="form" class="form-horizontal"> 
                                 <div class="form-group"> 
                                     <label for="email" class="col-sm-12 control-label"> 
-                                        Вход по почте </label> 
+                                        Логин: </label> 
                                     <div class="col-sm-12"> 
                                         <input type="text" class="form-control" id="email1" ng-model="user.login" placeholder="i.ivanov@example.ru" /> 
                                     </div> 
                                 </div> 
-                                <div class="form-group"> 
+                                <div class="form-group">
+                                    <label for="email" class="col-sm-12 control-label"> 
+                                        Пароль: </label>  
                                     <div class="col-sm-12"> 
                                         <input type="password" class="form-control" id="exampleInputPassword1" ng-model="user.password" placeholder="Пароль" /> 
                                     </div> 

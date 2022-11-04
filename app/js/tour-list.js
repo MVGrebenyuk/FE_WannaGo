@@ -86,6 +86,38 @@ $('.select').each(function() {
     });
 });
 
+function initFavsInList()
+  {
+    // Handle Favorites
+    var items = document.getElementsByClassName('tour-list-btn-favorites');
+    for(var x = 0; x < items.length; x++)
+    {
+      var item = items[x];
+      item.addEventListener('click', function(fn)
+      {
+        fn.target.classList.toggle('tour-list-btn-favorites-fav');
+      });
+    }
+  }
+
+initFavsInList()
+
+function initFavs()
+  {
+    // Handle Favorites
+    var items = document.getElementsByClassName('favorites-btn-favorites');
+    for(var x = 0; x < items.length; x++)
+    {
+      var item = items[x];
+      item.addEventListener('click', function(fn)
+      {
+        fn.target.classList.toggle('favorites-btn-favorites-fav');
+      });
+    }
+  }
+
+initFavs()
+
 $('div.tour-list-first-block').on('click', function(event) {
     window.location.href = './touring.html';
 });

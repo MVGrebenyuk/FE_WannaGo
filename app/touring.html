@@ -20,15 +20,15 @@
 
     <body>
         <div class="container" ng-controller="tourPageController">
+            <div class="container container-breadcrumbs">
+                <ul class="breadcrumbs">
+                    <li><a href="./index.html">Главная</a></li>
+                    <li><a href="./tour-list.html">Все туры</a></li>
+                    <li>Горная Аджария</li>
+                </ul>
+            </div>
             <div class="inner-container d-flex">
                 <div class="section-tour-left col-md-7">
-                    <div class="container container-breadcrumbs">
-                        <ul class="breadcrumbs">
-                            <li><a href="./index.html">Главная</a></li>
-                            <li><a href="./tour-list.html">Все туры</a></li>
-                            <li>Горная Аджария</li>
-                        </ul>
-                    </div>
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 tour-present">
@@ -146,46 +146,13 @@
                 <div class="right-column col-md-5">
                     <div class="col-md-5 tour-hero-maps">
                         <div class="slider-block">
-                            <div class="tour-slider slider-height-padding">
-                                <input class="checkbox frst" type="radio" id="slide-1" name="slider">
-                                <label for="slide-1"></label>
-                                <input class="checkbox scnd" type="radio" name="slider" id="slide-2">
-                                <label for="slide-2"></label>
-                                <input class="checkbox thrd" type="radio" name="slider" id="slide-3">
-                                <label for="slide-3"></label>
-                                <input class="checkbox foth" type="radio" name="slider" id="slide-4">
-                                <label for="slide-4"></label>
-                                <input class="checkbox fifth" type="radio" name="slider" id="slide-5">
-                                <label for="slide-5"></label>
-                                <input class="checkbox sixth" type="radio" name="slider" id="slide-6">
-                                <label for="slide-6"></label>
-                                <ul>
-                                    <li>
-                                        <span></span>
-                                    </li>
-                                    <li>
-                                        <span></span>
-                                    </li>
-                                    <li>
-                                        <span></span>
-                                    </li>
-                                    <li>
-                                        <span></span>
-                                    </li>
-                                    <li>
-                                        <span></span>
-                                    </li>
-                                    <li>
-                                        <span></span>
-                                    </li>
-                                </ul>
-                            </div>
+                            <div class="tour-slider"><img src="{{trip.image}}"></div>
                             <div class="col-md-12 tour-hero-payment d-flex">
                                 <div class="tour-hero-price-block">
-                                    <p class="tour-hero-price">{{trip.price}}</p>
+                                    <p class="tour-hero-price">{{trip.price}} ₽</p>
                                 </div>
                                 <div class="tour-hero-payment-block">
-                                    <button class="tour-list-btn-favorites"></button>
+                                    <button class="tour-list-btn-favorites" onclick="initFavs()" onfocus="initFavs()"></button>
                                     <button class="buy btn-buy">Купить</button>
                                 </div>
                             </div>

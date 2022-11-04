@@ -625,7 +625,7 @@ p {
 }
 
 .footer-contacts {
-    color: #1ABAA6;
+    color: #fc6c3f;
     white-space: pre-line;
     font-size: 14px;
 }
@@ -659,7 +659,6 @@ p {
     margin-bottom: 0;
     padding: 0 0 20px 0;
     display: inline-block;
-    color: #232d37;
 }
 
 .popular-routes .popular-routes-text {
@@ -681,6 +680,10 @@ p {
     color: #B6B6B6;
     margin-top: 10px;
     margin-left: -8px;
+}
+
+.container-breadcrumbs {
+    margin-top: 80px;
 }
 
 .breadcrumbs li {
@@ -945,7 +948,7 @@ nav ul {
 /* СТРАНИЦА ТУРА */
 
 .inner-container {
-    margin-top: 80px;
+    margin-top: 20px;
     border-radius: 10px;
     background: #F7F7F7;
 }
@@ -1098,14 +1101,16 @@ nav ul {
     float: left;
     background-image: url(./img//icons/favorites-tour-list1.png);
     margin: 0 10px 0 10px;
-    float: left;
-    background-image: url(./img/icons/like-avourites.svg);
     background-repeat: no-repeat;
     background-position: 9px 12px;
     background-size: auto;
 }
 
-.tour-list-btn-favorites:hover {
+.tour-list-btn-favorites-fav {
+    background-image: url(./img//icons/favorites-tour-list.png);
+}
+
+/* .tour-list-btn-favorites:hover {
     background-image: url(./img//icons/favorites-tour-list.png);
     background-image: url(./img/icons/like-favourites-active.svg);
     background-repeat: no-repeat;
@@ -1119,7 +1124,7 @@ nav ul {
     background-repeat: no-repeat;
     background-position: 9px 12px;
     background-size: auto;
-}
+} */
 
 .tour-page-btn-favorites {
     width: 46px;
@@ -1964,13 +1969,15 @@ input[type=date]::-webkit-calendar-picker-indicator {
     padding-top: 24px;
 }
 
-.tour-slider {
+.tour-slider > img {
     position: relative;
-    width: 100%;
+    width: 456px;
+    height: 326px;
     display: block;
+    border-radius: 10px;
 }
 
-.tour-slider .full-height {
+/* .tour-slider .full-height {
     min-height: 100vh;
 }
 
@@ -2069,12 +2076,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
     color: #343434;
     writing-mode: vertical-rl;
     opacity: 0;
-
-    /* анимация */
-    /* pointer-events: none;
+    pointer-events: none;
     box-shadow: 0 8px 25px 0 rgba(16,39,112,.1);
     -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease; */
+    transition: all 0.5s ease;
 }
 
 .tour-slider>ul li span {
@@ -2125,7 +2130,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     opacity: 1;
     pointer-events: auto;
     border-radius: 16px;
-}
+} */
 
 /* Personal area */
 
@@ -2695,32 +2700,18 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .favorites-btn-favorites {
     width: 46px;
     height: 46px;
+    background-image: url(./img//icons/favorites-tour-list1.png);
+    background-repeat: no-repeat;
+    background-position: 9px 12px;
+    background-size: auto;
     border: 1px solid #1A1919;
     border-radius: 10px;
     float: left;
-    background-image: url(./img//icons/favorites-tour-list1.png);
     margin: 5px 10px 0 10px;
-    float: left;
-    background-image: url(./img/icons/like-avourites.svg);
-    background-repeat: no-repeat;
-    background-position: 9px 12px;
-    background-size: auto;
 }
 
-.favorites-btn-favorites:hover {
+.favorites-btn-favorites-fav {
     background-image: url(./img//icons/favorites-tour-list.png);
-    background-image: url(./img/icons/like-favourites-active.svg);
-    background-repeat: no-repeat;
-    background-position: 9px 12px;
-    background-size: auto;
-}
-
-.favorites-btn-favorites:focus {
-    background-image: url(./img//icons/favorites-tour-list.png);
-    background-image: url(./img/icons/like-favourites-active.svg);
-    background-repeat: no-repeat;
-    background-position: 9px 12px;
-    background-size: auto;
 }
 
 .favorites-btn-buy-tour {
@@ -3295,8 +3286,6 @@ div#content {
 .creating-tour-map-area {
     width: 1180px;
     height: 475px;
-    border-radius: 10px;
-    background-color: #1ABAA6;
     margin-top: 40px;
 }
 
@@ -3308,4 +3297,26 @@ div#content {
 
 .touring-buy-page {
     margin-top: 80px;
+}
+
+.tour-present-buy-description-block-paragraph {
+    font-size: 14px;
+}
+
+.tour-present-buy-description {
+    background-color: #F7F7F7;
+    border-radius: 10px;
+    height: 296px;
+}
+
+#map {
+    width: 100%;
+    height: 80%;
+}
+
+#editor {
+    padding: 4px;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 14px;
 }
