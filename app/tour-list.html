@@ -130,7 +130,6 @@
                                             <div class="user-name">
                                                 <img src={{t.author.avatar}}>
                                                 <div class="tour-list-user-name">{{t.author.firstName + ' ' + t.author.lastName}}</div>
-                                                
                                             </div>
                                             <div class="tour-list-image">
                                                 <img src={{t.image}}>
@@ -149,7 +148,7 @@
                                             </div>
                                             <div class="tour-list-second-block-button">
                                                 <div class="tour-list-cost">{{t.price}}</div>
-                                                <button class="tour-list-btn-favorites" ng-click="addToFavorite(t.id)"></button>
+                                                <button class="tour-list-btn-favorites" onclick="initFavsInList()" onfocus="initFavsInList()" ng-click="addToFavorite(t.id)"></button>
                                                 <button  class="btn btn-submit tour-list-btn-buy-tour" ng-click="addToPurchased(t.id)">Купить</button>
 <!--                                                <a href="./touring.html?tourId={{t.id}}" class="btn btn-submit tour-list-btn-buy-tour">Купить</a>-->
                                             </div>

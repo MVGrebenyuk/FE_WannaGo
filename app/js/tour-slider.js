@@ -1,31 +1,31 @@
-/* Индекс слайда по умолчанию */
-var slideIndex = 1;
-showSlides(slideIndex);
+// /* Индекс слайда по умолчанию */
+// var slideIndex = 1;
+// showSlides(slideIndex);
 
-/* Устанавливает текущий слайд */
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
+// /* Устанавливает текущий слайд */
+// function currentSlide(n) {
+//     showSlides(slideIndex = n);
+// }
 
-/* Основная функция слайдера */
-function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("checkbox");
+// /* Основная функция слайдера */
+// function showSlides(n) {
+//     var i;
+//     var slides = document.getElementsByClassName("checkbox");
 
-    if (n > slides.length) {
-      slideIndex = 1
-    }
+//     if (n > slides.length) {
+//       slideIndex = 1
+//     }
 
-    if (n < 1) {
-        slideIndex = slides.length
-    }
+//     if (n < 1) {
+//         slideIndex = slides.length
+//     }
 
-    for (i = 0; i < slides.length; i++) {
-        slides[i].checked = true;
-    }
+//     for (i = 0; i < slides.length; i++) {
+//         slides[i].checked = true;
+//     }
 
-    slides[slideIndex - 1].checked = true;
-}
+//     slides[slideIndex - 1].checked = true;
+// }
 
 /* Autoslide */
 
@@ -38,10 +38,24 @@ function showSlides(n) {
 //   }
 // },5000)
 
+function initFavs()
+  {
+    // Handle Favorites
+    var items = document.getElementsByClassName('tour-list-btn-favorites');
+    for(var x = 0; x < items.length; x++)
+    {
+      var item = items[x];
+      item.addEventListener('click', function(fn)
+      {
+        fn.target.classList.toggle('tour-list-btn-favorites-fav');
+      });
+    }
+  }
+
+initFavs()
+
 var myDiv = $('.tour-heading');
 myDiv.text(myDiv.text().substring(0,1050));
-
-$(".tour-hero-price").append(" ₽");
 
 $('div.tour-autor-info-block').on('click', function(event) {
   window.location.href = './personal-area.html';

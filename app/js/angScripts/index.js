@@ -137,9 +137,9 @@ angular.module('WannaGo').controller('mainController', function ($scope, $rootSc
                 $scope.trip.image = xhr.response;
                     $http.post(contextPath + '/api/v1/trip', $scope.trip)
                         .then(function successCallback(response) {
-                            alert('Trip created ' + response.data.username);
+                            alert('Тур создан. Trip created ' + response.data.username);
                         }, function errorCallback(response) {
-                            alert('Trip not created');
+                            alert('Тур не создан. Trip not created, please register or sign in');
                         });
             }
         };
