@@ -59,8 +59,6 @@ angular.module('WannaGo').controller('tourPageController', function ($scope, $ro
             });
     }
 
-
     $scope.getCurrentUser();
     $scope.getTrip()
-
 });

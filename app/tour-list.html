@@ -148,9 +148,9 @@
                                             </div>
                                             <div class="tour-list-second-block-button">
                                                 <div class="tour-list-cost">{{t.price}}</div>
-                                                <button class="tour-list-btn-favorites" onclick="initFavsInList()" onfocus="initFavsInList()"></button>
-                                                <button  class="btn btn-submit tour-list-btn-buy-tour">Купить</button>
-                                                <a href="./touring.html?tourId={{t.id}}" class="btn btn-submit tour-list-btn-buy-tour">Купить</a>
+                                                <button class="tour-list-btn-favorites" onclick="initFavsInList()" onfocus="initFavsInList()" ng-click="addToFavorite(t.id)"></button>
+                                                <button  class="btn btn-submit tour-list-btn-buy-tour" ng-click="addToPurchased(t.id)">Купить</button>
+<!--                                                <a href="./touring.html?tourId={{t.id}}" class="btn btn-submit tour-list-btn-buy-tour">Купить</a>-->
                                             </div>
                                         </div>
                                     </div>
@@ -163,7 +163,7 @@
         </div>
 
         <script src="js/angScripts/index.js"></script>
-        <script src="js/angScripts/tour.js"></script>
+        <script src="js/angScripts/toursListController.js"></script>
         <script src="js/jquery/jquery-2.2.4.min.js"></script>
         <script src="js/bootstrap/popper.min.js"></script>
         <script src="js/bootstrap/bootstrap.min.js"></script>
