@@ -58,5 +58,5 @@ var myDiv = $('.tour-heading');
 myDiv.text(myDiv.text().substring(0,1050));
 
 $('div.tour-autor-info-block').on('click', function(event) {
-  window.location.href = './personal-area.html';
+  window.location.href = './personal-area.html'; //ToDo как подшить параметр?
 });

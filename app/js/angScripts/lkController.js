@@ -1,21 +1,52 @@
 angular.module('WannaGo').controller('lkController', function ($scope, $rootScope, $http, $localStorage) {
-    const contextPath = 'http://5.188.140.199:8189/wannago';
+    const contextPath = 'http://localhost:8189/wannago';
 
     if ($localStorage.springWebUser) {
         $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.springWebUser.token;
     }
 
-    $scope.getCurrentUser = function (){
-        if ($localStorage.springWebUser) {
-            $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.springWebUser.token;
+    var params = window
+        .location
+        .search
+        .replace('?','')
+        .split('&')
+        .reduce(
+            function(p,e){
+                var a = e.split('=');
+                p[ decodeURIComponent(a[0])] = decodeURIComponent(a[1]);
+                return p;
+            },
+            {}
+        );
 
-            $http.get(contextPath + '/api/v1/user')
+    $scope.getCurrentUser = function (){
+        if(params['userId'] == null) {
+            if ($localStorage.springWebUser) {
+                $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.springWebUser.token;
+
+                $http.get(contextPath + '/api/v1/user')
+                    .then(function successCallback(response) {
+                        $scope.user = response.data;
+                        $localStorage.userProfile = response.data;
+                    }, function errorCallback(response) {
+
+                    });
+            }
+        } else {
+            $http.get(contextPath + '/api/v1/user/' + params['userId'])
                 .then(function successCallback(response) {
                     $scope.user = response.data;
-                    $localStorage.userProfile = response.data;
                 }, function errorCallback(response) {
 
                 });
+        }
+    }
+
+    $scope.isCurrentUser = function (userId){
+        if(userId.equal($localStorage.userProfile.id)){
+            return true;
+        } else {
+            return false;
         }
     }
 

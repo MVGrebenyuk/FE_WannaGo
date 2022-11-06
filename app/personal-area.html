@@ -34,8 +34,8 @@
                 <div>
                     <h2 class="tour-catalog">Профиль пользователя</h2>
                     <div class="personal-area-edit-button">
-                        <button class="btn-purchased-tours-area">Купленные туры</button>
-                        <button class="btn-edit-personal-area">Редактировать</button>
+                        <button class="btn-purchased-tours-area" ng-show="isCurrentUser">Купленные туры</button>
+                        <button class="btn-edit-personal-area" ng-show="isCurrentUser">Редактировать</button>
                     </div>
                 </div>
                 <div class="personal-area-top-block">

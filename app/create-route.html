@@ -70,7 +70,7 @@
                                     </div>
                                     <div>
                                         <p>Сложность</p>
-                                        <select class="preview-area-select" name="complexity">
+                                        <select class="preview-area-select" name="complexity" ng-model="trip.level">
                                             <option disabled>1</option>
                                             <option value="option">1</option>
                                             <option value="option1">2</option>
@@ -124,7 +124,7 @@
                 </div>
                 <div class="preview-photo-buttons">
                     <button class="btn preview-button-cancel">Отменить</button>
-                    <button class="btn preview-button-save" ng-click="simpleTest()">Сохранить</button>
+                    <button class="btn preview-button-save" ng-click="createTour()">Сохранить</button>
                 </div>
             </div>
                 <div class="creating-tour-map">

@@ -1153,6 +1153,37 @@ nav ul {
     background-size: auto;
 } */
 
+.tour-list-btn-favorites-true {
+    width: 46px;
+    height: 46px;
+    border: 1px solid #1A1919;
+    border-radius: 10px;
+    float: left;
+    background-image: url(./img//icons/favorites-tour-list.png);
+    margin: 0 10px 0 10px;
+    float: left;
+    background-image: url(./img/icons/like-favourites-active.svg);
+    background-repeat: no-repeat;
+    background-position: 9px 12px;
+    background-size: auto;
+}
+
+.tour-list-btn-favorites-true:hover {
+    background-image: url(./img//icons/favorites-tour-list1.png);
+    background-image: url(./img/icons/like-favourites-active.svg);
+    background-repeat: no-repeat;
+    background-position: 9px 12px;
+    background-size: auto;
+}
+
+.tour-list-btn-favorites-true:focus {
+    background-image: url(./img//icons/favorites-tour-list.png);
+    background-image: url(./img/icons/like-favourites-active.svg);
+    background-repeat: no-repeat;
+    background-position: 9px 12px;
+    background-size: auto;
+}
+
 .tour-page-btn-favorites {
     width: 46px;
     height: 46px;

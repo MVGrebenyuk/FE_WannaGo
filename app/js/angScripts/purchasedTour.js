@@ -1,4 +1,4 @@
-angular.module('WannaGo').controller('tourPageController', function ($scope, $rootScope, $http, $localStorage) {
+angular.module('WannaGo').controller('purchasedTourPageController', function ($scope, $rootScope, $http, $localStorage) {
     const contextPath = 'http://localhost:8189/wannago';
 
     var params = window
@@ -47,16 +47,15 @@ angular.module('WannaGo').controller('tourPageController', function ($scope, $ro
         if ($localStorage.springWebUser) {
             $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.springWebUser.token;
         }
-        $http.get(contextPath + '/api/v1/trip/' + params['tourId'])
+        $http.get(contextPath + '/api/v1/trip/purchased/' + params['tourId'] + '/tour')
             .then(function successCallback(response) {
-                console.log(response.data)
-                if(response.data.isPurchared === true){
-                    window.location.href = "./touring-buy.html?tourId=" + params['tourId'];
+                if(response.data.isPurchared !== true){
+                    window.location.href = './touring.html?tourId=' + params['tourId'];
                 }
                 $scope.trip = response.data;
                 var div = document.getElementById('textDiv');
                 var newDiv = document.createElement('div')
-                newDiv.innerHTML = $scope.trip.shortTitle;
+                newDiv.innerHTML = $scope.trip.description;
                 div.insertAdjacentElement('afterbegin', newDiv)
             }, function errorCallback(response) {
                 alert("Зарегистрируйтесь")
