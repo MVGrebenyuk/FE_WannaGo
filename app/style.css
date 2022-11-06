@@ -1076,6 +1076,33 @@ nav ul {
     align-items: center;
 }
 
+.leave-feedback-button {
+    display: block;
+    margin-top: 80px;
+    margin: 80px auto 0 auto;
+    padding: 8px 102.5px;
+    font-size: 20px;
+    line-height: 24px;
+    border: 0px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    background: #FFB800;
+    border-radius: 10px; 
+}
+
+.general-reviews-tour {
+    margin: 0 auto;
+}
+
+.general-reviews-tour-heading {
+    margin-top: 27px;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    color: #000000;
+}
+
 .tour-hero-price {
     font-weight: 400;
     font-size: 45px;
@@ -1669,15 +1696,22 @@ input[type=date]::-webkit-calendar-picker-indicator {
     margin: 0 5px;
 }
 
+.full-description-blok-paragraph{
+    margin-bottom: 0;
+}
+
 .heading-reviews {
     margin-top: 41px;
     padding: 0 15px;
 }
 
-.reviews-cart {
+.heading-reviews-buy-touring {
+    margin-top: 80px;
+}
+
+.reviews-cart:not(:nth-child(1))  {
     margin-top: 30px;
     padding: 0 15px;
-
 }
 
 .riviews-cart-autor-name > p {
@@ -1924,6 +1958,15 @@ input[type=date]::-webkit-calendar-picker-indicator {
 	line-height: 1;
 	color: lightgrey;
 }
+
+.rating-mini-block {
+    margin-top: 6px;
+}
+
+.rating-mini-discription {
+    margin: auto 0 auto 10px;
+}
+
 .rating-mini > span:before {
 	content: url(./img/icons/StarUn.png);
 }
