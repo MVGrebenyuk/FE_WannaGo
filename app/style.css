@@ -2643,6 +2643,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .favorites-user-name-block img {
     width: 40px;
     height: 40px;
+    border-radius: 50%;
 }
 
 .favorites-user-name {
@@ -2730,6 +2731,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
     margin: 0 24px;
 }
 
+.favorites-first-block-link:hover {
+    text-decoration: none;
+}
+
 .favorites-place-name {
     font-size: 20px;
     font-weight: bold;
@@ -2770,7 +2775,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .favorites-rating-mini span {
 	padding: 0 2px;
-	font-size: 21px;
+	font-size: 18px;
 	line-height: 1;
 	color: lightgrey;
 }
@@ -2822,6 +2827,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .purchased-routes-user-name-block img {
     width: 40px;
     height: 40px;
+    border-radius: 50%;
 }
 
 .purchased-routes-user-name {
@@ -2880,6 +2886,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
     font-size: 20px;
 }
 
+.purchased-routes-btn-view-route:hover {
+    text-decoration: none;
+    color: rgb(211, 210, 210);
+}
+
 .purchased-routes-first-block {
     margin: 0 24px;
 }
@@ -2924,7 +2935,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .purchased-routes-rating-mini span {
 	padding: 0 2px;
-	font-size: 19px;
+	font-size: 18px;
 	line-height: 1;
 	color: lightgrey;
 }
@@ -2935,6 +2946,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .purchased-routes-rating-mini > span.active {
 	content: url(./img/icons/StarTl.png);
+}
+
+.purchased-routes-rating-block {
+    display: flex;
+    margin-left: 5px;
 }
 
 .btn-purchased-routes-see-more {
@@ -3319,4 +3335,10 @@ div#content {
     margin-top: 10px;
     margin-left: 10px;
     font-size: 14px;
+}
+
+.grid-container {
+    --n: 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(max(200px, 100%/var(--n)), 1fr));
 }

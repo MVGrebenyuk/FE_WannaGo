@@ -39,78 +39,62 @@
                     <h2 class="tour-catalog">Ваши приобретенные маршруты</h2>
                 </div>
                 <div class="purchased-routes-area">
-                    <table class="purchased-routes-table">
-                        <tbody>
-                            <tr>
-                                <td ng-repeat="t in tripsList">
-                                    <div class="purchased-routes-block">
-                                        <div class="purchased-routes-second-block">
-                                            <div class="purchased-routes-user-name-block">
-                                                <img src={{t.author.avatar}}>
-                                                <div class="purchased-routes-user-name">{{t.author.firstName + 'n' + t.author.lastName}}</div>
-                                                <div class="purchased-routes-rating-mini">
-                                                    <span class="active"></span>
-                                                    <span class="active"></span>
-                                                    <span class="active"></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                </div>
-                                                <p class="purchased-routes-route-evaluation">187 оценок</p>
-                                            </div>
-                                            <div class="purchased-routes-image">
-                                                <img src={{t.image}}>
-                                            </div>
-                                            <div class="purchased-routes-grad-image">
-                                                <img src="img//tour-list/tour-list-image2.png">
-                                            </div>
-                                            <div class="purchased-routes-second-block-button">
-                                                <button onclick="window.location.href = './touring.html'" class="btn btn-submit purchased-routes-btn-view-route">Посмотреть</button>
-                                            </div>
+                    <div class="grid-container purchased-routes-table">
+                        <div class="purchased-routes-block" ng-repeat="t in tripsList">
+                            <div class="purchased-routes-second-block">
+                                <div class="purchased-routes-user-name-block">
+                                    <img src={{t.author.avatar}}>
+                                    <div class="purchased-routes-user-name">{{t.author.firstName + ' ' + t.author.lastName}}</div>
+                                    <div class="purchased-routes-rating-block">
+                                        <div class="purchased-routes-rating-mini">
+                                            <span class="active"></span>
+                                            <span class="active"></span>
+                                            <span class="active"></span>
+                                            <span></span>
+                                            <span></span>
                                         </div>
-                                        <div class="purchased-routes-first-block">
-                                            <div class="purchased-routes-place-name">Горная Аджария</div>
-                                            <div class="purchased-routes-bottom-block">
-                                                <div><span>Время в пути</span>
-                                                    <div class="bottom-block-info">
-                                                        <img src="./img/icons/tour-list-1.png">
-                                                        <p>{{t.duration}} дней</p>
-                                                    </div>
-                                                </div>
-                                                <div><span>Расстояние</span>
-                                                    <div class="bottom-block-info">
-                                                        <img src="./img/icons/tour-list-2.png">
-                                                        <p>{{t.length}}</p>
-                                                    </div>
-                                                </div>
-                                                <div><span>Сложность</span>
-                                                    <div class="bottom-block-info">
-                                                        <img src="./img/icons/tour-list-3.png">
-                                                        <p>{{t.level}}/5</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="purchased-routes-description-text">{{t.shortTitle}}
-                                            </div>
+                                        <p class="purchased-routes-route-evaluation">187 оценок</p>
+                                    </div>
+                                </div>
+                                <div class="purchased-routes-image">
+                                    <img src={{t.image}}>
+                                </div>
+                                <div class="purchased-routes-grad-image">
+                                    <img src="img//tour-list/tour-list-image2.png">
+                                </div>
+                                <div class="purchased-routes-second-block-button">
+                                    <a href = "./touring.html?tourId={{t.id}}" class="btn btn-submit purchased-routes-btn-view-route">Посмотреть</a>
+                                </div>
+                            </div>
+                            <div class="purchased-routes-first-block">
+                                <div class="purchased-routes-place-name">{{t.title}}</div>
+                                <div class="purchased-routes-bottom-block">
+                                    <div><span>Время в пути</span>
+                                        <div class="bottom-block-info">
+                                            <img src="./img/icons/tour-list-1.png">
+                                            <p>{{t.duration}} дня</p>
                                         </div>
                                     </div>
-                                </td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="purchased-routes-see-more text-center">
-                        <button class="btn-purchased-routes-see-more">Смотреть больше</button>
+                                    <div><span>Расстояние</span>
+                                        <div class="bottom-block-info">
+                                            <img src="./img/icons/tour-list-2.png">
+                                            <p>{{t.length}} км</p>
+                                        </div>
+                                    </div>
+                                    <div><span>Сложность</span>
+                                        <div class="bottom-block-info">
+                                            <img src="./img/icons/tour-list-3.png">
+                                            <p>{{t.level}}/5</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="purchased-routes-description-text">{{t.shortTitle}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="purchased-routes-see-more text-center">
+                            <button class="btn-purchased-routes-see-more" ng-show="trips.length > 9">Смотреть больше</button>
+                        </div>
                     </div>
                 </div>
             </div>

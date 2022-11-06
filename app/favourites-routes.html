@@ -40,80 +40,65 @@
                     <h2 class="tour-catalog">Избранное</h2>
                 </div>
                 <div class="favorites-area">
-                    <table class="favorites-table">
-                        <tbody>
-                            <tr>
-                                <td ng-repeat="t in tripsList">
-                                    <div class="favorites-block">
-                                        <div class="favorites-second-block">
-                                            <div class="favorites-user-name-block">
-                                                <img src={{t.author.avatar}}>
-                                                <div class="favorites-user-name">{{t.author.firstName + '\n' + t.author.lastName}}</div>
-                                                <div class="favorites-rating-mini">
-                                                    <span class="active"></span>
-                                                    <span class="active"></span>
-                                                    <span class="active"></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                </div>
-                                                <p class="favorites-route-evaluation">187 оценок</p>
-                                            </div>
-                                            <div class="favorites-image">
-                                                <img src={{t.image}}>
-                                            </div>
-                                            <div class="favorites-grad-image">
-                                                <img src="img//tour-list/tour-list-image2.png">
-                                            </div>
-                                            <div class="favorites-second-block-button">
-                                                <div class="favorites-cost">{{t.price}}</div>
-                                                <button class="favorites-btn-favorites" onclick="initFavs()" onfocus="initFavs()"></button>
-                                                <button class="btn btn-submit favorites-btn-buy-tour" data-toggle="modal" data-target="#myModal">Купить</button>
+                    <div class="grid-container favorites-table">
+                        <div class="favorites-block" ng-repeat="t in tripsList">
+                            <div class="favorites-second-block">
+                                <div class="favorites-user-name-block">
+                                    <img src={{t.author.avatar}}>
+                                    <div class="favorites-user-name">{{t.author.firstName + '\n' + t.author.lastName}}</div>
+                                    <div class="purchased-routes-rating-block">
+                                        <div class="favorites-rating-mini">
+                                            <span class="active"></span>
+                                            <span class="active"></span>
+                                            <span class="active"></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <p class="favorites-route-evaluation">187 оценок</p>
+                                    </div>
+                                </div>
+                                <div class="favorites-image">
+                                    <img src={{t.image}}>
+                                </div>
+                                <div class="favorites-grad-image">
+                                    <img src="img//tour-list/tour-list-image2.png">
+                                </div>
+                                <div class="favorites-second-block-button">
+                                    <div class="favorites-cost">{{t.price}}</div>
+                                    <button class="favorites-btn-favorites" onclick="initFavs()" onfocus="initFavs()"></button>
+                                    <button class="btn btn-submit favorites-btn-buy-tour" ng-click="addToPurchased(t.id)">Купить</button>
+                                </div>
+                            </div>
+                            <div class="favorites-first-block">
+                                <a class="favorites-first-block-link" href="./touring.html?tourId={{t.id}}">
+                                    <div class="favorites-place-name">{{t.title}}</div>
+                                    <div class="favorites-bottom-block">
+                                        <div><span>Время в пути</span>
+                                            <div class="bottom-block-info">
+                                                <img src="./img/icons/tour-list-1.png">
+                                                <p>{{t.duration}} дня</p>
                                             </div>
                                         </div>
-                                        <div class="favorites-first-block">
-                                            <div class="favorites-place-name">{{t.name}}</div>
-                                            <div class="favorites-bottom-block">
-                                                <div><span>Время в пути</span>
-                                                    <div class="bottom-block-info">
-                                                        <img src="./img/icons/tour-list-1.png">
-                                                        <p>{{t.duration}}</p>
-                                                    </div>
-                                                </div>
-                                                <div><span>Расстояние</span>
-                                                    <div class="bottom-block-info">
-                                                        <img src="./img/icons/tour-list-2.png">
-                                                        <p>{{t.length}}</p>
-                                                    </div>
-                                                </div>
-                                                <div><span>Сложность</span>
-                                                    <div class="bottom-block-info">
-                                                        <img src="./img/icons/tour-list-3.png">
-                                                        <p>{{t.level}}/5</p>
-                                                    </div>
-                                                </div>
+                                        <div><span>Расстояние</span>
+                                            <div class="bottom-block-info">
+                                                <img src="./img/icons/tour-list-2.png">
+                                                <p>{{t.length}} км</p>
                                             </div>
-                                            <div class="favorites-description-text">{{t.shortTitle}}
+                                        </div>
+                                        <div><span>Сложность</span>
+                                            <div class="bottom-block-info">
+                                                <img src="./img/icons/tour-list-3.png">
+                                                <p>{{t.level}}/5</p>
                                             </div>
                                         </div>
                                     </div>
-                                </td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="favorites-area-see-more text-center">
-                        <button class="btn-favorites-see-more">Смотреть больше</button>
+                                    <div class="favorites-description-text">{{t.shortTitle}}</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="favorites-area-see-more text-center">
+                            <button class="btn-favorites-see-more" ng-show="trips.length > 9">Смотреть больше</button>
+                        </div>
                     </div>
                 </div>
             </div>
