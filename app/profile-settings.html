@@ -36,11 +36,11 @@
                                 <div class="header-section-pa d-flex ">
                                     <div class="col-5">
                                         <label class="profile-settings-label" for="disabledTextInput">Имя</label>
-                                        <input class="form-control profile-settings-label-name" type="text" value="{{user.firstName}}" placeholder="{{user.firstName}}" ng-model="updateProfileDto.firstName">
+                                        <input class="form-control profile-settings-label-name" type="text" maxlength="9" value="{{user.firstName}}" placeholder="{{user.firstName}}" ng-model="updateProfileDto.firstName">
                                     </div>
                                     <div class="col-7">
                                         <label class="profile-settings-label" for="disabledTextInput">Фамилия</label>
-                                        <input class="form-control profile-settings-label-surname" type="text" ng-model="updateProfileDto.lastName" value="{{user.lastName}}" placeholder="{{user.lastName}}">
+                                        <input class="form-control profile-settings-label-surname" type="text" maxlength="9" ng-model="updateProfileDto.lastName" value="{{user.lastName}}" placeholder="{{user.lastName}}">
                                     </div>
                                 </div>
                                 <div class="middle-section-pa d-flex">
