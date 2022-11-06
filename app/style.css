@@ -1076,9 +1076,31 @@ nav ul {
     align-items: center;
 }
 
+.rating-descripthion-buy-tour {
+    margin-bottom: 0;
+}
+
+.leave-feedback {
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    text-decoration-line: underline;
+}
+.leave-feedback:hover {
+    color:#FF7A00;
+}
+
+.general-reviews-tour {
+    padding: 0;
+}
+
+.general-reviews-tour-block {
+    padding: 0;
+}
+
 .leave-feedback-button {
     display: block;
-    margin-top: 80px;
+    width: 100%;
     margin: 80px auto 0 auto;
     padding: 8px 102.5px;
     font-size: 20px;
@@ -1742,7 +1764,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .reviews-cart:not(:nth-child(1))  {
     margin-top: 30px;
-    padding: 0 15px;
+    padding: 0;
 }
 
 .riviews-cart-autor-name > p {
@@ -3387,6 +3409,30 @@ div#content {
 
 .touring-buy-page {
     margin-top: 80px;
+}
+
+.tour-present-buy {
+    margin-top: 37px;
+}
+
+.section-tour-full-description {
+    margin-top: 55px;
+}
+
+.section-tour-full-description-heading {
+    margin-left: 30px;
+}
+
+.section-buy-tour-reviews {
+    padding: 0;
+}
+
+.heading-reviews {
+    padding: 0;
+}
+
+.reviews-cart-first {
+    padding: 0;
 }
 
 .tour-present-buy-description-block-paragraph {
