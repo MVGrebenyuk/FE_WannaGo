@@ -38,25 +38,5 @@
 //   }
 // },5000)
 
-function initFavs()
-  {
-    // Handle Favorites
-    var items = document.getElementsByClassName('tour-list-btn-favorites');
-    for(var x = 0; x < items.length; x++)
-    {
-      var item = items[x];
-      item.addEventListener('click', function(fn)
-      {
-        fn.target.classList.toggle('tour-list-btn-favorites-fav');
-      });
-    }
-  }
-
-initFavs()
-
 var myDiv = $('.tour-heading');
 myDiv.text(myDiv.text().substring(0,1050));
-
-$('div.tour-autor-info-block').on('click', function(event) {
-  window.location.href = './personal-area.html'; //ToDo как подшить параметр?
-});

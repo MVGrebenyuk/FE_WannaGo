@@ -23,8 +23,8 @@ var headerText = `
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#wannago-nav" aria-controls="wannago-nav" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars" aria-hidden="true"></i>Меню</button>
                                 <!-- Menu Area Start -->
                                 <div class="search">
-                                    <input type="text" maxlength= "12" placeholder="Найди то, что ты давно ищешь" class="searchbar">
-                                    <img src="https://images-na.ssl-images-amazon.com/images/I/41gYkruZM2L.png" alt="search icon" class="button">
+                                    <input type="text" maxlength= "12" placeholder="Поиск" class="searchbar">
+                                    <img src="./img/icons/find.png" alt="search icon" class="button">
                                     </div>
                                 <div class="collapse navbar-collapse justify-content-center" id="wannago-nav">
                                     <ul class="navbar-nav" id="wannago-nav">
@@ -51,6 +51,7 @@ var headerText = `
                                                         <li><a href="./personal-area.html">Профиль</a></li>
                                                         <li><a href="./create-route.html">Создать тур</a></li>
                                                         <li><a href="./favourites-routes.html">Избранное</a></li>
+                                                        <li><a href="./purchased-routes.html">Купленные туры</a></li>
                                                         <li><a href="#" ng-click="tryToLogout()">Выход</a></li>
                                                     </ul>
                                                 </li>

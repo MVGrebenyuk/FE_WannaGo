@@ -29,7 +29,7 @@
 }
 
 .blog-area {
-    margin-top: 80px;
+    margin-top: 100px;
     background-size: 100%;
 }
 
@@ -473,7 +473,7 @@ p {
 
 /* Собственно сам слайдер */
 .slider{
-    max-width: 64%;
+    width: 1180px;
     position: relative;
     margin: auto;
     height: 330px;
@@ -483,8 +483,7 @@ p {
 /* Картинка мастабируется по отношению к родительскому элементу */
 .slider .item img {
     object-fit: cover;
-    margin-left: 53px;
-    width: 96%;
+    width: 1180px;
     height: 330px;
     border: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.473);
@@ -507,7 +506,7 @@ p {
     color: #fff;
     font-size: 35px;
     /* Выравнивание текста по горизонтали и по вертикали*/
-    left: 821px;
+    left: 780px;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 802px;
@@ -566,7 +565,7 @@ p {
 
 .slideText .slide-rating {
     font-size: 18px;
-    margin: 5px 0 0 20px;
+    margin: 0 0 0 12px;
 }
 
 .slideText .slide-tour-info {
@@ -737,7 +736,7 @@ nav ul {
     visibility: hidden;
     opacity: 0;
     z-index: 5;
-    width: 150px;
+    width: 165px;
     transform: perspective(600px) rotateX(-90deg);
     transform-origin: 0% 0%;
     transition: .6s ease-in-out;
@@ -932,6 +931,18 @@ nav ul {
     color: white;
 }
 
+.tour-list-btn-buy-tourer {
+    position: absolute;
+    width: 290px;
+    height: 46px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    line-height: 27px;
+    letter-spacing: 1px;
+    background-color: #1ABAA6;
+}
+
 .tour-list-btn-create-tour {
     position: absolute;
     left: 70%;
@@ -1107,13 +1118,14 @@ nav ul {
     font-weight: 400;
     font-size: 45px;
     line-height: 49px;
-    text-align: right;
+    text-align: start;
     color: #000000;
     margin-top: -3px;
 }
 
 .tour-hero-price-block {
-    margin-right: auto;
+    margin-right: 40px;
+    width: 210px;
 }
 
 .favorites {
@@ -2574,7 +2586,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     font-size: 38px;
     font-weight: 400;
     height: 49px;
-    width: 137px;
+    width: 126px;
     margin-left: 4px;
 }
 
@@ -2670,7 +2682,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .user-route-rating-mini {
     display: inline-block;
-    margin-left: 0px;
+    margin-left: 10px;
 	font-size: 0;
 }
 
@@ -2761,7 +2773,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     font-size: 38px;
     font-weight: 400;
     height: 49px;
-    width: 137px;
+    width: 126px;
     margin-left: 4px;
 }
 
@@ -3093,6 +3105,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     background-color: #F7F7F7;
     border: none;
     border-radius: 10px;
+    padding-left: 10px;
 }
 
 .preview-area-short-description textarea {
@@ -3103,6 +3116,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
     border: none;
     border-radius: 10px;
     resize: none;
+    padding-left: 10px;
+    padding-right: 5px;
 }
 
 .preview-area-select {
@@ -3317,8 +3332,8 @@ div#content {
 }
 
 .preview-photo-buttons {
-    margin-top: 39px;
-    text-align: end;
+    text-align: center;
+    margin-bottom: 80px;
 }
 
 .preview-button-save {
@@ -3331,6 +3346,20 @@ div#content {
     font-weight: 600;
     letter-spacing: 1px;
     margin-left: 20px;
+    cursor: pointer;
+}
+
+.preview-button-save:hover {
+    width: 145px;
+    height: 46px;
+    border-radius: 10px;
+    background-color: #ee7300;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-left: 20px;
+    cursor: pointer;
 }
 
 .preview-button-cancel {
@@ -3343,6 +3372,20 @@ div#content {
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.preview-button-cancel:hover {
+    width: 142px;
+    height: 46px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: rgb(241, 241, 241);
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
 }
 
 .file-upload {
@@ -3370,7 +3413,7 @@ div#content {
 }
 
 .creating-tour-map {
-    margin: 80px auto;
+    margin: 60px auto;
 }
 
 .creating-tour-map-area {

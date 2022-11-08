@@ -106,3 +106,6 @@ if (window.FileList && window.File) {
   }); 
 }
 
+$('button.preview-button-cancel').on('click', function(event) {
+    window.location.href = './tour-list.html';
+});
