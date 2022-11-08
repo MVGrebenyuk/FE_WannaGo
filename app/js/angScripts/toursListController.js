@@ -37,9 +37,15 @@ angular.module('WannaGo').controller('tourController', function ($scope, $rootSc
     $scope.addToPurchased = function (tripId){
         $http.post(contextPath + '/api/v1/trip/purchased/' + tripId)
             .then(function (response) {
+                window.location.reload();
                 alert("DEBUG: Тур куплен");
             });
     }
+
+    $scope.redirect = function (tripId){
+        console.log(tripId);
+        window.location = "./touring.html?tourId=" + tripId;
+      }
 
     $scope.getAllTrips();
 

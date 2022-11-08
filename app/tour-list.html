@@ -102,9 +102,9 @@
                             <tr ng-repeat="t in tripsList">
                                 <td>
                                     <div class="tour-list-block">
-                                        <a href="./touring.html?tourId={{t.id}}"><div class="tour-list-first-block">
-                                                <div class="place-name">{{t.title}}</div>
-                                                <div class="tour-description-text">{{t.shortTitle}}</div>
+                                        <div class="tour-list-first-block" ng-click="redirect(t.id)">
+                                            <div class="place-name">{{t.title}}</div>
+                                            <div class="tour-description-text">{{t.shortTitle}}</div>
                                             <div class="tour-list-bottom-block">
                                                 <div><span>Время в пути</span>
                                                     <div class="bottom-block-info">
@@ -125,7 +125,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div></a>
+                                        </div>
                                         <div class="tour-list-second-block">
                                             <div class="user-name">
                                                 <img src={{t.author.avatar}}>
@@ -147,14 +147,19 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="tour-list-second-block-button">
+                                            <div class="tour-list-second-block-button" ng-if="!t.isPurchared">
                                                 <div class="tour-list-cost">{{t.price}}</div>
                                                 <button class="tour-list-btn-favorites" ng-show="!checkFav(t.isFavorite)" ng-click="addToFavorite(t.id)"></button>
                                                 <button class="tour-list-btn-favorites-true" ng-show="checkFav(t.isFavorite)" ng-click="delFromFavorites(t.id)"></button>
-                                                <button  class="btn btn-submit tour-list-btn-buy-tour" ng-click="addToPurchased(t.id)">Купить</button>
-<!--                                                <a href="./touring.html?tourId={{t.id}}" class="btn btn-submit tour-list-btn-buy-tour">Купить</a>-->
+                                                <button class="btn btn-submit tour-list-btn-buy-tour" ng-click="addToPurchased(t.id)">Купить</button>
+                                            </div>
+                                            <div class="tour-list-second-block-button" ng-if="t.isPurchared">
+                                                <button class="tour-list-btn-favorites" ng-show="!checkFav(t.isFavorite)" ng-click="addToFavorite(t.id)"></button>
+                                                <button class="tour-list-btn-favorites-true" ng-show="checkFav(t.isFavorite)" ng-click="delFromFavorites(t.id)"></button>
+                                                <button class="btn btn-submit tour-list-btn-buy-tourer">Посмотреть</button>
                                             </div>
                                         </div>
+                                        <div class="delete-tour suda-nado-uslovie"><img src="./img/icons/close-icon2.png" style="cursor: pointer;"></div>
                                     </div>
                                 </td>
                             </tr>

@@ -77,7 +77,7 @@
                     <div class="container container-rating-and-author">
                         <div class="row">
                             <div class="container">
-                                <div class="col-md-12 rating-and-author-block">
+                                <div class="col-md-12 rating-and-author-block" ng-click="redirect(trip.author.id)">
                                         <div class="col-md-12 tour-autor-block">
                                             <div class="tour-autor-info-block d-flex">
                                                 <span class="autor-fhoto"><img src={{trip.author.avatar}}></span>
@@ -94,7 +94,7 @@
                                             </div>
                                         </div>
                                 </div>
-                            </div>     
+                            </div>
                             <div class="container">
                                 <h3 class="section-tour-heading heading-reviews">Отзывы маршрута</h3>
                                 <div class="col-md-12 reviews-cart">
@@ -152,8 +152,9 @@
                                     <p class="tour-hero-price">{{trip.price}} ₽</p>
                                 </div>
                                 <div class="tour-hero-payment-block">
-                                    <button class="tour-list-btn-favorites" onclick="initFavs()" onfocus="initFavs()"></button>
-                                    <button class="buy btn-buy">Купить</button>
+                                    <button class="tour-list-btn-favorites" ng-show="!checkFav(t.isFavorite)" ng-click="addToFavorite(t.id)"></button>
+                                    <button class="tour-list-btn-favorites-true" ng-show="checkFav(t.isFavorite)" ng-click="delFromFavorites(t.id)"></button>
+                                    <button  class="btn btn-submit tour-list-btn-buy-tour" ng-click="addToPurchased(t.id)">Купить</button>
                                 </div>
                             </div>
                         </div>

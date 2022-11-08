@@ -65,8 +65,9 @@
                                 </div>
                                 <div class="favorites-second-block-button">
                                     <div class="favorites-cost">{{t.price}}</div>
-                                    <button class="favorites-btn-favorites" onclick="initFavs()" onfocus="initFavs()"></button>
-                                    <button class="btn btn-submit favorites-btn-buy-tour" ng-click="addToPurchased(t.id)">Купить</button>
+                                    <button class="tour-list-btn-favorites" ng-show="!checkFav(t.isFavorite)" ng-click="addToFavorite(t.id)"></button>
+                                    <button class="tour-list-btn-favorites-true" ng-show="checkFav(t.isFavorite)" ng-click="delFromFavorites(t.id)"></button>
+                                    <button  class="btn btn-submit tour-list-btn-buy-tour" ng-click="addToPurchased(t.id)">Купить</button>
                                 </div>
                             </div>
                             <div class="favorites-first-block">
