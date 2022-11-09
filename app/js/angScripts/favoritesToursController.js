@@ -1,5 +1,5 @@
 angular.module('WannaGo').controller('favoritesTourController', function ($scope, $rootScope, $http, $localStorage) {
-    const contextPath = 'http://5.188.140.199:8189/wannago'; //'http://5.188.140.199:8189/wannago'
+    const contextPath = $rootScope.CONSTANTS;
 
     if ($localStorage.springWebUser) {
         $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.springWebUser.token;

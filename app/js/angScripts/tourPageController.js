@@ -1,5 +1,5 @@
 angular.module('WannaGo').controller('tourPageController', function ($scope, $rootScope, $http, $localStorage) {
-    const contextPath = 'http://5.188.140.199:8189/wannago';
+    const contextPath = $rootScope.CONSTANTS;
 
     var params = window
         .location

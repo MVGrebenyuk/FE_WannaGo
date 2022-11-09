@@ -1,5 +1,5 @@
 angular.module('WannaGo').controller('lkController', function ($scope, $rootScope, $http, $localStorage) {
-    const contextPath = 'http://5.188.140.199:8189/wannago';
+    const contextPath = $rootScope.CONSTANTS;
 
     if ($localStorage.springWebUser) {
         $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.springWebUser.token;
@@ -20,7 +20,7 @@ angular.module('WannaGo').controller('lkController', function ($scope, $rootScop
         );
 
     $scope.getCurrentUser = function (){
-        if(params['userId'] == null) {
+        if(params['id'] == null) {
             if ($localStorage.springWebUser) {
                 $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.springWebUser.token;
 
@@ -33,7 +33,7 @@ angular.module('WannaGo').controller('lkController', function ($scope, $rootScop
                     });
             }
         } else {
-            $http.get(contextPath + '/api/v1/user/' + params['userId'])
+            $http.get(contextPath + '/api/v1/user/' + params['id'])
                 .then(function successCallback(response) {
                     $scope.user = response.data;
                 }, function errorCallback(response) {
@@ -43,7 +43,7 @@ angular.module('WannaGo').controller('lkController', function ($scope, $rootScop
     }
 
     $scope.isCurrentUser = function (userId){
-        if(userId.equal($localStorage.userProfile.id)){
+        if(userId == $localStorage.userProfile.id){
             return true;
         } else {
             return false;
@@ -81,6 +81,8 @@ angular.module('WannaGo').controller('lkController', function ($scope, $rootScop
                 console.log(xhr.response)
                 if (xhr.status != 200) { // если фото не загрузилось
                     $scope.updateProfileDto.avatar = $localStorage.userProfile.avatar;
+                    console.log($scope.updateProfileDto)
+                    alert($scope.updateProfileDto)
                     $http.post(contextPath + '/api/v1/profile/update', $scope.updateProfileDto)
                         .then(function successCallback(response) {
                             delete $localStorage.userProfile;
@@ -95,6 +97,8 @@ angular.module('WannaGo').controller('lkController', function ($scope, $rootScop
                         $scope.updateProfileDto = {}
                         $scope.updateProfileDto.avatar = xhr.response;
                     }
+                    console.log($scope.updateProfileDto)
+                    alert($scope.updateProfileDto)
                     $http.post(contextPath + '/api/v1/profile/update', $scope.updateProfileDto)
                         .then(function successCallback(response) {
                             delete $localStorage.userProfile;
@@ -117,10 +121,17 @@ angular.module('WannaGo').controller('lkController', function ($scope, $rootScop
     }
 
     $scope.getAllTrips = function (){
-        $http.get(contextPath + '/api/v1/trip/' + $localStorage.userProfile.id + '/author')
-            .then(function (response) {
-                $scope.trips = response.data;
-            });
+        if(params['id'] == null) {
+            $http.get(contextPath + '/api/v1/trip/' + $localStorage.userProfile.id + '/author')
+                .then(function (response) {
+                    $scope.trips = response.data;
+                });
+        } else {
+            $http.get(contextPath + '/api/v1/trip/' + params['id'] + '/author')
+                .then(function (response) {
+                    $scope.trips = response.data;
+                });
+        }
     };
 
     $scope.getCurrentUser();

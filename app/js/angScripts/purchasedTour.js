@@ -1,6 +1,5 @@
 angular.module('WannaGo').controller('purchasedTourPageController', function ($scope, $rootScope, $http, $localStorage) {
-    const contextPath = 'http://5.188.140.199:8189/wannago';
-
+    const contextPath = $rootScope.CONSTANTS;
     var params = window
         .location
         .search
@@ -50,7 +49,7 @@ angular.module('WannaGo').controller('purchasedTourPageController', function ($s
         $http.get(contextPath + '/api/v1/trip/purchased/' + params['tourId'] + '/tour')
             .then(function successCallback(response) {
                 if(response.data.isPurchared !== true){
-                    window.location.href = './touring.html?tourId=' + params['tourId'];
+                    window.location.href = './tour-page.html?tourId=' + params['tourId'];
                 }
                 $scope.trip = response.data;
                 var div = document.getElementById('textDiv');

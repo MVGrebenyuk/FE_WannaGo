@@ -1,15 +1,24 @@
 angular.module('WannaGo').controller('tourController', function ($scope, $rootScope, $http, $localStorage) {
-    const contextPath = 'http://5.188.140.199:8189/wannago';
+    const contextPath = $rootScope.CONSTANTS;
 
     if ($localStorage.springWebUser) {
         $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.springWebUser.token;
     }
 
     $scope.getAllTrips = function (){
-      $http.get(contextPath + '/api/v1/trip')
+      $http.post(contextPath + '/api/v1/trip/get', $scope.filter)
           .then(function (response) {
              $scope.tripsList = response.data;
           });
+    };
+
+    $scope.findFilters = function (){
+        $http.get(contextPath + '/api/v1/filters')
+            .then(function (response) {
+                $scope.filterInfo = response.data;
+                $localStorage.filterInfo = response.data;
+                localStorage.filterInfo = JSON.stringify(response.data);
+            });
     };
 
     $scope.checkIsFavOrBuy = function (checkBool){
@@ -18,6 +27,22 @@ angular.module('WannaGo').controller('tourController', function ($scope, $rootSc
         } else {
             return true;
         }
+    }
+
+    $scope.isAdmin = function (){
+        var roles = $localStorage.userProfile.roles;
+       if(roles.some(u.name === 'ROLE_ADMIN')){
+           return true
+       } else {
+           return false;
+       }
+    }
+
+    $scope.deleteTour = function (id){
+        $http.delete(contextPath + '/api/v1/trip/' + id +'/delete')
+            .then(function (response) {
+                window.location.reload();
+            });
     }
 
     $scope.addToFavorite = function (tripId){
@@ -42,11 +67,11 @@ angular.module('WannaGo').controller('tourController', function ($scope, $rootSc
             });
     }
 
-    $scope.redirect = function (tripId){
-        console.log(tripId);
-        window.location = "./touring.html?tourId=" + tripId;
-      }
+    $scope.redirect = function (location){
+        window.location.href = location;
+    }
 
+    $scope.findFilters();
     $scope.getAllTrips();
 
 });

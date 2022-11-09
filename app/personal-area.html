@@ -26,7 +26,7 @@
                 <ul class="breadcrumbs">
                     <li><a href="./index.html">Главная</a></li>
                     <li><a href="./tour-list.html">Туры</a></li>
-                    <li><a href="./touring.html">Горная Аджария</a></li>
+                    <li><a href="tour-page.html">Горная Аджария</a></li>
                     <li>{{user.firstName + ' ' + user.lastName}}</li>
                 </ul>
             </div>
@@ -34,8 +34,8 @@
                 <div>
                     <h2 class="tour-catalog">Профиль пользователя</h2>
                     <div class="personal-area-edit-button">
-                        <button class="btn-purchased-tours-area" ng-show="isCurrentUser">Купленные туры</button>
-                        <button class="btn-edit-personal-area" ng-show="isCurrentUser">Редактировать</button>
+                        <button class="btn-purchased-tours-area" ng-show="isCurrentUser(user.id)">Купленные туры</button>
+                        <button class="btn-edit-personal-area" ng-show="isCurrentUser(user.id)">Редактировать</button>
                     </div>
                 </div>
                 <div class="personal-area-top-block">
@@ -106,7 +106,7 @@
                                     <button  class="btn btn-submit tour-list-btn-buy-tour" ng-click="addToPurchased(t.id)">Купить</button>
                                 </div>
                             </div>
-                            <div class="user-route-first-block"><a href="./touring.html?tourId={{t.id}}">
+                            <div class="user-route-first-block"><a href="./tour.html?tourId={{t.id}}">
                                 <div class="user-route-place-name">{{t.title}}</div>
                                 <div class="user-route-bottom-block">
                                     <div><span>Время в пути</span>
