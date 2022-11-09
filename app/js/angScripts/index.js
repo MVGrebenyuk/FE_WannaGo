@@ -22,7 +22,7 @@
     function run($rootScope, $http, $localStorage) {
         if ($localStorage.springWebUser) {
             $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.springWebUser.token;
-            CONSTANTS = 'http://localhost:8189/wannago',
+            CONSTANTS = 'http://5.188.140.199:8189/wannago',
                 //'http://5.188.140.199:8189/wannago'
             $rootScope.CONSTANTS = CONSTANTS;
         }

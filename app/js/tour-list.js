@@ -34,7 +34,7 @@ $(function(){
 
 $(function(){
 var xhr = new XMLHttpRequest();
-xhr.open("GET", "http://localhost:8189/wannago" + '/api/v1/filters');
+xhr.open("GET", "http://5.188.140.199:8189/wannago" + '/api/v1/filters');
 xhr.send();
 
 xhr.onload = function() {
