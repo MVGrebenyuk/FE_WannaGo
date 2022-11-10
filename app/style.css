@@ -1087,31 +1087,9 @@ nav ul {
     align-items: center;
 }
 
-.rating-descripthion-buy-tour {
-    margin-bottom: 0;
-}
-
-.leave-feedback {
-    font-size: 14px;
-    line-height: 17px;
-    color: #000000;
-    text-decoration-line: underline;
-}
-.leave-feedback:hover {
-    color:#FF7A00;
-}
-
-.general-reviews-tour {
-    padding: 0;
-}
-
-.general-reviews-tour-block {
-    padding: 0;
-}
-
 .leave-feedback-button {
     display: block;
-    width: 100%;
+    margin-top: 80px;
     margin: 80px auto 0 auto;
     padding: 8px 102.5px;
     font-size: 20px;
@@ -1776,7 +1754,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .reviews-cart:not(:nth-child(1))  {
     margin-top: 30px;
-    padding: 0;
+    padding: 0 15px;
 }
 
 .riviews-cart-autor-name > p {
@@ -3454,30 +3432,6 @@ div#content {
     margin-top: 80px;
 }
 
-.tour-present-buy {
-    margin-top: 37px;
-}
-
-.section-tour-full-description {
-    margin-top: 55px;
-}
-
-.section-tour-full-description-heading {
-    margin-left: 30px;
-}
-
-.section-buy-tour-reviews {
-    padding: 0;
-}
-
-.heading-reviews {
-    padding: 0;
-}
-
-.reviews-cart-first {
-    padding: 0;
-}
-
 .tour-present-buy-description-block-paragraph {
     font-size: 14px;
 }
@@ -3504,4 +3458,77 @@ div#content {
     --n: 3;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(max(200px, 100%/var(--n)), 1fr));
+}
+
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    z-index: 1001;
+}
+
+.preloader__row {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+}
+
+.loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+}
+
+.loaded .preloader {
+    display: none;
+}
+
+.loader {
+    position: relative;
+    display: inline-block;
+    margin: 0 12.5% 100px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #FF820E;
+    border-radius: 50%;
+    animation: spin 0.75s infinite linear;
+}
+.loader::before,
+.loader::after {
+    left: -2px;
+    top: -2px;
+    display: none;
+    position: absolute;
+    content: '';
+    width: inherit;
+    height: inherit;
+    border: inherit;
+    border-radius: inherit;
+}
+
+.loader {
+    border-top-color: transparent;
+}
+.loader::after {
+    display: block;
+    left: -2px;
+    top: -2px;
+    border: inherit;
+    transform: rotate(65deg);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }

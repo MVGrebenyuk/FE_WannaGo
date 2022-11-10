@@ -1,6 +1,10 @@
 var headerText = `
 <body>
-
+<div class="preloader">
+    <div class="preloader__row">
+        <div class="loader loader"></div>
+    </div>
+</div>
 <!-- ****** Header ****** -->
 <header class="header-area">
     <div class="header-container" ng-controller="mainController">
@@ -194,3 +198,11 @@ function setHeader() {
 }
 
 setHeader();
+
+window.onload = function () {
+    document.body.classList.add('loaded_hiding');
+    window.setTimeout(function () {
+      document.body.classList.add('loaded');
+      document.body.classList.remove('loaded_hiding');
+    }, 500);
+}
