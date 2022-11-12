@@ -152,9 +152,9 @@
                                     <p class="tour-hero-price">{{trip.price}} ₽</p>
                                 </div>
                                 <div class="tour-hero-payment-block">
-                                    <button class="tour-list-btn-favorites" ng-show="!checkFav(t.isFavorite)" ng-click="addToFavorite(t.id)"></button>
-                                    <button class="tour-list-btn-favorites-true" ng-show="checkFav(t.isFavorite)" ng-click="delFromFavorites(t.id)"></button>
-                                    <button  class="btn btn-submit tour-list-btn-buy-tour" ng-click="addToPurchased(t.id)">Купить</button>
+                                    <button class="tour-list-btn-favorites" ng-show="!checkIsFavOrBuy(trip.isFavorite)" ng-click="addToFavorite(trip.id)"></button>
+                                    <button class="tour-list-btn-favorites-true" ng-show="checkIsFavOrBuy(trip.isFavorite)" ng-click="delFromFavorites(trip.id)"></button>
+                                    <button  class="btn btn-submit tour-list-btn-buy-tour" ng-click="addToPurchased(trip.id)">Купить</button>
                                 </div>
                             </div>
                         </div>

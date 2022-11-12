@@ -19,12 +19,28 @@ angular.module('WannaGo').controller('favoritesTourController', function ($scope
             });
     }
 
+    $scope.delFromFavorites = function (tripId){
+        $http.post(contextPath + '/api/v1/trip/favorites/' + tripId + '/remove')
+            .then(function (response) {
+                $scope.getAllTrips();
+            });
+    }
+
     $scope.addToPurchased = function (tripId){
         $http.post(contextPath + '/api/v1/trip/purchased/' + tripId)
             .then(function (response) {
                 alert("DEBUG: Тур куплен");
             });
     }
+
+    $scope.checkIsFavOrBuy = function (checkBool){
+        if(checkBool === false || checkBool === null){
+            return false;
+        } else {
+            return true;
+        }
+    }
+
 
     $scope.getAllTrips();
 

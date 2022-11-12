@@ -31,7 +31,7 @@ angular.module('WannaGo').controller('tourController', function ($scope, $rootSc
 
     $scope.isAdmin = function (){
         var roles = $localStorage.userProfile.roles;
-       if(roles.some(u.name === 'ROLE_ADMIN')){
+       if(roles.name === 'ROLE_ADMIN'){
            return true
        } else {
            return false;
@@ -48,22 +48,21 @@ angular.module('WannaGo').controller('tourController', function ($scope, $rootSc
     $scope.addToFavorite = function (tripId){
         $http.post(contextPath + '/api/v1/trip/favorites/' + tripId)
             .then(function (response) {
-                alert("DEBUG: Тур добавлен в избранное");
+                $scope.getAllTrips();
             });
     }
 
     $scope.delFromFavorites = function (tripId){
-        $http.post(contextPath + '/api/v1/trip/favorites/remove' + tripId)
+        $http.post(contextPath + '/api/v1/trip/favorites/' + tripId + '/remove')
             .then(function (response) {
-                alert("DEBUG: Тур удален из избранного");
+                $scope.getAllTrips();
             });
     }
 
     $scope.addToPurchased = function (tripId){
         $http.post(contextPath + '/api/v1/trip/purchased/' + tripId)
             .then(function (response) {
-                window.location.reload();
-                alert("DEBUG: Тур куплен");
+                $scope.getAllTrips();
             });
     }
 

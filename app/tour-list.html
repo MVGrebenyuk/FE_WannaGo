@@ -52,7 +52,7 @@
                                     <input type="text" id="max" placeholder="{{filterInfo.priceMax}}" ng-model="filter.maxPrice">
                                     <span class="filter-description-r">до (руб)</span>
                                 </div>
-                                <div id="slider-price"></div>
+                            <div id="slider-price"></div>
                         </div>
                         <div class="tour-list-filter-duration">
                             <div class="tour-list-filter-name">Длительность</div>
@@ -67,15 +67,15 @@
                         <div class="tour-list-filter-complexity">
                             <div class="tour-list-filter-name">По сложности</div>
                             <div class="difficulty-values">
-                                <input type="checkbox" name="checkbox" id="checkbox_1" class="css-checkbox" value="1" ng-model="filter.level">
+                                <input type="checkbox" name="checkbox" id="checkbox_1" class="css-checkbox" value="1">
                                 <label for="checkbox_1" class="cb-values"><span></span>1</label>
-                                <input type="checkbox" name="checkbox1" id="checkbox_2" class="css-checkbox" value="2" ng-model="filter.level">
+                                <input type="checkbox" name="checkbox" id="checkbox_2" class="css-checkbox" value="2">
                                 <label for="checkbox_2" class="cb-values"><span></span>2</label>
-                                <input type="checkbox" name="checkbox2" id="checkbox_3" class="css-checkbox" value="3" ng-model="filter.level">
+                                <input type="checkbox" name="checkbox" id="checkbox_3" class="css-checkbox" value="3">
                                 <label for="checkbox_3" class="cb-values"><span></span>3</label>
-                                <input type="checkbox" name="checkbox3" id="checkbox_4" class="css-checkbox" value="4" ng-model="filter.level">
+                                <input type="checkbox" name="checkbox" id="checkbox_4" class="css-checkbox" value="4">
                                 <label for="checkbox_4" class="cb-values chexbox-val-4"><span></span>4</label>
-                                <input type="checkbox" name="checkbox4" id="checkbox_5" class="css-checkbox" value="5" ng-model="filter.level">
+                                <input type="checkbox" name="checkbox" id="checkbox_5" class="css-checkbox" value="5">
                                 <label for="checkbox_5" class="cb-values"><span></span>5</label>
                             </div>
                         </div>
@@ -143,15 +143,15 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="tour-list-second-block-button" ng-if="!t.isPurchared">
+                                            <div class="tour-list-second-block-button" ng-show="!t.isPurchared">
                                                 <div class="tour-list-cost">{{t.price}}</div>
-                                                <button class="tour-list-btn-favorites" ng-show="!checkFav(t.isFavorite)" ng-click="addToFavorite(t.id)"></button>
-                                                <button class="tour-list-btn-favorites-true" ng-show="checkFav(t.isFavorite)" ng-click="delFromFavorites(t.id)"></button>
+                                                <button class="tour-list-btn-favorites" ng-show="!checkIsFavOrBuy(t.isFavorite)" ng-click="addToFavorite(t.id)"></button>
+                                                <button class="tour-list-btn-favorites-true" ng-show="checkIsFavOrBuy(t.isFavorite)" ng-click="delFromFavorites(t.id)"></button>
                                                 <button class="btn btn-submit tour-list-btn-buy-tour" ng-click="addToPurchased(t.id)">Купить</button>
                                             </div>
-                                            <div class="tour-list-second-block-button" ng-if="t.isPurchared">
-                                                <button class="tour-list-btn-favorites" ng-show="!checkFav(t.isFavorite)" ng-click="addToFavorite(t.id)"></button>
-                                                <button class="tour-list-btn-favorites-true" ng-show="checkFav(t.isFavorite)" ng-click="delFromFavorites(t.id)"></button>
+                                            <div class="tour-list-second-block-button" ng-show="t.isPurchared">
+                                                <button class="tour-list-btn-favorites" ng-show="!checkIsFavOrBuy(t.isFavorite)" ng-click="addToFavorite(t.id)"></button>
+                                                <button class="tour-list-btn-favorites-true" ng-show="checkIsFavOrBuy(t.isFavorite)" ng-click="delFromFavorites(t.id)"></button>
                                                 <button class="btn btn-submit tour-list-btn-buy-tourer" ng-click="redirect('./tour-page.html?tourId=' + t.id)">Посмотреть</button>
                                             </div>
                                         </div>

@@ -63,6 +63,34 @@ angular.module('WannaGo').controller('tourPageController', function ($scope, $ro
             });
     }
 
+    $scope.addToFavorite = function (tripId){
+        $http.post(contextPath + '/api/v1/trip/favorites/' + tripId)
+            .then(function (response) {
+            });
+    }
+
+    $scope.delFromFavorites = function (tripId){
+        $http.post(contextPath + '/api/v1/trip/favorites/' + tripId + '/remove')
+            .then(function (response) {
+                $scope.getAllTrips();
+            });
+    }
+
+    $scope.addToPurchased = function (tripId){
+        $http.post(contextPath + '/api/v1/trip/purchased/' + tripId)
+            .then(function (response) {
+                window.location.reload()
+            });
+    }
+
+    $scope.checkIsFavOrBuy = function (checkBool){
+        if(checkBool === false || checkBool === null){
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     $scope.redirect = function (authorId){
         console.log(authorId);
         window.location = "./personal-area.html?id=" + authorId;

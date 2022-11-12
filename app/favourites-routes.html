@@ -63,15 +63,26 @@
                                 <div class="favorites-grad-image">
                                     <img src="img//tour-list/tour-list-image2.png">
                                 </div>
-                                <div class="favorites-second-block-button">
-                                    <div class="favorites-cost">{{t.price}}</div>
-                                    <button class="tour-list-btn-favorites" ng-show="!checkFav(t.isFavorite)" ng-click="addToFavorite(t.id)"></button>
-                                    <button class="tour-list-btn-favorites-true" ng-show="checkFav(t.isFavorite)" ng-click="delFromFavorites(t.id)"></button>
-                                    <button  class="btn btn-submit tour-list-btn-buy-tour" ng-click="addToPurchased(t.id)">Купить</button>
+                                <div class="favorites-second-block-button" ng-show="!t.isPurchared">
+                                    <div class="tour-list-cost">{{t.price}}</div>
+                                    <button class="tour-list-btn-favorites" ng-show="!checkIsFavOrBuy(t.isFavorite)" ng-click="addToFavorite(t.id)"></button>
+                                    <button class="tour-list-btn-favorites-true" ng-show="checkIsFavOrBuy(t.isFavorite)" ng-click="delFromFavorites(t.id)"></button>
+                                    <button class="btn btn-submit tour-list-btn-buy-tour" ng-click="addToPurchased(t.id)">Купить</button>
                                 </div>
+                                <div class="favorites-second-block-button" ng-show="t.isPurchared">
+                                    <button class="tour-list-btn-favorites" ng-show="!checkIsFavOrBuy(t.isFavorite)" ng-click="addToFavorite(t.id)"></button>
+                                    <button class="tour-list-btn-favorites-true" ng-show="checkIsFavOrBuy(t.isFavorite)" ng-click="delFromFavorites(t.id)"></button>
+                                    <button class="btn btn-submit tour-list-btn-buy-tourer" ng-click="redirect('./tour-page.html?tourId=' + t.id)">Посмотреть</button>
+                                </div>
+<!--                                <div class="favorites-second-block-button">-->
+<!--                                    <div class="favorites-cost">{{t.price}}</div>-->
+<!--                                    <button class="tour-list-btn-favorites" ng-show="!checkFav(t.isFavorite)" ng-click="addToFavorite(t.id)"></button>-->
+<!--                                    <button class="tour-list-btn-favorites-true" ng-show="checkFav(t.isFavorite)" ng-click="delFromFavorites(t.id)"></button>-->
+<!--                                    <button  class="btn btn-submit tour-list-btn-buy-tour" ng-click="addToPurchased(t.id)">Купить</button>-->
+<!--                                </div>-->
                             </div>
                             <div class="favorites-first-block">
-                                <a class="favorites-first-block-link" href="./ещгк.html?tourId={{t.id}}">
+                                <a class="favorites-first-block-link" href="./tour-page.html?tourId={{t.id}}">
                                     <div class="favorites-place-name">{{t.title}}</div>
                                     <div class="favorites-bottom-block">
                                         <div><span>Время в пути</span>
