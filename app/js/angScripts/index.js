@@ -22,15 +22,15 @@
     function run($rootScope, $http, $localStorage) {
         if ($localStorage.springWebUser) {
             $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.springWebUser.token;
-            CONSTANTS = 'http://5.188.140.199:8189/wannago',
-                //'http://5.188.140.199:8189/wannago'
-            $rootScope.CONSTANTS = CONSTANTS;
         }
+        localStorage.CONSTANTS = 'http://5.188.140.199:8189/wannago'
     }
 })();
 
 angular.module('WannaGo').controller('mainController', function ($scope, $rootScope, $http, $localStorage) {
-    const contextPath = $rootScope.CONSTANTS;
+    const contextPath = localStorage.CONSTANTS;
+
+    console.log('url = ' + localStorage.CONSTANTS)
 
     $scope.tryToAuth = function () {
         $http.post(contextPath + '/auth', $scope.user)

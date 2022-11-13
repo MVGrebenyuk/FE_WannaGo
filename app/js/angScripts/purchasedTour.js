@@ -1,5 +1,5 @@
 angular.module('WannaGo').controller('purchasedTourPageController', function ($scope, $rootScope, $http, $localStorage) {
-    const contextPath = $rootScope.CONSTANTS;
+    const contextPath = localStorage.CONSTANTS;
     var params = window
         .location
         .search
@@ -13,6 +13,8 @@ angular.module('WannaGo').controller('purchasedTourPageController', function ($s
             },
             {}
         );
+
+    console.log('url = ' + localStorage.CONSTANTS)
 
     $scope.tryToAuth = function () {
         $http.post(contextPath + '/auth', $scope.user)

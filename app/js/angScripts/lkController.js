@@ -1,9 +1,11 @@
 angular.module('WannaGo').controller('lkController', function ($scope, $rootScope, $http, $localStorage) {
-    const contextPath = $rootScope.CONSTANTS;
+    const contextPath = localStorage.CONSTANTS;
 
     if ($localStorage.springWebUser) {
         $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.springWebUser.token;
     }
+
+    console.log('url = ' + localStorage.CONSTANTS)
 
     var params = window
         .location
