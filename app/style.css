@@ -877,6 +877,7 @@ nav ul {
     margin-bottom: 20px;
     width: 880px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .tour-list-first-block:active,
@@ -917,7 +918,7 @@ nav ul {
 
 .tour-list-btn-buy-tour {
     position: absolute;
-    width: 140px;
+    width: 145px;
     height: 46px;
     border-radius: 10px;
     cursor: pointer;
@@ -931,9 +932,21 @@ nav ul {
     color: white;
 }
 
+.tour-list-second-block-button > .tour-list-btn-buy-tourer {
+    position: absolute;
+    width: 300px;
+    height: 46px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    line-height: 27px;
+    letter-spacing: 1px;
+    background-color: #1ABAA6;
+}
+
 .tour-list-btn-buy-tourer {
     position: absolute;
-    width: 290px;
+    width: 276px;
     height: 46px;
     border-radius: 10px;
     cursor: pointer;
@@ -1037,15 +1050,44 @@ nav ul {
     color: #000000;
 }
 
+.tour-characteristics-block > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
 .tour-characteristics-discription {
     text-align: start;
     font-weight: 600;
+}
+
+.container-full-description > #textDiv {
+    margin: 0;
+    padding: 0;
 }
 
 .tour-characteristics-footer  {
     margin-top: 10px;
     align-items: center;
     text-align: center;
+}
+
+.tour-buy-star-rating > .rating-mini {
+    float: left;
+    margin-right: 6px;
+}
+
+.rating-descripthion-buy-tour {
+    margin-bottom: 1px;
+}
+
+.leave-feedback {
+    margin-left: 5px;
+}
+
+.container-heading-tour {
+    margin-bottom: 30px;
 }
 
 .tour-characteristics-icon {
@@ -1139,7 +1181,7 @@ nav ul {
     border-radius: 10px;
     float: left;
     background-image: url(./img//icons/favorites-tour-list1.png);
-    margin: 0 10px 0 10px;
+    margin: 0 10px 0 4px;
     background-repeat: no-repeat;
     background-position: 9px 12px;
     background-size: auto;
@@ -1172,7 +1214,7 @@ nav ul {
     border-radius: 10px;
     float: left;
     background-image: url(./img/icons/favorites-tour-list.png);
-    margin: 0 10px 0 10px;
+    margin: 0 10px 0 0;
     float: left;
     background-image: url(./img/icons/like-favourites-active.svg);
     background-repeat: no-repeat;
@@ -3531,4 +3573,38 @@ div#content {
     to {
         transform: rotate(360deg);
     }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1000;
+}
+.modal .modal_content {
+    background-color: #fefefe;
+    margin: 12% auto;
+    padding: 20px;
+    width: 770px;
+    height: 400px;
+    z-index: 99999;
+    border-radius: 10px;
+}
+
+.modal_content > img {
+    margin-top: 40px;
+}
+
+.modal_content > p {
+    font-size: 40px;
+}
+
+.modal .modal_content .close_modal_window {
+    float: right;
+    cursor: pointer;
 }
