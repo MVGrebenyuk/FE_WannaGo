@@ -140,7 +140,20 @@ angular.module('WannaGo').controller('mainController', function ($scope, $rootSc
                 $scope.trip.image = xhr.response;
                     $http.post(contextPath + '/api/v1/trip', $scope.trip)
                         .then(function successCallback(response) {
-                            alert('Тур создан. Trip created ' + response.data.username);
+                            var modal = document.getElementById("my_modal");
+                            var span = document.getElementsByClassName("close_modal_window")[0];
+
+                            modal.style.display = "block";
+
+                            span.onclick = function () {
+                                modal.style.display = "none";
+                            }
+
+                            window.onclick = function (event) {
+                                if (event.target == modal) {
+                                    modal.style.display = "none";
+                                }
+                            }
                         }, function errorCallback(response) {
                             alert('Тур не создан. Trip not created, please register or sign in');
                         });

@@ -24,15 +24,15 @@
                 <ul class="breadcrumbs">
                     <li><a href="./index.html">Главная</a></li>
                     <li><a href="./tour-list.html">Все туры</a></li>
-                    <li>Горная Аджария</li>
+                    <li>{{trip.title}}</li>
                 </ul>
             </div>
             <div class="section-heading-tour">
                 <div class="container container-heading-tour">
                     <div class="col-md-12 tour-hero-description">
-                        <h2 class="tour-heading">Горная Аджария</h2>
+                        <h2 class="tour-heading">{{trip.title}}</h2>
                     </div>
-                    <div class="tour-hero-star-rating">
+                    <div class="tour-buy-star-rating">
                         <div class="rating-mini">
                             <span class="active"></span>
                             <span class="active"></span>
@@ -58,8 +58,8 @@
                                 <div class="tour-present-buy-description-block">
                                         <div class="col-md-12 reviews-descripthion">
                                             <h3 class="tour-present-buy-description-block-heading">Краткое описание</h2>
-                                            <p class="tour-present-buy-description-block-paragraph">
-                                                {{trip.shortTitle}}                                        </div>
+                                            <p class="tour-present-buy-description-block-paragraph">{{trip.shortTitle}}</p>
+                                        </div>
                                         <div class="col-md-12 d-flex tour-characteristics">
                                             <div class="col-md-3 tour-characteristics-block">
                                                 <div class="tour-characteristics-discription">Время в пути</div>
@@ -83,8 +83,8 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-3 tour-characteristics-block d-flex">
-                                                <img src={{t.author.avatar}}>
-                                                <div class="tour-characteristics-footer  d-flex">
+                                                <img src={{trip.author.avatar}}>
+                                                <div class="tour-characteristics-footer d-flex">
                                                     <div class="tour-characteristics-result">{{trip.author.firstName + ' ' + trip.author.lastName}}</div>
                                                 </div>
                                             </div>
@@ -101,13 +101,10 @@
 
             <div class="section-tour-full-description">
                 <div class="container container-full-description">
-                    <div class="row">
-                        <h2 class="section-tour-full-description-heading">
-                            Описание маршрута
-                        </h2>
-                        <div id="textDiv" class="full-description-blok d-flex col-md-12">
-                        </div>
-                    </div>
+                    <h2 class="section-tour-full-description-heading">
+                        Описание маршрута
+                    </h2>
+                    <div id="textDiv" class="full-description-blok d-flex col-md-12"></div>
                 </div>
             </div>
 
