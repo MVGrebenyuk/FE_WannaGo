@@ -23,7 +23,7 @@
         if ($localStorage.springWebUser) {
             $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.springWebUser.token;
         }
-        localStorage.CONSTANTS = 'http://5.188.140.99:8189/wannago'
+        localStorage.CONSTANTS = 'http://5.188.140.199:8189/wannago'
     }
 })();
 
