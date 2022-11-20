@@ -5,10 +5,23 @@ angular.module('WannaGo').controller('tourController', function ($scope, $rootSc
         $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.springWebUser.token;
     }
 
-    console.log('url = ' + localStorage.CONSTANTS)
+    $scope.getAllTripsWithFilters = function (){
+        let filter = JSON;
+        filter.country = document.getElementById('country').value;
+        filter.priceMin = document.getElementById('min').value;
+        filter.priceMax = document.getElementById('max').value;
+        filter.durationMin = document.getElementById('min-duration').value;
+        filter.durationMax = document.getElementById('max-duration').value;
+        filter.lengthMin = document.getElementById('min-distance').value;
+        filter.lengthMax = document.getElementById('max-distance').value;
+        $http.post(contextPath + '/api/v1/trip/get', filter)
+            .then(function (response) {
+                $scope.tripsList = response.data;
+            });
+    };
 
     $scope.getAllTrips = function (){
-      $http.post(contextPath + '/api/v1/trip/get', $scope.filter)
+      $http.post(contextPath + '/api/v1/trip/get')
           .then(function (response) {
              $scope.tripsList = response.data;
           });
@@ -20,6 +33,7 @@ angular.module('WannaGo').controller('tourController', function ($scope, $rootSc
                 $scope.filterInfo = response.data;
                 $localStorage.filterInfo = response.data;
                 localStorage.filterInfo = JSON.stringify(response.data);
+                $scope.getAllTrips();
             });
     };
 
@@ -32,12 +46,20 @@ angular.module('WannaGo').controller('tourController', function ($scope, $rootSc
     }
 
     $scope.isAdmin = function (){
-        var roles = $localStorage.userProfile.roles;
-       if(roles.name === 'ROLE_ADMIN'){
-           return true
-       } else {
-           return false;
-       }
+        var retValue = false;
+        try {
+            var roles = $localStorage.userProfile.roles;
+            retValue = roles.some(function (elem) {
+                if (elem.name === "ROLE_ADMIN") {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+        } catch (e) {
+
+        }
+        return retValue;
     }
 
     $scope.deleteTour = function (id){
@@ -73,6 +95,5 @@ angular.module('WannaGo').controller('tourController', function ($scope, $rootSc
     }
 
     $scope.findFilters();
-    $scope.getAllTrips();
 
 });

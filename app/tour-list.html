@@ -38,7 +38,7 @@
                                 <div class="tour-list-filter-name">По странам</div>
                                 <div class="tour-list-filter-content">
                                     <div class="tour-list-select">
-                                        <select class="select" name="country" ng-model="filter.country">
+                                        <select class="select" id="country" name="country">
                                             <option value="">Выберите страну</option>
                                             <option ng-repeat="f in filterInfo.country" value="{{f}}">{{f}}</option>
                                         </select>
@@ -48,9 +48,9 @@
                             <div class="tour-list-filter-price">
                                 <div class="tour-list-filter-name">Цена</div>
                                     <div id="slider-range-price">
-                                        <input type="text" id="min" placeholder="{{filterInfo.priceMin}}" ng-model="filter.minPrice">
+                                        <input type="text" id="min" placeholder="{{filterInfo.priceMin}}">
                                         <span class="filter-description">от (руб)</span>
-                                        <input type="text" id="max" placeholder="{{filterInfo.priceMax}}" ng-model="filter.maxPrice">
+                                        <input type="text" id="max" placeholder="{{filterInfo.priceMax}}">
                                         <span class="filter-description-r">до (руб)</span>
                                     </div>
                                 <div id="slider-price"></div>
@@ -58,9 +58,9 @@
                             <div class="tour-list-filter-duration">
                                 <div class="tour-list-filter-name">Длительность</div>
                                 <div id="slider-range-duration">
-                                    <input type="text" id="min-duration" placeholder="{{filterInfo.durationMin}}" ng-model="filter.minDuration">
+                                    <input type="text" id="min-duration" placeholder="{{filterInfo.durationMin}}" ng-model="TripFilter.minDuration">
                                     <span class="filter-description">от (дней)</span>
-                                    <input type="text" id="max-duration" placeholder="{{filterInfo.durationMax}}" ng-model="filter.maxDuration">
+                                    <input type="text" id="max-duration" placeholder="{{filterInfo.durationMax}}" ng-model="TripFilter.maxDuration">
                                     <span class="filter-description-r">до (дней)</span>
                                 </div>
                                 <div id="slider-duration"></div>
@@ -83,15 +83,15 @@
                             <div class="tour-list-filter-distance">
                                 <div class="tour-list-filter-name">Расстоянию</div>
                                 <div id="slider-range-distance">
-                                    <input type="text" id="min-distance" placeholder="{{filterInfo.lengthMin}}" value={{filterInfo.lengthMin}} ng-model="filter.minLength">
+                                    <input type="text" id="min-distance" placeholder="{{filterInfo.lengthMin}}" value={{filterInfo.lengthMin}} ng-model="TripFilter.minLength">
                                     <span class="filter-description">от (км)</span>
-                                    <input type="text" id="max-distance" placeholder="{{filterInfo.lengthMax}}" value={{filterInfo.lengthMax}} ng-model="filter.maxLength">
+                                    <input type="text" id="max-distance" placeholder="{{filterInfo.lengthMax}}" value={{filterInfo.lengthMax}} ng-model="TripFilter.maxLength">
                                     <span class="filter-description-r">до (км)</span>
                                 </div>
                                 <div id="slider-distance"></div>
                             </div>
                             <div class="tour-list-filter-name">
-                                <button class="btn btn-submit tour-list-btn-find-tours" ng-click="getAllTrips()">Применить</button>
+                                <button class="btn btn-submit tour-list-btn-find-tours" ng-click="getAllTripsWithFilters()">Применить</button>
                             </div>
                         </form>
                     </div>
@@ -116,12 +116,12 @@
                                                         <p>{{t.length}} км</p>
                                                     </div>
                                                 </div>
-                                                <div><span>Сложность</span>
-                                                    <div class="bottom-block-info">
-                                                        <img src="./img/icons/tour-list-3.png">
-                                                        <p>{{t.level}}/5</p>
-                                                    </div>
-                                                </div>
+<!--                                                <div><span>Сложность</span>-->
+<!--                                                    <div class="bottom-block-info">-->
+<!--                                                        <img src="./img/icons/tour-list-3.png">-->
+<!--                                                        <p>{{t.level}}/5</p>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
                                             </div>
                                         </div>
                                         <div class="tour-list-second-block">

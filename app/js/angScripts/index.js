@@ -23,7 +23,7 @@
         if ($localStorage.springWebUser) {
             $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.springWebUser.token;
         }
-        localStorage.CONSTANTS = 'http://5.188.140.199:8189/wannago'
+        localStorage.CONSTANTS = 'http://localhost:8189/wannago'
     }
 })();
 
@@ -138,6 +138,8 @@ angular.module('WannaGo').controller('mainController', function ($scope, $rootSc
             } else { // если всё прошло гладко, выводим результат
                 $scope.trip.description = tinyMCE.activeEditor.getContent();
                 $scope.trip.image = xhr.response;
+                $scope.trip.region = document.getElementById('region').value;
+                // $scope.trip.level = document.getElementById('level').value;
                     $http.post(contextPath + '/api/v1/trip', $scope.trip)
                         .then(function successCallback(response) {
                             var modal = document.getElementById("my_modal");

@@ -32,20 +32,20 @@ $(function(){
 	});
 });
 
-$(function(){
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "http://5.188.140.199:8189/wannago" + '/api/v1/filters');
-xhr.send();
-
-xhr.onload = function() {
-	console.log(xhr.response)
-	if (xhr.status == 200) {
-		localStorage.filterInfo = JSON.stringify(xhr.response);
-	} else {
-		alert("Не удалось загрузить фильтры")
-	}
-}
-});
+// $(function(){
+// var xhr = new XMLHttpRequest();
+// xhr.open("GET", "http://5.188.140.199:8189/wannago" + '/api/v1/filters');
+// xhr.send();
+//
+// xhr.onload = function() {
+// 	console.log(xhr.response)
+// 	if (xhr.status == 200) {
+// 		localStorage.filterInfo = JSON.stringify(xhr.response);
+// 	} else {
+// 		alert("Не удалось загрузить фильтры")
+// 	}
+// }
+// });
 // $('.select').each(function() {
 //     const _this = $(this),
 //         selectOption = _this.find('option'),
