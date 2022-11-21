@@ -27,10 +27,9 @@ var headerText = `
                                     <a class="nav-link-footer" href="./tour-list.html">Туры</a>
                                 </div>
                                 <div class="footer-link">
-                                    <a class="nav-link-footer" href="archive.html">Личный кабинет</a>
+                                    <a class="nav-link-footer" href="./personal-area.html">Личный кабинет</a>
                                 </div>
                                 <div class="footer-contacts"><a>Наши контакты</a>
-
                                     <div>Email: wannago@gmail.com
                                         Телефон: + 7 920 885 02 64
                                     </div>
