@@ -134,7 +134,11 @@ angular.module('WannaGo').controller('mainController', function ($scope, $rootSc
         xhr.onload = function() {
             console.log(xhr.response)
             if (xhr.status != 200) { // анализируем HTTP-статус ответа, если статус не 200, то произошла ошибка
-                alert(`Ошибка ${xhr.status}: ${xhr.statusText}`); // Например, 404: Not Found
+                if(document.getElementById('content').innerHTML.trim().length == 0) {
+                    alert("Пожалуйста вставьте фото тура");
+                 } else {
+                    alert(`Ошибка ${xhr.status}: ${xhr.statusText}`); // Например, 404: Not Found
+                 }
             } else { // если всё прошло гладко, выводим результат
                 $scope.trip.description = tinyMCE.activeEditor.getContent();
                 $scope.trip.image = xhr.response;
