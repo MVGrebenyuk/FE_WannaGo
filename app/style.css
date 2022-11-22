@@ -270,7 +270,7 @@ CSS
 .blog-logo {
     margin-top: 40px;
     font-size: 99px;
-    font-family: 'Montserrat';
+    font-family: 'Nunito';
     font-weight: 800;
     color: #1ABAA6;
 }
@@ -278,7 +278,7 @@ CSS
 .blog-logo-second {
     margin-top: 40px;
     font-size: 99px;
-    font-family: 'Montserrat';
+    font-family: 'Nunito';
     font-weight: 800;
     color: #FF820E;
 }
@@ -870,6 +870,10 @@ nav ul {
     margin-top: 242px;
 }
 
+.tour-list-second-block-button > .tour-list-cost {
+    width: 152px;
+}
+
 .tour-list-block {
     height: 317px;
     background-color: #F7F7F7;
@@ -1400,6 +1404,10 @@ input[type="checkbox"]:checked + label span {
     color: #000000;
 }
 
+.profile-settings-form input:focus {
+    background-color: #eeeeee;
+}
+
 .profile-settings-heading {
     font-weight: 600;
     margin-top: 20px;
@@ -1498,6 +1506,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
     overflow: hidden;
     resize: none;
     border: none; /* указание этого свойства также удалит обводку в FireFox */
+}
+
+.form-control-lk:focus {
+    background-color: #eeeeee;
 }
 
 .avatar-lk {
@@ -1670,7 +1682,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     font-size: 38px;
     font-weight: 400;
     height: 49px;
-    width: 152px;
+    width: 135px;
     margin-top: -3px;
 }
 
@@ -3597,14 +3609,36 @@ div#content {
 }
 
 .modal_content > img {
-    margin-top: 40px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 .modal_content > p {
     font-size: 40px;
+    color: black;
 }
 
 .modal .modal_content .close_modal_window {
     float: right;
+    cursor: pointer;
+}
+
+.button-look-tour {
+    width: 135px;
+    height: 37px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.button-look-tour:hover {
+    width: 135px;
+    height: 37px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    font-weight: 500;
     cursor: pointer;
 }
