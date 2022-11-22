@@ -1706,6 +1706,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     background-color: #F7F7F7;
     appearance: none;
     position: relative;
+    padding-left: 5px;
 }
 
 .new-select {
@@ -3391,6 +3392,9 @@ div#content {
 }
 
 .preview-button-save {
+    position: relative;
+    top: 1498px;
+    left: 680px;
     width: 145px;
     height: 46px;
     border-radius: 10px;
@@ -3399,11 +3403,13 @@ div#content {
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 1px;
-    margin-left: 20px;
     cursor: pointer;
 }
 
 .preview-button-save:hover {
+    position: relative;
+    top: 1498px;
+    left: 680px;
     width: 145px;
     height: 46px;
     border-radius: 10px;
@@ -3412,7 +3418,6 @@ div#content {
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 1px;
-    margin-left: 20px;
     cursor: pointer;
 }
 
