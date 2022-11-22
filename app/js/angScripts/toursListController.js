@@ -65,7 +65,7 @@ angular.module('WannaGo').controller('tourController', function ($scope, $rootSc
     $scope.deleteTour = function (id){
         $http.delete(contextPath + '/api/v1/trip/' + id +'/delete')
             .then(function (response) {
-                window.location.reload();
+                $scope.getAllTrips();
             });
     }
 
