@@ -123,48 +123,67 @@ angular.module('WannaGo').controller('mainController', function ($scope, $rootSc
             });
     }
 
+    function validate() {
+        if($scope.trip != null){
+            if($scope.trip.title != null && $scope.trip.shortTitle != null
+            && $scope.trip.duration != null && $scope.trip.length != null
+            && $scope.trip.price != null && $scope.trip.country != null){
+                console.log('Валидация прошла успешно')
+                return true;
+            }
+        }
+        console.log('Валидация провалилась');
+        return false;
+    }
+
     $scope.createTour = function () {
-            var formData = new FormData();
-            formData.append("file", document.getElementById("file-uploader").files[0]);
+    if(validate() === true) {
+        var formData = new FormData();
+        formData.append("file", document.getElementById("file-uploader").files[0]);
 
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", contextPath + '/api/v1/trip/image');
-            xhr.send(formData);
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", contextPath + '/api/v1/trip/image');
+        xhr.send(formData);
 
-        xhr.onload = function() {
+        xhr.onload = function () {
             console.log(xhr.response)
             if (xhr.status != 200) { // анализируем HTTP-статус ответа, если статус не 200, то произошла ошибка
-                if(document.getElementById('content').innerHTML.trim().length == 0) {
+                if (document.getElementById('content').innerHTML.trim().length == 0) {
                     alert("Пожалуйста вставьте фото тура");
-                 } else {
+                } else {
                     alert(`Ошибка ${xhr.status}: ${xhr.statusText}`); // Например, 404: Not Found
-                 }
+                }
             } else { // если всё прошло гладко, выводим результат
                 $scope.trip.description = tinyMCE.activeEditor.getContent();
                 $scope.trip.image = xhr.response;
                 $scope.trip.region = document.getElementById('region').value;
-                // $scope.trip.level = document.getElementById('level').value;
-                    $http.post(contextPath + '/api/v1/trip', $scope.trip)
-                        .then(function successCallback(response) {
-                            var modal = document.getElementById("my_modal");
-                            var span = document.getElementsByClassName("close_modal_window")[0];
+                $http.post(contextPath + '/api/v1/trip', $scope.trip)
+                    .then(function successCallback(response) {
+                        var modal = document.getElementById("my_modal");
+                        var span = document.getElementsByClassName("close_modal_window")[0];
+                        $scope.tourId = response.data;
+                        console.log(response.data)
+                        modal.style.display = "block";
 
-                            modal.style.display = "block";
+                        span.onclick = function () {
+                            modal.style.display = "none";
+                        }
 
-                            span.onclick = function () {
+                        window.onclick = function (event) {
+                            if (event.target == modal) {
                                 modal.style.display = "none";
                             }
-
-                            window.onclick = function (event) {
-                                if (event.target == modal) {
-                                    modal.style.display = "none";
-                                }
-                            }
-                        }, function errorCallback(response) {
-                            alert('Тур не создан. Trip not created, please register or sign in');
-                        });
+                        }
+                    }, function errorCallback(response) {
+                        alert('Тур не создан. Trip not created, please register or sign in');
+                    });
             }
         };
+    }
+    }
+
+    $scope.tourLocate = function (){
+        window.location.href = './touring-buy.html?tourId=' + $scope.tourId;
     }
 
     $scope.getCurrentUser = function (){
