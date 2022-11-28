@@ -56,25 +56,25 @@
                         <div class="col-md-12  d-flex tour-present-buy">
                             <div class="col-md-6 tour-present-buy-description">
                                 <div class="tour-present-buy-description-block">
-                                        <div class="col-md-12 reviews-descripthion">
-                                            <h3 class="tour-present-buy-description-block-heading">Краткое описание</h2>
-                                            <p class="tour-present-buy-description-block-paragraph">{{trip.shortTitle}}</p>
+                                    <div class="col-md-12 reviews-descripthion">
+                                        <h3 class="tour-present-buy-description-block-heading">Краткое описание</h2>
+                                        <p class="tour-present-buy-description-block-paragraph">{{trip.shortTitle}}</p>
+                                    </div>
+                                    <div class="col-md-12 d-flex tour-characteristics">
+                                        <div class="col-md-3 tour-characteristics-block">
+                                            <div class="tour-characteristics-discription">Время в пути</div>
+                                            <div class="tour-characteristics-footer d-flex">
+                                                <span class=" tour-characteristics-icon tour-characteristics-icon-watch"></span>
+                                                <div class="tour-characteristics-result">{{trip.duration}}</div>
+                                            </div>
                                         </div>
-                                        <div class="col-md-12 d-flex tour-characteristics">
-                                            <div class="col-md-3 tour-characteristics-block">
-                                                <div class="tour-characteristics-discription">Время в пути</div>
-                                                <div class="tour-characteristics-footer d-flex">
-                                                    <span class=" tour-characteristics-icon tour-characteristics-icon-watch"></span>
-                                                    <div class="tour-characteristics-result">{{trip.duration}}</div>
-                                                </div>
+                                        <div class="col-md-3 tour-characteristics-block">
+                                            <div class="tour-characteristics-discription">Расстояние</div>
+                                            <div class="tour-characteristics-footer  d-flex">
+                                                <span class="tour-characteristics-icon tour-characteristics-icon-point"></span>
+                                                <div class="tour-characteristics-result">{{trip.length}}</div>
                                             </div>
-                                            <div class="col-md-3 tour-characteristics-block">
-                                                <div class="tour-characteristics-discription">Расстояние</div>
-                                                <div class="tour-characteristics-footer  d-flex">
-                                                    <span class="tour-characteristics-icon tour-characteristics-icon-point"></span>
-                                                    <div class="tour-characteristics-result">{{trip.length}}</div>
-                                                </div>
-                                            </div>
+                                        </div>
 <!--                                            <div class="col-md-3 tour-characteristics-block">-->
 <!--                                                <div class="tour-characteristics-discription">Сложность</div>-->
 <!--                                                <div class="tour-characteristics-footer  d-flex">-->
@@ -82,13 +82,13 @@
 <!--                                                    <div class="tour-characteristics-result">{{trip.level}}/5</div>-->
 <!--                                                </div>-->
 <!--                                            </div>-->
-                                            <div class="col-md-3 tour-characteristics-block d-flex">
-                                                <img src={{trip.author.avatar}}>
-                                                <div class="tour-characteristics-footer d-flex">
-                                                    <div class="tour-characteristics-result">{{trip.author.firstName + ' ' + trip.author.lastName}}</div>
-                                                </div>
+                                        <div class="col-md-3 tour-characteristics-block d-flex" ng-click="redirect(trip.author.id)">
+                                            <img src={{trip.author.avatar}}>
+                                            <div class="tour-characteristics-footer d-flex">
+                                                <div class="tour-characteristics-result">{{trip.author.firstName + ' ' + trip.author.lastName}}</div>
                                             </div>
-                                        </div>   
+                                        </div>
+                                    </div>   
                                 </div>
                             </div>
                             <div class="col-md-6 tour-present-buy-maps">
