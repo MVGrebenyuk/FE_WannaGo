@@ -2712,13 +2712,18 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .user-route-description-text {
-    height: 143px;
+    height: 185px;
     font-size: 14px;
     line-height: 17px;
     font-weight: 400;
     margin-top: 10px;
     margin-bottom: 20px;
     color: #000;
+    overflow: hidden;
+}
+
+.user-route-bottom-block {
+    height: 58px;
 }
 
 .user-route-bottom-block * {
@@ -2885,13 +2890,18 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .favorites-description-text {
-    height: 143px;
+    height: 185px;
     font-size: 14px;
     line-height: 17px;
     font-weight: 400;
     margin-top: 10px;
     margin-bottom: 20px;
     color: #000;
+    overflow: hidden;
+}
+
+.favorites-bottom-block {
+    height: 58px;
 }
 
 .favorites-bottom-block * {
@@ -2901,7 +2911,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .favorites-bottom-block>div {
     float: left;
-    margin-right: 23px;
+    margin-right: 22px;
 }
 
 .favorites-bottom-block>div>span {
@@ -3045,13 +3055,18 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .purchased-routes-description-text {
-    height: 143px;
+    height: 185px;
     font-size: 14px;
     line-height: 17px;
     font-weight: 400;
     margin-top: 10px;
     margin-bottom: 20px;
     color: #000;
+    overflow: hidden;
+}
+
+.purchased-routes-bottom-block {
+    height: 58px;
 }
 
 .purchased-routes-bottom-block * {
