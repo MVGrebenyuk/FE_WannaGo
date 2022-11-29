@@ -38,6 +38,11 @@
     height: 429px;
 }
 
+.blog-area-image > img {
+    width: 580px;
+    height: 429px;
+}
+
 .modal-content {
     width: 420px;
 }
@@ -136,9 +141,9 @@ CSS
     border-bottom: 2px solid #F88821;
 }
 
-.icons {
+/* .icons {
     margin-right: 20px;
-}
+} */
 
 .control-label-registration {
     margin-top: 0; /* убрали маргин */
@@ -291,15 +296,30 @@ CSS
 }
 
 .description {
-    font-size: 16px;
+    font-size: 14px;
     color: black;
-    width: 480px;
+    width: 580px;
 }
 
 .post-headline {
     font-size: 40px;
     margin-bottom: 0;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+}
+
+.post-headline-head {
+    font-size: 20px;
+}
+
+.post-headline-about {
+    margin-bottom: 10px;
+}
+
+.post-headline-about-right {
+    margin-right: 22px;
+    font-size: 40px;
+    margin-bottom: 0;
+    margin-bottom: 30px;
 }
 
 .tour-catalog {
@@ -338,7 +358,7 @@ h6 {
 }
 
 p {
-    color: #51545f;
+    color: black;
     font-size: 16px;
 }
 
@@ -962,7 +982,7 @@ nav ul {
 
 .tour-list-btn-create-tour {
     position: absolute;
-    left: 70%;
+    left: 74%;
     width: 140px;
     height: 46px;
     border-radius: 10px;
@@ -971,6 +991,10 @@ nav ul {
     font-weight: 600;
     line-height: 24px;
     letter-spacing: 1px;
+}
+
+.post-content-right-column {
+    text-align: end;
 }
 
 /* СТРАНИЦА ТУРА */
@@ -1054,7 +1078,17 @@ nav ul {
     color: #000000;
 }
 
-.tour-characteristics-block > img {
+.tour-characteristics-block-user {
+    padding: 0;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.tour-characteristics-block-user > img {
     width: 40px;
     height: 40px;
     border-radius: 50%;

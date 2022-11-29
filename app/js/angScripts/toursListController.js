@@ -94,6 +94,11 @@ angular.module('WannaGo').controller('tourController', function ($scope, $rootSc
         window.location.href = location;
     }
 
+    $scope.redirectToAuthor = function (authorId){
+        console.log(authorId);
+        window.location = "./personal-area.html?id=" + authorId;
+    }
+
     $scope.findFilters();
 
 });

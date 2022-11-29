@@ -82,7 +82,7 @@
 <!--                                                    <div class="tour-characteristics-result">{{trip.level}}/5</div>-->
 <!--                                                </div>-->
 <!--                                            </div>-->
-                                        <div class="col-md-3 tour-characteristics-block d-flex" ng-click="redirect(trip.author.id)">
+                                        <div class="col-md-3 tour-characteristics-block-user d-flex" ng-click="redirectToAuthor(trip.author.id)">
                                             <img src={{trip.author.avatar}}>
                                             <div class="tour-characteristics-footer d-flex">
                                                 <div class="tour-characteristics-result">{{trip.author.firstName + ' ' + trip.author.lastName}}</div>
@@ -257,8 +257,6 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
 
         <script src="js/angScripts/index.js"></script>
