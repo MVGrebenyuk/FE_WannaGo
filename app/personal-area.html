@@ -65,7 +65,7 @@
                                     <p>{{user.city}}</p>
                                 </div>
                             </div>
-                            <button class="btn-subscribe-user-info">Подписаться</button>
+                            <button class="btn-subscribe-user-info" ng-show="!isCurrentUser(user.id)">Подписаться</button>
                         </div>
                     </div>
                 </div>

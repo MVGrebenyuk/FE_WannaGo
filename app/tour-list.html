@@ -125,10 +125,9 @@
                                             </div>
                                         </div>
                                         <div class="tour-list-second-block">
-                                            <div class="user-name">
+                                            <div class="user-name" ng-click="redirectToAuthor(t.author.id)">
                                                 <img src={{t.author.avatar}}>
                                                 <div class="tour-list-user-name">{{t.author.firstName + ' ' + t.author.lastName}}</div>
-                                                
                                             </div>
                                             <div class="tour-list-image">
                                                 <img src={{t.image}}>

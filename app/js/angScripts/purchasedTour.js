@@ -63,6 +63,11 @@ angular.module('WannaGo').controller('purchasedTourPageController', function ($s
             });
     }
 
+    $scope.redirectToAuthor = function (authorId){
+        console.log(authorId);
+        window.location = "./personal-area.html?id=" + authorId;
+    }
+
     $scope.getCurrentUser();
     $scope.getTrip()
 });
